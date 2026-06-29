@@ -1,0 +1,48 @@
+---
+interface Props {
+  name: string;
+  text: string;
+  stars?: number;
+}
+
+const { name, text, stars = 5 } = Astro.props;
+---
+
+<blockquote class="testimonial">
+  <div class="testimonial__stars" aria-label={`${stars} estrelas`}>
+    {"★".repeat(stars)}
+  </div>
+  <p class="testimonial__text">"{text}"</p>
+  <footer class="testimonial__author">— {name}</footer>
+</blockquote>
+
+<style>
+  .testimonial {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-left: 3px solid #5ECFBF;
+    border-radius: 0 8px 8px 0;
+    padding: 28px 32px;
+  }
+
+  .testimonial__stars {
+    color: #5ECFBF;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+
+  .testimonial__text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.85);
+    font-style: italic;
+  }
+
+  .testimonial__author {
+    margin-top: 16px;
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 0.05em;
+  }
+</style>

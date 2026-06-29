@@ -1,0 +1,220 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="Contato — Studio Crystal Lashes · Santo André, SP"
+  description="Entre em contato com o Studio Crystal Lashes. WhatsApp, endereço, horários e localização em Santo André, SP."
+>
+
+  <section class="page-hero section section--dark">
+    <div class="container">
+      <p class="eyebrow">Fale conosco</p>
+      <h1 style="color: #fff;">Agende seu<br /><em>horário</em></h1>
+      <p style="color: rgba(255,255,255,0.6); margin-top: 16px; max-width: 440px; line-height: 1.7;">
+        A forma mais rápida de agendar é pelo WhatsApp. Respondemos em minutos.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contato-grid">
+
+        <!-- Contato Principal -->
+        <div class="contato-info">
+          <div class="info-block">
+            <h2>WhatsApp</h2>
+            <p class="text-muted">Atendimento rápido, dúvidas e agendamentos.</p>
+            <a
+              href="https://wa.me/5511916637446?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio!"
+              class="btn btn--primary wa-btn"
+              target="_blank"
+              rel="noopener"
+            >
+              Abrir WhatsApp
+            </a>
+            <p class="phone-display">(11) 91663-7446</p>
+          </div>
+
+          <div class="info-block">
+            <h3>Endereço</h3>
+            <address>
+              <p>Av. João Ramalho, 170 – Sala 702</p>
+              <p>Vila Assunção, Santo André – SP</p>
+              <p>CEP 09030-320</p>
+            </address>
+          </div>
+
+          <div class="info-block">
+            <h3>Horários de atendimento</h3>
+            <table class="hours-table">
+              <tbody>
+                <tr>
+                  <td>Terça a Sexta</td>
+                  <td><strong>9h – 19h</strong></td>
+                </tr>
+                <tr>
+                  <td>Sábado</td>
+                  <td class="text-muted">Fechado</td>
+                </tr>
+                <tr>
+                  <td>Domingo / Segunda</td>
+                  <td class="text-muted">Fechado</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="info-block">
+            <h3>Redes sociais</h3>
+            <div class="social-links">
+              <a href="https://www.instagram.com/studiocrystallashes/" target="_blank" rel="noopener" class="social-link">
+                Instagram @studiocrystallashes
+              </a>
+              <a href="https://www.tiktok.com/@crystallashesstudio" target="_blank" rel="noopener" class="social-link">
+                TikTok @crystallashesstudio
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mapa -->
+        <div class="contato-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.2!2d-46.527!3d-23.659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce41d2a3a3a3a3%3A0x0!2sAv.%20Jo%C3%A3o%20Ramalho%2C%20170%20-%20Vila%20Assun%C3%A7%C3%A3o%2C%20Santo%20Andr%C3%A9%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+            width="100%"
+            height="420"
+            style="border:0; border-radius: 8px;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Localização Studio Crystal Lashes — Av. João Ramalho 170, Sala 702, Vila Assunção, Santo André"
+          ></iframe>
+          <p class="map-note text-muted">
+            Acesso pela Av. João Ramalho. Estacionamento disponível nas proximidades.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  .page-hero {
+    padding: 100px 24px 60px;
+  }
+
+  .contato-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 64px;
+    align-items: start;
+  }
+
+  .contato-info {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .info-block h2 {
+    font-size: 1.8rem;
+    color: #0F2820;
+    margin-bottom: 8px;
+  }
+
+  .info-block h3 {
+    font-size: 1.1rem;
+    color: #0F2820;
+    margin-bottom: 12px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+
+  .info-block p {
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .wa-btn {
+    margin-top: 16px;
+    margin-bottom: 12px;
+  }
+
+  .phone-display {
+    font-size: 0.9rem;
+    color: #94A3B8;
+    margin-top: 4px;
+  }
+
+  address {
+    font-style: normal;
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .hours-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .hours-table td {
+    padding: 8px 0;
+    font-size: 0.9rem;
+    color: #475569;
+    border-bottom: 1px solid #F1F5F9;
+  }
+
+  .hours-table td:last-child {
+    text-align: right;
+  }
+
+  .hours-table strong {
+    color: #0F2820;
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .social-link {
+    font-size: 0.9rem;
+    color: #5ECFBF;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .social-link:hover {
+    color: #3BADA0;
+  }
+
+  .contato-map {
+    position: sticky;
+    top: 88px;
+  }
+
+  .map-note {
+    margin-top: 12px;
+    font-size: 0.82rem;
+    text-align: center;
+  }
+
+  @media (max-width: 860px) {
+    .contato-grid {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    .contato-map {
+      position: static;
+    }
+  }
+</style>

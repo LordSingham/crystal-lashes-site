@@ -1,0 +1,82 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  type?: 'website' | 'article';
+  canonicalUrl?: string;
+  jsonLd?: object;
+}
+
+const {
+  title,
+  description,
+  image = '/og-image.jpg',
+  type = 'website',
+  canonicalUrl,
+  jsonLd,
+} = Astro.props;
+
+const siteUrl = 'https://crystallashes.com.br';
+const canonical = canonicalUrl ?? Astro.url.href;
+const ogImage = image.startsWith('http') ? image : `${siteUrl}${image}`;
+
+const localBusinessJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BeautySalon',
+  name: 'Studio Crystal Lashes',
+  description: 'Especialistas em Extensão de Cílios e Harmonização do Olhar em Santo André, SP.',
+  url: siteUrl,
+  telephone: '+55-11-91663-7446',
+  image: `${siteUrl}/og-image.jpg`,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Av. João Ramalho, 170 – Sala 702',
+    addressLocality: 'Santo André',
+    addressRegion: 'SP',
+    postalCode: '09030-320',
+    addressCountry: 'BR',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: -23.6618,
+    longitude: -46.5278,
+  },
+  openingHoursSpecification: [
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Tuesday','Wednesday','Thursday','Friday'], opens: '09:00', closes: '19:00' },
+  ],
+  priceRange: 'R$75 – R$220',
+  servesCuisine: undefined,
+  areaServed: ['Santo André', 'São Bernardo do Campo', 'Mauá', 'São Caetano do Sul', 'ABC Paulista'],
+  sameAs: [
+    'https://www.instagram.com/studiocrystallashes/',
+    'https://www.tiktok.com/@crystallashesstudio',
+    'https://www.facebook.com/studiolashes.crystal',
+  ],
+};
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+
+<!-- Open Graph -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonical} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:site_name" content="Studio Crystal Lashes" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+
+<!-- JSON-LD LocalBusiness (always on) -->
+<script type="application/ld+json" set:html={JSON.stringify(localBusinessJsonLd)} />
+
+<!-- Page-specific JSON-LD (optional) -->
+{jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}

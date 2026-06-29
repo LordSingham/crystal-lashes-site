@@ -1,0 +1,97 @@
+﻿---
+interface Props {
+  name: string;
+  description: string;
+  price: string;
+  duration?: string;
+  highlight?: boolean;
+}
+
+const { name, description, price, duration, highlight = false } = Astro.props;
+const waText = encodeURIComponent(`Olá, gostaria de agendar ${name}!`);
+---
+
+<article class={`service-card ${highlight ? 'service-card--highlight' : ''}`}>
+  <div class="service-card__body">
+    <h3 class="service-card__name">{name}</h3>
+    <p class="service-card__desc">{description}</p>
+    {duration && <p class="service-card__duration">{duration}</p>}
+  </div>
+  <div class="service-card__footer">
+    <span class="service-card__price">{price}</span>
+    <a
+      href={`https://wa.me/5511916637446?text=${waText}`}
+      class="btn btn--primary service-card__btn"
+      target="_blank"
+      rel="noopener"
+    >
+      Agendar
+    </a>
+  </div>
+</article>
+
+<style>
+  .service-card {
+    background: #fff;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    transition: box-shadow 0.25s, transform 0.25s;
+  }
+
+  .service-card:hover {
+    box-shadow: 0 8px 32px rgba(15, 23, 42, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .service-card--highlight {
+    border-color: #5ECFBF;
+    box-shadow: 0 0 0 1px #5ECFBF, 0 0 24px rgba(94, 207, 191, 0.22);
+  }
+
+  .service-card__name {
+    font-size: 1.3rem;
+    color: #0F2820;
+    margin-bottom: 8px;
+  }
+
+  .service-card__desc {
+    font-size: 0.9rem;
+    color: #475569;
+    line-height: 1.6;
+  }
+
+  .service-card__duration {
+    font-size: 0.78rem;
+    color: #94A3B8;
+    margin-top: 8px;
+    letter-spacing: 0.04em;
+  }
+
+  .service-card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid #F1F5F9;
+  }
+
+  .service-card__price {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #0F2820;
+  }
+
+  .service-card__btn {
+    padding: 10px 18px;
+    font-size: 0.78rem;
+    white-space: nowrap;
+  }
+</style>
+

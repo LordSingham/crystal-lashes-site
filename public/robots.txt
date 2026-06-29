@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# AI crawlers — explicitly allowed for AEO/GEO
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GoogleExtendedBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+Sitemap: https://crystallashes.com.br/sitemap-index.xml

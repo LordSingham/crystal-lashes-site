@@ -1,0 +1,301 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.id.replace(/\.md$/, '') },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const slug = post.id.replace(/\.md$/, '');
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: post.data.title,
+  description: post.data.description,
+  image: post.data.image,
+  datePublished: post.data.pubDate.toISOString(),
+  dateModified: (post.data.updatedDate ?? post.data.pubDate).toISOString(),
+  author: {
+    '@type': 'Person',
+    name: 'Stefanie Moura Oliveira',
+    url: 'https://crystallashes.com.br/sobre',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Studio Crystal Lashes',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://crystallashes.com.br/og-image.jpg',
+    },
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': `https://crystallashes.com.br/blog/${slug}`,
+  },
+};
+---
+
+<Base
+  title={`${post.data.title} — Studio Crystal Lashes`}
+  description={post.data.description}
+  image={post.data.image}
+  type="article"
+  canonicalUrl={`https://crystallashes.com.br/blog/${slug}`}
+  jsonLd={jsonLd}
+>
+
+  <article class="blog-post">
+    <header class="post-header section section--dark">
+      <div class="container">
+        <div class="post-meta">
+          <a href="/blog" class="back-link">← Blog</a>
+          <time datetime={post.data.pubDate.toISOString()}>
+            {post.data.pubDate.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })}
+          </time>
+        </div>
+        <h1 style="color: #fff; max-width: 720px;">{post.data.title}</h1>
+        <p class="post-desc">{post.data.description}</p>
+        {post.data.tags.length > 0 && (
+          <div class="post-tags">
+            {post.data.tags.map((tag) => <span class="post-tag">{tag}</span>)}
+          </div>
+        )}
+      </div>
+    </header>
+
+    {post.data.image && (
+      <div class="post-hero-img container">
+        <img src={post.data.image} alt={post.data.title} loading="eager" />
+      </div>
+    )}
+
+    <div class="post-content container">
+      <Content />
+    </div>
+
+    <footer class="post-footer section section--muted">
+      <div class="container text-center">
+        <p class="eyebrow">Ficou com dúvidas?</p>
+        <h2>Agende uma avaliação</h2>
+        <p class="text-muted" style="margin-top: 12px; margin-bottom: 28px;">
+          Converse com a Stefanie pelo WhatsApp — sem compromisso.
+        </p>
+        <a href="https://wa.me/5511916637446?text=Ol%C3%A1%2C%20li%20um%20artigo%20no%20blog%20e%20quero%20saber%20mais!" class="btn btn--primary" target="_blank" rel="noopener">
+          Falar no WhatsApp
+        </a>
+      </div>
+    </footer>
+  </article>
+
+</Base>
+
+<style>
+  .post-header {
+    padding: 100px 24px 60px;
+  }
+
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.45);
+  }
+
+  .back-link {
+    color: #5ECFBF;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .back-link:hover {
+    color: #3BADA0;
+  }
+
+  .post-desc {
+    color: rgba(255,255,255,0.65);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 600px;
+    margin-top: 16px;
+  }
+
+  .post-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .post-tag {
+    font-size: 0.75rem;
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.6);
+    padding: 4px 12px;
+    border-radius: 12px;
+  }
+
+  .post-hero-img {
+    margin: 40px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    max-height: 480px;
+  }
+
+  .post-hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .post-content {
+    max-width: 760px;
+    padding-top: 0;
+    padding-bottom: 80px;
+  }
+
+  .post-content :global(h2) {
+    font-size: 1.8rem;
+    margin: 40px 0 16px;
+    color: #0F2820;
+  }
+
+  .post-content :global(h3) {
+    font-size: 1.3rem;
+    margin: 32px 0 12px;
+    color: #0F2820;
+  }
+
+  .post-content :global(p) {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #334155;
+    margin-bottom: 20px;
+  }
+
+  .post-content :global(ul),
+  .post-content :global(ol) {
+    padding-left: 24px;
+    margin-bottom: 20px;
+  }
+
+  .post-content :global(li) {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #334155;
+    margin-bottom: 6px;
+  }
+
+  .post-content :global(strong) {
+    color: #0F2820;
+    font-weight: 600;
+  }
+
+  .post-content :global(blockquote) {
+    border-left: 3px solid #5ECFBF;
+    padding: 16px 24px;
+    background: #F8FAFC;
+    border-radius: 0 8px 8px 0;
+    margin: 24px 0;
+    font-style: italic;
+    color: #475569;
+  }
+
+  .post-content :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 24px;
+    font-size: 0.9rem;
+  }
+
+  .post-content :global(th) {
+    background: #F1F5F9;
+    padding: 10px 16px;
+    text-align: left;
+    font-weight: 600;
+    color: #0F2820;
+    border-bottom: 2px solid #E2E8F0;
+  }
+
+  .post-content :global(td) {
+    padding: 10px 16px;
+    border-bottom: 1px solid #F1F5F9;
+    color: #334155;
+  }
+
+  .post-content :global(a) {
+    color: #5ECFBF;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .post-content :global(a:hover) {
+    color: #3BADA0;
+  }
+
+  /* Imagens dentro do post */
+  .post-content :global(img) {
+    width: 100%;
+    border-radius: 8px;
+    margin: 32px 0;
+    object-fit: cover;
+  }
+
+  .post-content :global(figure) {
+    margin: 36px 0;
+  }
+
+  .post-content :global(figcaption) {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #94A3B8;
+    margin-top: 10px;
+    font-style: italic;
+  }
+
+  /* Imagem que ocupa mais largura que o texto (destaque visual) */
+  .post-content :global(.img-wide) {
+    margin-left: -80px;
+    margin-right: -80px;
+    width: calc(100% + 160px);
+    max-width: none;
+    border-radius: 8px;
+  }
+
+  /* Imagem flutuando à direita (texto ao lado) */
+  .post-content :global(.img-float) {
+    float: right;
+    width: 45%;
+    margin: 8px 0 24px 32px;
+    border-radius: 8px;
+  }
+
+  @media (max-width: 640px) {
+    .post-content :global(.img-wide) {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
+
+    .post-content :global(.img-float) {
+      float: none;
+      width: 100%;
+      margin: 16px 0;
+    }
+  }
+
+  /* Separador visual entre seções */
+  .post-content :global(hr) {
+    border: none;
+    border-top: 1px solid #E2E8F0;
+    margin: 40px 0;
+  }
+</style>
