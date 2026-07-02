@@ -23,7 +23,11 @@ const { title, description, image, type = 'website', canonicalUrl, jsonLd } = As
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="generator" content={Astro.generator} />
+  <meta name="theme-color" content="#0F2820" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="font" href="/fonts/better-signature-regular.ttf" type="font/truetype" crossorigin />
   <SEO
     title={title}
     description={description}
@@ -34,8 +38,9 @@ const { title, description, image, type = 'website', canonicalUrl, jsonLd } = As
   />
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Ir para o conteúdo</a>
   <Header />
-  <main>
+  <main id="main-content">
     <slot />
   </main>
   <Footer />

@@ -2,6 +2,7 @@
 title: "Quanto Dura a Extensão de Cílios? Guia Completo de Manutenção"
 description: "Descubra quanto tempo dura a extensão de cílios, o que acelera a queda dos fios e como manter o visual impecável por mais tempo com os cuidados certos."
 pubDate: 2026-07-08
+image: "/fotos/blog/blog-quanto-tempo-dura-extensao-cilios.jpg"
 tags: ["extensão de cílios", "manutenção", "cuidados", "durabilidade"]
 ---
 

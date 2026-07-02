@@ -1,4 +1,4 @@
-﻿---
+---
 import Base from '../layouts/Base.astro';
 ---
 
@@ -7,21 +7,61 @@ import Base from '../layouts/Base.astro';
   description="Conheça Stefanie Moura Oliveira, fundadora do Studio Crystal Lashes. 7 anos transformando olhares com a técnica Crystal exclusiva em Santo André, SP."
 >
 
-  <section class="sobre-hero section section--dark">
-    <div class="container">
-      <p class="eyebrow">A arquiteta do olhar</p>
-      <h1 style="color: #fff; max-width: 600px;">Stefanie Moura:<br /><em>do CLT ao Crystal</em></h1>
+  <!-- Hero -->
+  <section class="sobre-hero section--dark">
+    <div class="container sobre-hero__inner">
+      <div class="sobre-hero__content">
+        <p class="eyebrow">A arquiteta do olhar</p>
+        <h1 style="color: #fff; margin: 12px 0 20px;">Stefanie Moura:<br /><em>do CLT ao Crystal</em></h1>
+        <p style="color: rgba(255,255,255,0.66); line-height: 1.8; max-width: 520px;">
+          7 anos especializando o olhar clínico e 3 anos em Harmonização do Olhar. A Stefanie une precisão técnica, escuta e senso estético para criar extensões que respeitam o formato de cada olho. Foi assim que transformou a experiência do CLT em um studio autoral em Vila Assunção, Santo André.
+        </p>
+      </div>
+      <div class="sobre-hero__photo">
+        <img
+          src="/fotos/stefanie/stefanieoriginal-27.jpg"
+          alt="Stefanie Moura, fundadora do Studio Crystal Lashes"
+          loading="eager"
+          width="560"
+          height="700"
+        />
+      </div>
     </div>
   </section>
 
+  <!-- Autoridade -->
+  <section class="autoridade">
+    <div class="container">
+      <div class="autoridade-grid">
+        <div class="fact-card reveal reveal-delay-1">
+          <span class="fact-number">7+</span>
+          <span class="fact-label">anos de experiência em lash</span>
+        </div>
+        <div class="fact-card reveal reveal-delay-2">
+          <span class="fact-number">3</span>
+          <span class="fact-label">anos em Harmonização do Olhar</span>
+        </div>
+        <div class="fact-card reveal reveal-delay-3">
+          <span class="fact-number">4.8★</span>
+          <span class="fact-label">avaliação média no Google (46 avaliações)</span>
+        </div>
+        <div class="fact-card fact-card--highlight reveal reveal-delay-4">
+          <span class="fact-number">Crystal</span>
+          <span class="fact-label">técnica exclusiva de mapeamento</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- História -->
   <section class="section">
     <div class="container sobre-content">
-      <div class="sobre-text">
+      <div class="sobre-text reveal">
         <p class="eyebrow">A história</p>
         <h2>Uma escolha que mudou tudo</h2>
         <p>
-          Stefanie Moura Oliveira não planejou ser lash designer. Ela planejou ser muita coisa antes disso —
-          e foi. Carreira CLT, rotina estruturada, estabilidade aparente. Mas algo faltava.
+          Stefanie Moura Oliveira não planejou ser lash designer. Ela planejou ser muita coisa antes disso. E foi.
+          Carreira CLT, rotina estruturada, estabilidade aparente. Mas algo faltava.
         </p>
         <p>
           A virada veio quando ela descobriu a extensão de cílios não como serviço de beleza, mas como forma
@@ -30,7 +70,7 @@ import Base from '../layouts/Base.astro';
         </p>
         <p>
           Ela largou o CLT. Especializou-se. Construiu do zero o Studio Crystal Lashes em Vila Assunção,
-          Santo André. Desenvolveu uma técnica própria — o <strong>Mapeamento Crystal</strong> — que analisa
+          Santo André. Desenvolveu uma técnica própria, o <strong>Mapeamento Crystal</strong>, que analisa
           o formato de cada olho para criar harmonias, não fórmulas genéricas.
         </p>
         <p>
@@ -39,69 +79,90 @@ import Base from '../layouts/Base.astro';
         </p>
         <blockquote class="sobre-quote">
           "Meu objetivo é simples: fazer cada mulher sair mais confiante do que entrou."
-          <footer>— Stefanie Moura</footer>
+          <footer>Stefanie Moura</footer>
         </blockquote>
       </div>
 
-      <aside class="sobre-facts">
-        <div class="fact-card">
-          <span class="fact-number">7+</span>
-          <span class="fact-label">anos de experiência em lash</span>
-        </div>
-        <div class="fact-card">
-          <span class="fact-number">3</span>
-          <span class="fact-label">anos em Harmonização do Olhar</span>
-        </div>
-        <div class="fact-card">
-          <span class="fact-number">4.8★</span>
-          <span class="fact-label">avaliação média no Google</span>
-        </div>
-        <div class="fact-card">
-          <span class="fact-number">1</span>
-          <span class="fact-label">técnica exclusiva: Mapeamento Crystal</span>
-        </div>
+      <aside class="sobre-aside reveal reveal-delay-1">
+        <img
+          src="/fotos/stefanie/stefanie-trabalhando.png"
+          alt="Stefanie Moura trabalhando no Studio Crystal Lashes"
+          class="sobre-aside__img"
+          loading="lazy"
+          width="480"
+          height="600"
+        />
       </aside>
     </div>
   </section>
 
-  <section class="section section--muted">
+  <!-- Mapeamento Crystal -->
+  <section class="section section--calcita">
     <div class="container">
-      <div class="text-center" style="margin-bottom: 48px;">
+      <div class="text-center reveal" style="margin-bottom: 48px;">
         <p class="eyebrow">O método</p>
         <h2>Por que o Mapeamento Crystal é diferente</h2>
       </div>
       <div class="metodo-grid">
-        <div class="metodo-step">
+        <div class="metodo-step reveal reveal-delay-1">
           <div class="step-num">01</div>
           <h3>Análise do formato do olho</h3>
-          <p>Cada olho é único. O Mapeamento Crystal começa com uma análise da abertura, posicionamento e curvatura natural antes de qualquer decisão sobre fios.</p>
+          <p>Cada olho é único. O Mapeamento Crystal começa com uma análise do formato do olho, posicionamento e curvatura natural dos cílios antes de qualquer decisão sobre fios.</p>
         </div>
-        <div class="metodo-step">
+        <div class="metodo-step reveal reveal-delay-2">
           <div class="step-num">02</div>
           <h3>Projeto personalizado</h3>
-          <p>Comprimento, curvatura, espessura e efeito escolhidos em função do seu rosto — não de uma tendência genérica. O objetivo é harmonia, não destaque forçado.</p>
+          <p>Comprimento, curvatura, espessura e efeito escolhidos em função do seu rosto, não de uma tendência genérica. O objetivo é harmonia, não destaque forçado.</p>
         </div>
-        <div class="metodo-step">
+        <div class="metodo-step reveal reveal-delay-3">
           <div class="step-num">03</div>
-          <h3>Aplicação com precisão cirúrgica</h3>
+          <h3>Aplicação com precisão</h3>
           <p>Cada fio fixado individualmente no cílio natural. Técnica que respeita a saúde do fio natural e garante durabilidade máxima.</p>
         </div>
-        <div class="metodo-step">
+        <div class="metodo-step reveal reveal-delay-4">
           <div class="step-num">04</div>
           <h3>Resultado que é seu</h3>
-          <p>O resultado final não parece extensão — parece seu olho, mas a melhor versão possível. Essa é a marca do Mapeamento Crystal.</p>
+          <p>O resultado final não parece extensão, parece seu olho, mas a melhor versão possível. Essa é a marca do Mapeamento Crystal.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section cta-sobre section--dark">
+  <!-- Ambiente -->
+  <section class="section ambiente">
+    <div class="container">
+      <div class="ambiente-grid reveal">
+        <div class="ambiente-fotos">
+          <img src="/fotos/espaco/espaco-atendimento.png" alt="Atendimento no Studio Crystal Lashes" class="ambiente-foto ambiente-foto--main" loading="eager" width="800" height="600" />
+          <img src="/fotos/espaco/espaco-02.png" alt="Detalhe do studio Crystal Lashes" class="ambiente-foto" loading="eager" width="400" height="300" />
+          <img src="/fotos/espaco/espaco-03.png" alt="Organização do studio" class="ambiente-foto" loading="eager" width="400" height="300" />
+        </div>
+        <div class="ambiente-text">
+          <p class="eyebrow">O ambiente</p>
+          <h2>Pensado para o seu relaxamento</h2>
+          <p class="text-muted">
+            Temperatura controlada, luz calibrada e música suave. A maioria das clientes adormece durante o procedimento. Isso não é coincidência, é o Lash Nap.
+          </p>
+          <p class="text-muted" style="margin-top: 16px;">
+            Av. João Ramalho, 170, Sala 702<br />
+            Vila Assunção, Santo André, SP
+          </p>
+          <a href="https://wa.me/5511916637446?text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20o%20studio!" class="btn btn--outline" style="margin-top: 28px;" target="_blank" rel="noopener">
+            Agendar uma visita
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--dark">
     <div class="container text-center">
       <h2 style="color: #fff;">Pronta para conhecer<br /><em>a diferença na prática?</em></h2>
       <p style="color: rgba(255,255,255,0.6); margin-top: 16px; margin-bottom: 32px;">
         Agende sua consulta em Vila Assunção, Santo André.
       </p>
-      <a href="https://wa.me/5511916637446?text=Ol%C3%A1%2C%20vi%20o%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio!" class="btn btn--primary" target="_blank" rel="noopener">
+      <a href="https://wa.me/5511916637446?text=Ol%C3%A1%2C%20vi%20o%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio!" class="btn btn--calcita" target="_blank" rel="noopener">
         Agendar pelo WhatsApp
       </a>
     </div>
@@ -109,38 +170,184 @@ import Base from '../layouts/Base.astro';
 
 </Base>
 
+<script>
+  // Scroll reveal
+  const observer = new IntersectionObserver(
+    (entries) => entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-visible');
+        observer.unobserve(e.target);
+      }
+    }),
+    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+  );
+
+  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+</script>
+
 <style>
+  /* ── Hero ── */
   .sobre-hero {
-    padding: 100px 24px 60px;
+    min-height: auto;
+    padding: 118px 0 88px;
+    background:
+      linear-gradient(
+        180deg,
+        var(--calcita) 0%,
+        rgba(124, 224, 211, 0.94) 62%,
+        var(--calcita-soft) 100%
+      );
   }
 
+  .sobre-hero__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .sobre-hero__inner {
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      padding-top: 0;
+      min-height: 600px;
+    }
+  }
+
+  .sobre-hero__content h1 {
+    font-size: clamp(2.5rem, 4.6vw, 4rem);
+    line-height: 1.08;
+  }
+
+  .sobre-hero__photo {
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: var(--radius);
+    padding: 0;
+    background: rgba(255, 255, 255, 0.16);
+    box-shadow: 0 28px 70px rgba(15, 40, 32, 0.18);
+    overflow: hidden;
+    order: -1;
+    justify-self: center;
+    width: min(100%, 390px);
+  }
+
+  .sobre-hero__photo::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 80px rgba(124, 224, 211, 0.14);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  @media (min-width: 768px) {
+    .sobre-hero__photo { order: 0; }
+  }
+
+  .sobre-hero__photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center center;
+    border-radius: var(--radius);
+    filter: brightness(1.05) contrast(0.97) saturate(0.98);
+  }
+
+  @media (min-width: 768px) {
+    .sobre-hero__photo img { height: auto; }
+  }
+
+  /* ── Autoridade ── */
+  .autoridade {
+    padding: 40px 0 88px;
+    background:
+      linear-gradient(
+        180deg,
+        var(--calcita-soft) 0%,
+        rgba(232, 252, 249, 0.96) 50%,
+        var(--calcita-soft) 100%
+      );
+  }
+
+  .autoridade-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  @media (min-width: 768px) {
+    .autoridade-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  .fact-card {
+    background: var(--white);
+    border: var(--border-default);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: border-color var(--transition);
+  }
+
+  .fact-card:hover { border-color: var(--calcita); }
+
+  .fact-card--highlight {
+    border-color: var(--calcita);
+    background: var(--calcita-soft);
+  }
+
+  .fact-number {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--teal-deep);
+    line-height: 1;
+  }
+
+  .fact-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+
+  /* ── História ── */
   .sobre-content {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 64px;
+    grid-template-columns: 1fr;
+    gap: 48px;
     align-items: start;
   }
 
+  @media (min-width: 768px) {
+    .sobre-content {
+      grid-template-columns: 1.4fr 1fr;
+      gap: 64px;
+    }
+  }
+
+  .sobre-text h2 { margin: 12px 0 28px; }
+
   .sobre-text p {
     font-size: 1rem;
-    color: #475569;
+    color: var(--text-muted);
     line-height: 1.8;
     margin-bottom: 16px;
   }
 
-  .sobre-text h2 {
-    margin: 12px 0 28px;
-  }
-
   .sobre-quote {
-    border-left: 3px solid #5ECFBF;
+    border-left: 3px solid var(--calcita);
     padding: 20px 24px;
     margin-top: 28px;
-    background: #F8FAFC;
-    border-radius: 0 8px 8px 0;
+    background: var(--calcita-soft);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
     font-style: italic;
     font-size: 1.05rem;
-    color: #0F2820;
+    color: var(--teal-deep);
     line-height: 1.6;
   }
 
@@ -148,82 +355,103 @@ import Base from '../layouts/Base.astro';
     margin-top: 12px;
     font-size: 0.82rem;
     font-style: normal;
-    color: #94A3B8;
+    color: var(--text-muted);
   }
 
-  .sobre-facts {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    position: sticky;
-    top: 90px;
+  .sobre-aside__img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    object-fit: cover;
+    height: 400px;
   }
 
-  .fact-card {
-    background: #F8FAFC;
-    border: 1px solid #E2E8F0;
-    border-radius: 8px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+  @media (min-width: 768px) {
+    .sobre-aside {
+      position: sticky;
+      top: 90px;
+    }
+
+    .sobre-aside__img { height: 500px; }
   }
 
-  .fact-number {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem;
-    font-weight: 400;
-    color: #0F2820;
-    line-height: 1;
-  }
-
-  .fact-label {
-    font-size: 0.78rem;
-    color: #94A3B8;
-    line-height: 1.3;
-  }
-
+  /* ── Mapeamento steps ── */
   .metodo-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 32px;
+    gap: 24px;
   }
 
   .metodo-step {
     padding: 28px;
-    background: #fff;
-    border: 1px solid #E2E8F0;
-    border-radius: 8px;
+    background: var(--white);
+    border: var(--border-default);
+    border-radius: var(--radius-lg);
+    transition: border-color var(--transition), box-shadow var(--transition);
+  }
+
+  .metodo-step:hover {
+    border-color: var(--calcita);
+    box-shadow: var(--shadow-soft);
   }
 
   .step-num {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--font-heading);
     font-size: 2.5rem;
-    color: #5ECFBF;
-    font-weight: 300;
+    color: var(--calcita);
+    font-weight: 400;
     line-height: 1;
     margin-bottom: 12px;
   }
 
   .metodo-step h3 {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+    color: var(--teal-deep);
     margin-bottom: 10px;
   }
 
   .metodo-step p {
     font-size: 0.88rem;
-    color: #475569;
+    color: var(--text-muted);
     line-height: 1.7;
   }
 
-  @media (max-width: 768px) {
-    .sobre-content {
-      grid-template-columns: 1fr;
-    }
+  /* ── Ambiente ── */
+  .ambiente-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
+  }
 
-    .sobre-facts {
-      position: static;
+  @media (min-width: 768px) {
+    .ambiente-grid {
+      grid-template-columns: 1.4fr 1fr;
+      gap: 64px;
     }
   }
-</style>
 
+  .ambiente-fotos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .ambiente-foto {
+    border-radius: var(--radius-md);
+    object-fit: cover;
+    width: 100%;
+    height: 180px;
+  }
+
+  .ambiente-foto--main {
+    grid-column: 1 / -1;
+    height: 260px;
+  }
+
+  .ambiente-text h2 { margin: 12px 0 20px; }
+
+  .ambiente-text .text-muted {
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+</style>

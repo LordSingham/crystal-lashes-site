@@ -1,102 +1,157 @@
-﻿---
+---
 import Base from '../layouts/Base.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 
 const lashServices = [
   {
     name: 'Volume Crystal',
-    description: 'A técnica exclusiva do Studio Crystal Lashes. O Mapeamento Crystal analisa o formato individual do olho para definir a curvatura, comprimento e espessura ideais. Resultado: um olhar harmonizado que parece natural — porque foi feito para você.',
-    price: 'R$210',
-    duration: '2h30 – 3h',
+    description: 'A técnica exclusiva do Studio Crystal Lashes. O Mapeamento Crystal analisa o formato individual do olho para definir a curvatura, comprimento e espessura ideais. Resultado: um olhar harmonizado que parece natural, porque foi feito para você.',
+    price: 'R$250',
+    duration: '2h – 2h30',
     highlight: true,
   },
   {
-    name: 'Volume Egípcio / Fox Eyes',
-    description: 'Efeito alongado e dramático. Mapeamento com fios mais longos nas extremidades para elevar e alongar o olhar. Ideal para quem quer presença e impacto.',
-    price: 'R$220',
-    duration: '2h30 – 3h',
+    name: 'Fox Eyes',
+    description: 'Efeito alongado. Mapeamento com fios mais longos nas extremidades para elevar e alongar o olhar. Ideal para quem quer presença e impacto.',
+    price: 'R$250',
+    duration: '2h',
   },
   {
-    name: 'Extensão Elegance / Brasileiro',
+    name: 'Elegance / Brasileiro',
     description: 'Clássica e sofisticada. Define o olhar de forma delicada e natural, sem exageros. A escolha perfeita para o dia a dia profissional.',
-    price: 'R$200',
-    duration: '2h – 2h30',
+    price: 'R$250',
+    duration: '2h',
+  },
+  {
+    name: 'Egípcio',
+    description: 'Efeito mais volumoso. Modelo com fios mais volumosos, na medida certa. Para quem procura um olhar mais marcante, sem exageros.',
+    price: 'R$250',
+    duration: '2h',
   },
   {
     name: 'Manutenção',
-    description: 'Reposição dos fios caídos para manter o visual impecável entre sessões completas. Recomendada a cada 21–28 dias para resultado duradouro.',
-    price: 'R$120–150',
+    description: 'Reposição dos fios que caíram e os que cresceram, para manter o visual impecável entre sessões completas. Recomendada a cada 15 a 21 dias para resultado duradouro.',
+    price: 'R$150–175',
     duration: '1h – 1h30',
-  },
-  {
-    name: 'Lash Lifting',
-    description: 'Curvatura e definição nos seus cílios naturais. Sem extensão, sem fios — apenas o potencial do seu próprio cílio revelado. Dura até 8 semanas.',
-    price: 'R$200',
-    duration: '1h',
   },
 ];
 
-const browServices = [
-  {
-    name: 'Design de Sobrancelha',
-    description: 'Modelagem precisa que enquadra e harmoniza o rosto. Técnica manual ou com linha, definindo o arco ideal para o formato do seu rosto.',
-    price: 'R$75',
-    duration: '30–40 min',
-  },
-  {
-    name: 'Brow Lamination',
-    description: 'Sobrancelhas fixadas na direção certa, com aspecto natural e volumoso. Efeito dura até 6–8 semanas. Inclui design.',
-    price: 'R$190',
-    duration: '1h',
-  },
+const efeitos = [
+  { nome: 'Volume Crystal', perfil: 'Qualquer formato de olho. Análise individual determina o mapeamento.', visual: 'Natural, harmonizado, elegante.' },
+  { nome: 'Fox Eyes', perfil: 'Olhos amendoados ou que precisam de elevação na extremidade.', visual: 'Alongado, felino, marcante.' },
+  { nome: 'Elegance / Brasileiro', perfil: 'Olhos redondos, sobrancelhas bem definidas, pele clara ou escura.', visual: 'Delicado, natural, profissional.' },
+  { nome: 'Egípcio', perfil: 'Quem quer volume, mas sem exagero. Olhar que chama atenção.', visual: 'Volumoso, intenso, sofisticado.' },
 ];
 ---
 
 <Base
   title="Serviços e Preços — Studio Crystal Lashes, Santo André"
-  description="Extensão de cílios, Lash Lifting, Design de Sobrancelha e Brow Lamination em Santo André, SP. Preços e informações completas."
+  description="Extensão de cílios em Santo André, SP. Volume Crystal, Fox Eyes, Elegance, Egípcio e Manutenção. Preços e informações completas."
 >
 
-  <section class="page-hero section section--dark">
+  <section class="page-hero section--dark">
+    <div class="container page-hero__inner">
+      <div class="reveal">
+        <p class="eyebrow">O que oferecemos</p>
+        <h1 style="color: #fff; margin: 12px 0 16px;">Serviços<br /><em>& Preços</em></h1>
+        <p style="color: rgba(255,255,255,0.6); max-width: 480px; line-height: 1.7;">
+          Todos os procedimentos realizados com avaliação individual do olhar. Nada genérico.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section class="section">
     <div class="container">
-      <p class="eyebrow">O que oferecemos</p>
-      <h1 style="color: #fff;">Serviços<br /><em>& Preços</em></h1>
-      <p style="color: rgba(255,255,255,0.6); margin-top: 16px; max-width: 480px; line-height: 1.7;">
-        Todos os procedimentos realizados com avaliação individual do olhar. Nada genérico.
+      <div class="reveal" style="margin-bottom: 40px;">
+        <p class="eyebrow">Extensão de Cílios</p>
+        <h2>Cílios</h2>
+      </div>
+      <div class="grid-2">
+        {lashServices.map((s, i) => (
+          <div class={`reveal reveal-delay-${(i % 4) + 1}`}>
+            <ServiceCard {...s} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Como escolher o efeito -->
+  <section class="section section--calcita como-escolher">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom: 48px;">
+        <p class="eyebrow">Ajuda para decidir</p>
+        <h2>Como escolher o efeito ideal</h2>
+        <p class="text-muted" style="margin-top: 12px; max-width: 520px; margin-left: auto; margin-right: auto;">
+          Não tem certeza qual técnica combina com você? A Stefanie faz essa análise na consulta, mas este guia ajuda a entender as possibilidades.
+        </p>
+      </div>
+      <div class="efeitos-grid">
+        {efeitos.map((e, i) => (
+          <div class={`efeito-card reveal reveal-delay-${(i % 4) + 1}`}>
+            <h3>{e.nome}</h3>
+            <div class="efeito-row">
+              <span class="efeito-label">Perfil</span>
+              <p>{e.perfil}</p>
+            </div>
+            <div class="efeito-row">
+              <span class="efeito-label">Visual</span>
+              <p>{e.visual}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <p class="como-nota text-center">
+        Em caso de dúvida, agende e a Stefanie faz a análise presencialmente. O Mapeamento Crystal foi criado exatamente para isso.
       </p>
     </div>
   </section>
 
-  <section class="section">
+  <!-- Informações importantes -->
+  <section class="section info-section">
     <div class="container">
-      <p class="eyebrow">Extensão de Cílios</p>
-      <h2 style="margin-bottom: 40px;">Cílios</h2>
-      <div class="grid-2">
-        {lashServices.map((s) => <ServiceCard {...s} />)}
+      <div class="text-center reveal" style="margin-bottom: 48px;">
+        <p class="eyebrow">Antes de agendar</p>
+        <h2>Informações importantes</h2>
+      </div>
+      <div class="info-grid">
+        <div class="info-card reveal reveal-delay-1">
+          <div class="info-icon">R$30</div>
+          <h3>Sinal de agendamento</h3>
+          <p>É cobrado um sinal de R$30 para confirmar o horário. O valor é abatido do serviço no dia do atendimento.</p>
+        </div>
+        <div class="info-card reveal reveal-delay-2">
+          <div class="info-icon">24h</div>
+          <h3>Prazo para remarcação</h3>
+          <p>Reagendamentos devem ser feitos com pelo menos 24 horas de antecedência. Cancelamentos fora desse prazo acarretam perda do sinal.</p>
+        </div>
+        <div class="info-card reveal reveal-delay-3">
+          <div class="info-icon">10'</div>
+          <h3>Tolerância de pontualidade</h3>
+          <p>O studio aguarda até 10 minutos após o horário agendado. Atrasos maiores podem resultar em reagendamento.</p>
+        </div>
+        <div class="info-card reveal reveal-delay-4">
+          <div class="info-icon">Pix</div>
+          <h3>Formas de pagamento</h3>
+          <p>Pix, débito e crédito em até 3x. O sinal é pago via Pix no momento do agendamento.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section section--muted">
-    <div class="container">
-      <p class="eyebrow">Sobrancelhas</p>
-      <h2 style="margin-bottom: 40px;">Brows</h2>
-      <div class="grid-2">
-        {browServices.map((s) => <ServiceCard {...s} />)}
-      </div>
-    </div>
-  </section>
-
-  <section class="section faq-section">
+  <!-- FAQ -->
+  <section class="section faq-section section--calcita">
     <div class="container">
       <div class="text-center" style="margin-bottom: 48px;">
-        <p class="eyebrow">Antes de agendar</p>
+        <p class="eyebrow">Dúvidas</p>
         <h2>Perguntas frequentes</h2>
       </div>
       <div class="faq-grid">
         <details class="faq-item">
           <summary>Quanto tempo dura a extensão?</summary>
-          <p>Em média 3–4 semanas com cuidados adequados. A manutenção a cada 21–28 dias mantém o visual impecável de forma contínua.</p>
+          <p>Em média 3 a 4 semanas com cuidados adequados. A manutenção a cada 15 a 21 dias mantém o visual impecável de forma contínua.</p>
         </details>
         <details class="faq-item">
           <summary>A extensão danifica o cílio natural?</summary>
@@ -104,7 +159,7 @@ const browServices = [
         </details>
         <details class="faq-item">
           <summary>Posso usar máscara de cílios?</summary>
-          <p>Não é necessário e não é recomendado. A extensão já oferece o volume e o comprimento desejados. Mascar à base de óleo compromete a durabilidade da cola.</p>
+          <p>Não é necessário e não é recomendado. A extensão já oferece o volume e o comprimento desejados. Máscara de cílios compromete a durabilidade da cola.</p>
         </details>
         <details class="faq-item">
           <summary>O que é o Lash Nap?</summary>
@@ -112,23 +167,24 @@ const browServices = [
         </details>
         <details class="faq-item">
           <summary>Como fazer para agendar?</summary>
-          <p>Pelo WhatsApp — clique em qualquer botão "Agendar" neste site. O atendimento é de terça a sexta-feira na Av. João Ramalho, 170, Sala 702, Vila Assunção, Santo André.</p>
+          <p>Pelo WhatsApp, clique em qualquer botão "Agendar" neste site. O atendimento é de terça a sexta-feira na Av. João Ramalho, 170, Sala 702, Vila Assunção, Santo André.</p>
         </details>
         <details class="faq-item">
-          <summary>Tenho alergia a cola. Posso fazer?</summary>
+          <summary>Tenho sensibilidade a cola. Posso fazer?</summary>
           <p>Depende do tipo de sensibilidade. Entre em contato antes de agendar para conversarmos sobre o histórico e eventualmente realizarmos um teste de contato.</p>
         </details>
       </div>
     </div>
   </section>
 
+  <!-- CTA -->
   <section class="section section--dark cta-serv">
     <div class="container text-center">
       <h2 style="color: #fff;">Pronta para agendar?</h2>
       <p style="color: rgba(255,255,255,0.6); margin: 16px 0 32px;">
         Terça a sexta · Vila Assunção, Santo André · (11) 91663-7446
       </p>
-      <a href="https://wa.me/5511916637446?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio!" class="btn btn--primary" target="_blank" rel="noopener">
+      <a href="https://wa.me/5511916637446?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio!" class="btn btn--calcita" target="_blank" rel="noopener">
         Falar no WhatsApp
       </a>
     </div>
@@ -137,10 +193,109 @@ const browServices = [
 </Base>
 
 <style>
-  .page-hero {
-    padding: 100px 24px 60px;
+  /* ── Como escolher ── */
+  .efeitos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
   }
 
+  .efeito-card {
+    background: var(--white);
+    border: var(--border-default);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition), background var(--transition);
+  }
+
+  .efeito-card:hover {
+    background: linear-gradient(180deg, var(--white), var(--calcita-soft));
+    border-color: var(--calcita);
+    box-shadow: 0 18px 44px rgba(15,40,32,0.12);
+    transform: translateY(-5px);
+  }
+
+  .efeito-card:hover h3 {
+    color: var(--teal-dark);
+  }
+
+  .efeito-card h3 {
+    font-size: 1.05rem;
+    color: var(--teal-deep);
+    margin-bottom: 16px;
+  }
+
+  .efeito-row {
+    margin-bottom: 12px;
+  }
+
+  .efeito-label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--calcita);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .efeito-row p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .como-nota {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    max-width: 540px;
+    margin: 0 auto;
+    font-style: italic;
+  }
+
+  /* ── Informações importantes ── */
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+  }
+
+  .info-card {
+    padding: 28px;
+    border: var(--border-default);
+    border-radius: var(--radius-lg);
+    background: var(--white);
+    transition: border-color var(--transition), box-shadow var(--transition);
+  }
+
+  .info-card:hover {
+    border-color: var(--calcita);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .info-icon {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--calcita);
+    line-height: 1;
+    margin-bottom: 14px;
+  }
+
+  .info-card h3 {
+    font-size: 1rem;
+    color: var(--teal-deep);
+    margin-bottom: 10px;
+  }
+
+  .info-card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  /* ── FAQ ── */
   .faq-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -150,9 +305,10 @@ const browServices = [
   }
 
   .faq-item {
-    border: 1px solid #E2E8F0;
-    border-radius: 8px;
+    border: var(--border-default);
+    border-radius: var(--radius-md);
     overflow: hidden;
+    background: var(--white);
   }
 
   .faq-item summary {
@@ -164,7 +320,8 @@ const browServices = [
     justify-content: space-between;
     align-items: center;
     gap: 12px;
-    color: #0F2820;
+    color: var(--teal-deep);
+    font-size: 0.9rem;
   }
 
   .faq-item summary::-webkit-details-marker { display: none; }
@@ -172,9 +329,9 @@ const browServices = [
   .faq-item summary::after {
     content: '+';
     font-size: 1.2rem;
-    color: #5ECFBF;
+    color: var(--calcita);
     flex-shrink: 0;
-    transition: transform 0.2s;
+    transition: transform var(--transition-fast);
   }
 
   .faq-item[open] summary::after {
@@ -183,9 +340,68 @@ const browServices = [
 
   .faq-item p {
     padding: 0 24px 20px;
-    font-size: 0.9rem;
-    color: #475569;
+    font-size: 0.88rem;
+    color: var(--text-muted);
     line-height: 1.7;
+    /* animação de abertura via JS */
+    overflow: hidden;
+    transition: max-height 0.38s cubic-bezier(0.16,1,0.3,1);
   }
+
+  /* estados page-hero sem padding lateral extra (container cuida disso) */
+  .page-hero {
+    padding: 100px 0 60px;
+  }
+
+  .page-hero__inner { padding-top: 0; padding-bottom: 0; }
 </style>
 
+<script>
+  // Scroll reveal
+  const revealObs = new IntersectionObserver(
+    (entries) => entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-visible');
+        revealObs.unobserve(e.target);
+      }
+    }),
+    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+  );
+
+  document.querySelectorAll('.reveal').forEach((el) => revealObs.observe(el));
+
+  // FAQ: animação suave de altura ao abrir/fechar
+  document.querySelectorAll<HTMLDetailsElement>('.faq-item').forEach((details) => {
+    const summary = details.querySelector('summary')!;
+    const content = details.querySelector('p')!;
+
+    // altura 0 initial quando fechado
+    if (!details.open) content.style.maxHeight = '0';
+
+    summary.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      if (details.open) {
+        // Fechar: max-height → 0
+        content.style.maxHeight = content.scrollHeight + 'px';
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => { content.style.maxHeight = '0'; });
+        });
+        content.addEventListener('transitionend', () => {
+          details.open = false;
+        }, { once: true });
+      } else {
+        // Abrir
+        details.open = true;
+        const h = content.scrollHeight;
+        content.style.maxHeight = '0';
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => { content.style.maxHeight = h + 'px'; });
+        });
+        content.addEventListener('transitionend', () => {
+          content.style.maxHeight = ''; // remove fixed height após animação
+        }, { once: true });
+      }
+    });
+  });
+</script>

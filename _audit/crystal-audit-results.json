@@ -1,0 +1,836 @@
+[
+  {
+    "path": "/",
+    "file": "C:/Users/RodrigoOliveira/dev/02_Crystal_Lashes_OS/crystal-lashes-site/_audit/crystal-audit-home.png",
+    "metrics": {
+      "heroHeight": 791,
+      "heroImg": "/fotos/stefanie/stefanie-hero.jpg",
+      "radii": [
+        {
+          "cls": "btn btn--primary header__cta",
+          "radius": "999px",
+          "tag": "A"
+        },
+        {
+          "cls": "btn btn--primary",
+          "radius": "999px",
+          "tag": "A"
+        },
+        {
+          "cls": "btn btn--outline",
+          "radius": "999px",
+          "tag": "A"
+        },
+        {
+          "cls": "hero__photo-img",
+          "radius": "18px",
+          "tag": "IMG"
+        },
+        {
+          "cls": "espaco-foto espaco-foto--main reveal",
+          "radius": "16px",
+          "tag": "IMG"
+        },
+        {
+          "cls": "espaco-foto reveal reveal-delay-1",
+          "radius": "16px",
+          "tag": "IMG"
+        },
+        {
+          "cls": "espaco-foto reveal reveal-delay-2",
+          "radius": "16px",
+          "tag": "IMG"
+        },
+        {
+          "cls": "service-card service-card--highlight",
+          "radius": "24px",
+          "tag": "ARTICLE"
+        },
+        {
+          "cls": "btn btn--primary service-card__btn",
+          "radius": "999px",
+          "tag": "A"
+        },
+        {
+          "cls": "service-card ",
+          "radius": "24px",
+          "tag": "ARTICLE"
+        },
+        {
+          "cls": "btn btn--primary service-card__btn",
+          "radius": "999px",
+          "tag": "A"
+        },
+        {
+          "cls": "service-card ",
+          "radius": "24px",
+          "tag": "ARTICLE"
+        },
+        {
+          "cls": "btn btn--primary service-card__btn",
+          "radius": "999px",
+          "tag": "A"
+        },
+        {
+          "cls": "service-card ",
+          "radius": "24px",
+          "tag": "ARTICLE"
+        },
+        {
+          "cls": "btn btn--primary service-card__btn",
+          "radius": "999px",
+          "tag": "A"
+        },
+        {
+          "cls": "btn btn--outline",
+          "radius": "999px",
+          "tag": "A"
+        },
+        {
+          "cls": "",
+          "radius": "0px",
+          "tag": "IMG"
+        },
+        {
+          "cls": "",
+          "radius": "0px",
+          "tag": "IMG"
+        },
+        {
+          "cls": "",
+          "radius": "0px",
+          "tag": "IMG"
+        },
+        {
+          "cls": "",
+          "radius": "0px",
+          "tag": "IMG"
+        },
+        {
+          "cls": "btn btn--primary",
+          "radius": "999px",
+          "tag": "A"
+        },
+        {
+          "cls": "testimonial",
+          "radius": "0px 16px 16px 0px",
+          "tag": "BLOCKQUOTE"
+        },
+        {
+          "cls": "testimonial",
+          "radius": "0px 16px 16px 0px",
+          "tag": "BLOCKQUOTE"
+        },
+        {
+          "cls": "testimonial",
+          "radius": "0px 16px 16px 0px",
+          "tag": "BLOCKQUOTE"
+        },
+        {
+          "cls": "btn btn--outline-white",
+          "radius": "999px",
+          "tag": "A"
+        },
+        {
+          "cls": "blog-preview-card reveal reveal-delay-1",
+          "radius": "24px",
+          "tag": "A"
+        },
+        {
+          "cls": "",
+          "radius": "0px",
+          "tag": "IMG"
+        },
+        {
+          "cls": "blog-preview-card reveal reveal-delay-2",
+          "radius": "24px",
+          "tag": "A"
+        },
+        {
+          "cls": "",
+          "radius": "0px",
+          "tag": "IMG"
+        },
+        {
+          "cls": "blog-preview-card reveal reveal-delay-3",
+          "radius": "24px",
+          "tag": "A"
+        },
+        {
+          "cls": "",
+          "radius": "0px",
+          "tag": "IMG"
+        },
+        {
+          "cls": "btn btn--primary cta-btn",
+          "radius": "999px",
+          "tag": "A"
+        }
+      ],
+      "sections": [
+        {
+          "bg": "rgb(250, 250, 248)",
+          "className": "hero",
+          "heading": "O olhar que você merece,no formato que te harmoniza.",
+          "height": 791,
+          "i": 0,
+          "paddingBottom": "0px",
+          "paddingTop": "0px"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "className": "section espaco-section",
+          "heading": "Um studio pensado para o seu conforto",
+          "height": 664,
+          "i": 1,
+          "paddingBottom": "96px",
+          "paddingTop": "96px"
+        },
+        {
+          "bg": "rgb(124, 224, 211)",
+          "className": "section section--calcita-brand",
+          "heading": "Cada olho tem uma história.Sabemos contar a sua.",
+          "height": 735,
+          "i": 2,
+          "paddingBottom": "96px",
+          "paddingTop": "96px"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "className": "section",
+          "heading": "Do clássico ao exclusivo",
+          "height": 1090,
+          "i": 3,
+          "paddingBottom": "96px",
+          "paddingTop": "96px"
+        },
+        {
+          "bg": "rgb(233, 251, 248)",
+          "className": "section section--calcita resultados-preview",
+          "heading": "Transformações reais",
+          "height": 699,
+          "i": 4,
+          "paddingBottom": "96px",
+          "paddingTop": "96px"
+        },
+        {
+          "bg": "rgb(15, 40, 32)",
+          "className": "section section--dark",
+          "heading": "Resultados que falampor si mesmos",
+          "height": 854,
+          "i": 5,
+          "paddingBottom": "96px",
+          "paddingTop": "96px"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "className": "section blog-preview",
+          "heading": "Do blog",
+          "height": 688,
+          "i": 6,
+          "paddingBottom": "96px",
+          "paddingTop": "96px"
+        },
+        {
+          "bg": "rgb(124, 224, 211)",
+          "className": "section cta-final section--calcita-brand",
+          "heading": "Agende seu horárioainda hoje",
+          "height": 442,
+          "i": 7,
+          "paddingBottom": "96px",
+          "paddingTop": "96px"
+        }
+      ],
+      "title": "Studio Crystal Lashes — Extensão de Cílios em Santo André, SP",
+      "url": "/",
+      "viewport": {
+        "h": 911,
+        "w": 1920
+      }
+    }
+  },
+  {
+    "path": "/servicos",
+    "file": "C:/Users/RodrigoOliveira/dev/02_Crystal_Lashes_OS/crystal-lashes-site/_audit/crystal-audit-servicos.png",
+    "metrics": {
+      "heroHeight": 414,
+      "heroImg": null,
+      "radii": [
+        {
+          "cls": "btn btn--primary header__cta",
+          "radius": "999px",
+          "tag": "A"
+        },
+        {
+          "cls": "service-card service-card--highlight",
+          "radius": "24px",
+          "tag": "ARTICLE"
+        },
+        {
+          "cls": "btn btn--primary service-card__btn",
+          "radius": "999px",
+          "tag": "A"
+        },
+        {
+          "cls": "service-card ",
+          "radius": "24px",
+          "tag": "ARTICLE"
+        },
+        {
+          "cls": "btn btn--primary service-card__btn",
+          "radius": "999px",
+          "tag": "A"
+        },
+        {
+          "cls": "service-card ",
+          "radius": "24px",
+          "tag": "ARTICLE"
+        },
+        {
+          "cls": "btn btn--primary service-card__btn",
+          "radius": "999px",
+          "tag": "A"
+        },
+        {
+          "cls": "service-card ",
+          "radius": "24px",
+          "tag": "ARTICLE"
+        },
+        {
+          "cls": "btn btn--primary service-card__btn",
+          "radius": "999px",
+          "tag": "A"
+        },
+        {
+          "cls": "service-card ",
+          "radius": "24px",
+          "tag": "ARTICLE"
+        },
+        {
+          "cls": "btn btn--primary service-card__btn",
+          "radius": "999px",
+          "tag": "A"
+        },
+        {
+          "cls": "info-card reveal reveal-delay-1",
+          "radius": "24px",
+          "tag": "DIV"
+        },
+        {
+          "cls": "info-card reveal reveal-delay-2",
+          "radius": "24px",
+          "tag": "DIV"
+        },
+        {
+          "cls": "info-card reveal reveal-delay-3",
+          "radius": "24px",
+          "tag": "DIV"
+        },
+        {
+          "cls": "info-card reveal reveal-delay-4",
+          "radius": "24px",
+          "tag": "DIV"
+        },
+        {
+          "cls": "faq-item",
+          "radius": "16px",
+          "tag": "DETAILS"
+        },
+        {
+          "cls": "faq-item",
+          "radius": "16px",
+          "tag": "DETAILS"
+        },
+        {
+          "cls": "faq-item",
+          "radius": "16px",
+          "tag": "DETAILS"
+        },
+        {
+          "cls": "faq-item",
+          "radius": "16px",
+          "tag": "DETAILS"
+        },
+        {
+          "cls": "faq-item",
+          "radius": "16px",
+          "tag": "DETAILS"
+        },
+        {
+          "cls": "faq-item",
+          "radius": "16px",
+          "tag": "DETAILS"
+        },
+        {
+          "cls": "btn btn--calcita",
+          "radius": "999px",
+          "tag": "A"
+        }
+      ],
+      "sections": [
+        {
+          "bg": "rgb(15, 40, 32)",
+          "className": "page-hero section--dark",
+          "heading": "Serviços& Preços",
+          "height": 414,
+          "i": 0,
+          "paddingBottom": "60px",
+          "paddingTop": "100px"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "className": "section",
+          "heading": "Cílios",
+          "height": 1017,
+          "i": 1,
+          "paddingBottom": "96px",
+          "paddingTop": "96px"
+        },
+        {
+          "bg": "rgb(233, 251, 248)",
+          "className": "section section--calcita como-escolher",
+          "heading": "Como escolher o efeito ideal",
+          "height": 737,
+          "i": 2,
+          "paddingBottom": "96px",
+          "paddingTop": "96px"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "className": "section info-section",
+          "heading": "Informações importantes",
+          "height": 584,
+          "i": 3,
+          "paddingBottom": "96px",
+          "paddingTop": "96px"
+        },
+        {
+          "bg": "rgb(233, 251, 248)",
+          "className": "section faq-section section--calcita",
+          "heading": "Perguntas frequentes",
+          "height": 563,
+          "i": 4,
+          "paddingBottom": "96px",
+          "paddingTop": "96px"
+        },
+        {
+          "bg": "rgb(15, 40, 32)",
+          "className": "section section--dark cta-serv",
+          "heading": "Pronta para agendar?",
+          "height": 366,
+          "i": 5,
+          "paddingBottom": "96px",
+          "paddingTop": "96px"
+        }
+      ],
+      "title": "Serviços e Preços — Studio Crystal Lashes, Santo André",
+      "url": "/servicos",
+      "viewport": {
+        "h": 911,
+        "w": 1920
+      }
+    }
+  },
+  {
+    "path": "/resultados",
+    "file": "C:/Users/RodrigoOliveira/dev/02_Crystal_Lashes_OS/crystal-lashes-site/_audit/crystal-audit-resultados.png",
+    "metrics": {
+      "heroHeight": 416,
+      "heroImg": null,
+      "radii": [
+        {
+          "cls": "btn btn--primary header__cta",
+          "radius": "999px",
+          "tag": "A"
+        },
+        {
+          "cls": "",
+          "radius": "0px",
+          "tag": "IMG"
+        },
+        {
+          "cls": "",
+          "radius": "0px",
+          "tag": "IMG"
+        },
+        {
+          "cls": "",
+          "radius": "0px",
+          "tag": "IMG"
+        },
+        {
+          "cls": "",
+          "radius": "0px",
+          "tag": "IMG"
+        },
+        {
+          "cls": "",
+          "radius": "0px",
+          "tag": "IMG"
+        },
+        {
+          "cls": "",
+          "radius": "0px",
+          "tag": "IMG"
+        },
+        {
+          "cls": "",
+          "radius": "0px",
+          "tag": "IMG"
+        },
+        {
+          "cls": "",
+          "radius": "0px",
+          "tag": "IMG"
+        },
+        {
+          "cls": "btn btn--outline",
+          "radius": "999px",
+          "tag": "A"
+        },
+        {
+          "cls": "",
+          "radius": "0px",
+          "tag": "IMG"
+        },
+        {
+          "cls": "",
+          "radius": "0px",
+          "tag": "IMG"
+        },
+        {
+          "cls": "",
+          "radius": "0px",
+          "tag": "IMG"
+        },
+        {
+          "cls": "",
+          "radius": "0px",
+          "tag": "IMG"
+        },
+        {
+          "cls": "btn btn--outline-white",
+          "radius": "999px",
+          "tag": "A"
+        },
+        {
+          "cls": "btn btn--primary",
+          "radius": "999px",
+          "tag": "A"
+        }
+      ],
+      "sections": [
+        {
+          "bg": "rgb(15, 40, 32)",
+          "className": "res-hero section--dark",
+          "heading": "Transformaçõesque falam por si",
+          "height": 416,
+          "i": 0,
+          "paddingBottom": "60px",
+          "paddingTop": "100px"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "className": "section",
+          "heading": "Galeria de trabalhos",
+          "height": 1020,
+          "i": 1,
+          "paddingBottom": "96px",
+          "paddingTop": "96px"
+        },
+        {
+          "bg": "rgb(233, 251, 248)",
+          "className": "section section--calcita espaco",
+          "heading": "O studio por dentro",
+          "height": 509,
+          "i": 2,
+          "paddingBottom": "96px",
+          "paddingTop": "96px"
+        },
+        {
+          "bg": "rgb(15, 40, 32)",
+          "className": "section section--dark depoimentos",
+          "heading": "O que as clientes dizem",
+          "height": 821,
+          "i": 3,
+          "paddingBottom": "96px",
+          "paddingTop": "96px"
+        },
+        {
+          "bg": "rgb(124, 224, 211)",
+          "className": "section section--calcita-brand",
+          "heading": "Agende sua sessãocom a Stefanie",
+          "height": 408,
+          "i": 4,
+          "paddingBottom": "96px",
+          "paddingTop": "96px"
+        }
+      ],
+      "title": "Resultados — Studio Crystal Lashes, Santo André",
+      "url": "/resultados",
+      "viewport": {
+        "h": 911,
+        "w": 1920
+      }
+    }
+  },
+  {
+    "path": "/sobre",
+    "file": "C:/Users/RodrigoOliveira/dev/02_Crystal_Lashes_OS/crystal-lashes-site/_audit/crystal-audit-sobre.png",
+    "metrics": {
+      "heroHeight": 680,
+      "heroImg": "/fotos/stefanie/stefanie-sobre.jpg",
+      "radii": [
+        {
+          "cls": "btn btn--primary header__cta",
+          "radius": "999px",
+          "tag": "A"
+        },
+        {
+          "cls": "",
+          "radius": "0px",
+          "tag": "IMG"
+        },
+        {
+          "cls": "fact-card reveal reveal-delay-1 is-visible",
+          "radius": "24px",
+          "tag": "DIV"
+        },
+        {
+          "cls": "fact-card reveal reveal-delay-2 is-visible",
+          "radius": "24px",
+          "tag": "DIV"
+        },
+        {
+          "cls": "fact-card reveal reveal-delay-3 is-visible",
+          "radius": "24px",
+          "tag": "DIV"
+        },
+        {
+          "cls": "fact-card fact-card--highlight reveal reveal-delay-4 is-visible",
+          "radius": "24px",
+          "tag": "DIV"
+        },
+        {
+          "cls": "sobre-aside__img",
+          "radius": "24px",
+          "tag": "IMG"
+        },
+        {
+          "cls": "metodo-step reveal reveal-delay-1",
+          "radius": "24px",
+          "tag": "DIV"
+        },
+        {
+          "cls": "metodo-step reveal reveal-delay-2",
+          "radius": "24px",
+          "tag": "DIV"
+        },
+        {
+          "cls": "metodo-step reveal reveal-delay-3",
+          "radius": "24px",
+          "tag": "DIV"
+        },
+        {
+          "cls": "metodo-step reveal reveal-delay-4",
+          "radius": "24px",
+          "tag": "DIV"
+        },
+        {
+          "cls": "ambiente-foto ambiente-foto--main",
+          "radius": "16px",
+          "tag": "IMG"
+        },
+        {
+          "cls": "ambiente-foto",
+          "radius": "16px",
+          "tag": "IMG"
+        },
+        {
+          "cls": "ambiente-foto",
+          "radius": "16px",
+          "tag": "IMG"
+        },
+        {
+          "cls": "btn btn--outline",
+          "radius": "999px",
+          "tag": "A"
+        },
+        {
+          "cls": "btn btn--calcita",
+          "radius": "999px",
+          "tag": "A"
+        }
+      ],
+      "sections": [
+        {
+          "bg": "rgb(15, 40, 32)",
+          "className": "sobre-hero section--dark",
+          "heading": "Stefanie Moura:do CLT ao Crystal",
+          "height": 680,
+          "i": 0,
+          "paddingBottom": "80px",
+          "paddingTop": "80px"
+        },
+        {
+          "bg": "rgb(233, 251, 248)",
+          "className": "section section--calcita autoridade",
+          "heading": "",
+          "height": 317,
+          "i": 1,
+          "paddingBottom": "96px",
+          "paddingTop": "96px"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "className": "section",
+          "heading": "Uma escolha que mudou tudo",
+          "height": 1007,
+          "i": 2,
+          "paddingBottom": "96px",
+          "paddingTop": "96px"
+        },
+        {
+          "bg": "rgb(233, 251, 248)",
+          "className": "section section--calcita",
+          "heading": "Por que o Mapeamento Crystal é diferente",
+          "height": 664,
+          "i": 3,
+          "paddingBottom": "96px",
+          "paddingTop": "96px"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "className": "section ambiente",
+          "heading": "Pensado para o seu relaxamento",
+          "height": 644,
+          "i": 4,
+          "paddingBottom": "96px",
+          "paddingTop": "96px"
+        },
+        {
+          "bg": "rgb(15, 40, 32)",
+          "className": "section section--dark",
+          "heading": "Pronta para conhecera diferença na prática?",
+          "height": 420,
+          "i": 5,
+          "paddingBottom": "96px",
+          "paddingTop": "96px"
+        }
+      ],
+      "title": "Sobre a Stefanie Moura — Studio Crystal Lashes, Santo André",
+      "url": "/sobre",
+      "viewport": {
+        "h": 911,
+        "w": 1920
+      }
+    }
+  },
+  {
+    "path": "/blog",
+    "file": "C:/Users/RodrigoOliveira/dev/02_Crystal_Lashes_OS/crystal-lashes-site/_audit/crystal-audit-blog.png",
+    "metrics": {
+      "heroHeight": 325,
+      "heroImg": null,
+      "radii": [
+        {
+          "cls": "btn btn--primary header__cta",
+          "radius": "999px",
+          "tag": "A"
+        },
+        {
+          "cls": "blog-card reveal reveal-delay-1 is-visible",
+          "radius": "24px",
+          "tag": "ARTICLE"
+        },
+        {
+          "cls": "blog-card reveal reveal-delay-2 is-visible",
+          "radius": "24px",
+          "tag": "ARTICLE"
+        },
+        {
+          "cls": "blog-card reveal reveal-delay-3 is-visible",
+          "radius": "24px",
+          "tag": "ARTICLE"
+        },
+        {
+          "cls": "",
+          "radius": "0px",
+          "tag": "IMG"
+        }
+      ],
+      "sections": [
+        {
+          "bg": "rgb(15, 40, 32)",
+          "className": "page-hero section--dark",
+          "heading": "Blog",
+          "height": 325,
+          "i": 0,
+          "paddingBottom": "60px",
+          "paddingTop": "100px"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "className": "section",
+          "heading": "O que é Harmonização do Olhar e Por que Ela Transforma Mais do que a Extensão Comum",
+          "height": 735,
+          "i": 1,
+          "paddingBottom": "96px",
+          "paddingTop": "96px"
+        }
+      ],
+      "title": "Blog — Extensão de Cílios e Cuidados · Studio Crystal Lashes",
+      "url": "/blog",
+      "viewport": {
+        "h": 911,
+        "w": 1920
+      }
+    }
+  },
+  {
+    "path": "/contato",
+    "file": "C:/Users/RodrigoOliveira/dev/02_Crystal_Lashes_OS/crystal-lashes-site/_audit/crystal-audit-contato.png",
+    "metrics": {
+      "heroHeight": 416,
+      "heroImg": null,
+      "radii": [
+        {
+          "cls": "btn btn--primary header__cta",
+          "radius": "999px",
+          "tag": "A"
+        },
+        {
+          "cls": "btn btn--primary wa-btn",
+          "radius": "999px",
+          "tag": "A"
+        }
+      ],
+      "sections": [
+        {
+          "bg": "rgb(15, 40, 32)",
+          "className": "page-hero section--dark",
+          "heading": "Agende seuhorário",
+          "height": 416,
+          "i": 0,
+          "paddingBottom": "60px",
+          "paddingTop": "100px"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "className": "section",
+          "heading": "WhatsApp",
+          "height": 823,
+          "i": 1,
+          "paddingBottom": "96px",
+          "paddingTop": "96px"
+        }
+      ],
+      "title": "Contato — Studio Crystal Lashes · Santo André, SP",
+      "url": "/contato",
+      "viewport": {
+        "h": 911,
+        "w": 1920
+      }
+    }
+  }
+]

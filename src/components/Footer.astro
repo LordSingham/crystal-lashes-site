@@ -5,8 +5,8 @@ const year = new Date().getFullYear();
 <footer class="footer">
   <div class="footer__inner container">
     <div class="footer__brand">
-      <a href="/" class="footer__logo" aria-label="Crystal Lashes">
-        <img src="/logo.png" alt="Crystal Lashes" class="footer__logo-img" />
+      <a href="/" class="footer__logo" aria-label="Studio Crystal Lashes — Página Inicial">
+        Crystal Lashes
       </a>
       <p class="footer__tagline">Especialista em Harmonização do Olhar<br />através da Extensão de Cílios.</p>
       <div class="footer__socials">
@@ -33,7 +33,7 @@ const year = new Date().getFullYear();
       <nav>
         <a href="/sobre">Sobre</a>
         <a href="/servicos">Serviços</a>
-        <a href="/portfolio">Portfólio</a>
+        <a href="/resultados">Resultados</a>
         <a href="/blog">Blog</a>
         <a href="/contato">Contato</a>
       </nav>
@@ -42,8 +42,8 @@ const year = new Date().getFullYear();
     <div class="footer__contact">
       <h4>Onde estamos</h4>
       <address>
-        <p>Av. João Ramalho, 170 – Sala 702</p>
-        <p>Vila Assunção, Santo André – SP</p>
+        <p>Av. João Ramalho, 170, Sala 702</p>
+        <p>Vila Assunção, Santo André, SP</p>
         <p>CEP 09030-320</p>
         <p class="footer__phone"><a href="https://wa.me/5511916637446">(11) 91663-7446</a></p>
       </address>
@@ -52,39 +52,42 @@ const year = new Date().getFullYear();
   </div>
 
   <div class="footer__bottom container">
-    <p>© {year} Studio Crystal Lashes · Vila Assunção, Santo André–SP</p>
-    <p>Feito com carinho em Santo André ✦</p>
+    <p>© {year} Studio Crystal Lashes · Vila Assunção, Santo André, SP</p>
+    <p>Feito com carinho por <a href="https://sistemos.com.br" target="_blank" rel="noopener">Sistemos</a></p>
   </div>
 </footer>
 
 <style>
   .footer {
-    background: #091a14;
+    background: var(--footer-bg, #091a14);
     color: rgba(255,255,255,0.65);
     padding-top: 64px;
   }
 
+  .footer__logo {
+    font-family: var(--font-brand);
+    font-size: 2rem;
+    color: var(--calcita);
+    text-decoration: none;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+
   .footer__inner {
     display: grid;
-    grid-template-columns: 2fr 1fr 1.5fr;
-    gap: 48px;
+    grid-template-columns: 1fr;
+    gap: 32px;
     padding-bottom: 48px;
     border-bottom: 1px solid rgba(255,255,255,0.08);
   }
 
-  .footer__logo {
-    display: inline-block;
-  }
-
-  .footer__logo-img {
-    height: 40px;
-    width: auto;
-    filter: brightness(0) invert(1);
-    opacity: 0.9;
+  @media (min-width: 640px) {
+    .footer__inner { grid-template-columns: 2fr 1fr 1.5fr; gap: 48px; }
   }
 
   .footer__tagline {
-    margin-top: 12px;
     font-size: 0.85rem;
     line-height: 1.6;
   }
@@ -97,16 +100,17 @@ const year = new Date().getFullYear();
 
   .footer__socials a {
     color: rgba(255,255,255,0.5);
-    transition: color 0.2s;
+    transition: color var(--transition-fast);
   }
 
-  .footer__socials a:hover {
-    color: #5ECFBF;
-  }
+  .footer__socials a:hover { color: var(--calcita); }
+  .footer__socials a:nth-child(1):hover { color: #E4405F; }
+  .footer__socials a:nth-child(2):hover { color: #fff; }
+  .footer__socials a:nth-child(3):hover { color: #25D366; }
 
   .footer__links h4,
   .footer__contact h4 {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-body);
     font-size: 0.7rem;
     font-weight: 500;
     letter-spacing: 0.12em;
@@ -124,21 +128,19 @@ const year = new Date().getFullYear();
   .footer__links nav a {
     font-size: 0.9rem;
     color: rgba(255,255,255,0.65);
-    transition: color 0.2s;
+    transition: color var(--transition-fast);
   }
 
-  .footer__links nav a:hover {
-    color: #fff;
-  }
+  .footer__links nav a:hover { color: #fff; }
 
   .footer__contact address {
     font-style: normal;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     line-height: 1.8;
   }
 
   .footer__phone a {
-    color: #5ECFBF;
+    color: var(--calcita);
     font-weight: 500;
   }
 
@@ -152,22 +154,18 @@ const year = new Date().getFullYear();
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
     padding-top: 20px;
     padding-bottom: 20px;
     font-size: 0.78rem;
     color: rgba(255,255,255,0.3);
   }
 
-  @media (max-width: 768px) {
-    .footer__inner {
-      grid-template-columns: 1fr;
-      gap: 32px;
-    }
-
-    .footer__bottom {
-      flex-direction: column;
-      gap: 8px;
-      text-align: center;
-    }
+  .footer__bottom a {
+    color: var(--calcita);
+    transition: color var(--transition-fast);
   }
+
+  .footer__bottom a:hover { color: var(--white); }
 </style>

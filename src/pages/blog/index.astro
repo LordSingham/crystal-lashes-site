@@ -13,20 +13,26 @@ const posts = allPosts.sort(
   description="Dicas, guias e tudo sobre extensão de cílios, harmonização do olhar e cuidados com lash em Santo André, SP."
 >
 
-  <section class="page-hero section section--dark">
+  <section class="page-hero section--dark">
     <div class="container">
-      <p class="eyebrow">Conhecimento Crystal</p>
-      <h1 style="color: #fff;">Blog</h1>
-      <p style="color: rgba(255,255,255,0.6); margin-top: 16px; max-width: 480px; line-height: 1.7;">
-        Tudo o que você precisa saber sobre extensão de cílios, harmonização do olhar e cuidados com lash.
-      </p>
+      <div class="reveal">
+        <p class="eyebrow">Conhecimento Crystal</p>
+        <h1 style="color: #fff;">Blog</h1>
+        <p style="color: rgba(255,255,255,0.6); margin-top: 16px; max-width: 480px; line-height: 1.7;">
+          Tudo o que você precisa saber sobre extensão de cílios, harmonização do olhar e cuidados com lash.
+        </p>
+      </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
+      <div class="blog-section-head reveal">
+        <p class="eyebrow">Guias Crystal</p>
+        <h2>Conteúdo para cuidar melhor do seu olhar</h2>
+      </div>
       {posts.length === 0 ? (
-        <div class="empty-blog text-center">
+        <div class="empty-blog text-center reveal">
           <p class="text-muted">Artigos em breve. Fique de olho!</p>
           <a href="https://www.instagram.com/studiocrystallashes/" class="btn btn--primary" style="margin-top: 20px;" target="_blank" rel="noopener">
             Enquanto isso, siga no Instagram
@@ -34,11 +40,11 @@ const posts = allPosts.sort(
         </div>
       ) : (
         <div class="blog-grid">
-          {posts.map((post) => (
-            <article class="blog-card">
+          {posts.map((post, i) => (
+            <article class={`blog-card reveal reveal-delay-${(i % 4) + 1}`}>
               {post.data.image && (
                 <a href={`/blog/${post.id}`} class="blog-card__img-link">
-                  <img src={post.data.image} alt={post.data.title} loading="lazy" />
+                  <img src={post.data.image} alt={post.data.title} loading="eager" width="640" height="360" />
                 </a>
               )}
               <div class="blog-card__body">
@@ -54,7 +60,7 @@ const posts = allPosts.sort(
                   <a href={`/blog/${post.id}`}>{post.data.title}</a>
                 </h2>
                 <p class="blog-card__desc">{post.data.description}</p>
-                <a href={`/blog/${post.id}`} class="blog-card__link">Ler artigo →</a>
+                <a href={`/blog/${post.id}`} class="blog-card__link">Ler artigo ✦</a>
               </div>
             </article>
           ))}
@@ -67,35 +73,59 @@ const posts = allPosts.sort(
 
 <style>
   .page-hero {
-    padding: 100px 24px 60px;
+    padding: 100px 0 60px;
   }
 
   .blog-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 32px;
+    align-items: stretch;
   }
 
+  .blog-section-head {
+    max-width: 680px;
+    margin-bottom: 40px;
+  }
+
+  .blog-section-head h2 { margin-top: 10px; }
+
   .blog-card {
-    border: 1px solid #E2E8F0;
-    border-radius: 8px;
+    border: var(--border-default);
+    border-radius: var(--radius-lg);
     overflow: hidden;
-    transition: transform 0.25s, box-shadow 0.25s;
+    background: var(--white);
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   .blog-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 40px rgba(15, 23, 42, 0.1);
+    box-shadow: var(--shadow-soft);
+    border-color: var(--calcita);
+  }
+
+  .blog-card__img-link {
+    display: block;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    background: var(--calcita-soft);
   }
 
   .blog-card__img-link img {
     width: 100%;
+    height: 100%;
     aspect-ratio: 16/9;
     object-fit: cover;
   }
 
   .blog-card__body {
     padding: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
 
   .blog-card__meta {
@@ -108,15 +138,15 @@ const posts = allPosts.sort(
 
   .blog-card__meta time {
     font-size: 0.75rem;
-    color: #94A3B8;
+    color: var(--text-muted);
   }
 
   .blog-tag {
     font-size: 0.7rem;
-    background: #F1F5F9;
-    color: #475569;
+    background: var(--calcita-light);
+    color: var(--teal-deep);
     padding: 2px 8px;
-    border-radius: 12px;
+    border-radius: var(--radius-pill);
   }
 
   .blog-card__title {
@@ -126,30 +156,32 @@ const posts = allPosts.sort(
   }
 
   .blog-card__title a {
-    color: #0F2820;
-    transition: color 0.2s;
+    color: var(--teal-deep);
+    transition: color var(--transition-fast);
   }
 
   .blog-card__title a:hover {
-    color: #5ECFBF;
+    color: var(--calcita);
   }
 
   .blog-card__desc {
     font-size: 0.88rem;
-    color: #475569;
+    color: var(--text-muted);
     line-height: 1.6;
     margin-bottom: 16px;
   }
 
   .blog-card__link {
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: #5ECFBF;
-    transition: color 0.2s;
+    margin-top: auto;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--calcita);
+    transition: color var(--transition-fast);
   }
 
   .blog-card__link:hover {
-    color: #3BADA0;
+    color: var(--teal-dark);
   }
 
   .empty-blog {
@@ -157,3 +189,15 @@ const posts = allPosts.sort(
   }
 </style>
 
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-visible');
+        observer.unobserve(e.target);
+      }
+    }),
+    { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+  );
+  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+</script>

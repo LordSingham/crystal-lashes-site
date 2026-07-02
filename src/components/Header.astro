@@ -1,8 +1,8 @@
 ---
 const nav = [
-  { label: 'Sobre', href: '/sobre' },
   { label: 'Serviços', href: '/servicos' },
-  { label: 'Portfólio', href: '/portfolio' },
+  { label: 'Resultados', href: '/resultados' },
+  { label: 'Sobre', href: '/sobre' },
   { label: 'Blog', href: '/blog' },
   { label: 'Contato', href: '/contato' },
 ];
@@ -13,7 +13,7 @@ const currentPath = Astro.url.pathname;
 <header class="header" id="header">
   <div class="header__inner container">
     <a href="/" class="header__logo" aria-label="Studio Crystal Lashes — Página Inicial">
-      <img src="/logo.png" alt="Crystal Lashes — Extensão de Cílios Santo André" class="header__logo-img" />
+      Crystal Lashes
     </a>
 
     <nav class="header__nav" aria-label="Navegação principal">
@@ -25,14 +25,30 @@ const currentPath = Astro.url.pathname;
           {label}
         </a>
       ))}
-      <a href="https://wa.me/5511916637446?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio!" class="btn btn--primary header__cta" target="_blank" rel="noopener">
+      <a
+        href="https://wa.me/5511916637446?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio!"
+        class="btn btn--primary header__cta"
+        target="_blank"
+        rel="noopener"
+      >
         Agendar
       </a>
     </nav>
 
-    <button class="header__burger" id="burger" aria-label="Abrir menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="header__mobile-actions">
+      <a
+        href="https://wa.me/5511916637446?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio!"
+        class="header__wa-mobile"
+        target="_blank"
+        rel="noopener"
+        aria-label="Agendar pelo WhatsApp"
+      >
+        Agendar
+      </a>
+      <button class="header__burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </header>
 
@@ -43,8 +59,13 @@ const currentPath = Astro.url.pathname;
     z-index: 100;
     background: rgba(255, 255, 255, 0.97);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid #E2E8F0;
-    transition: box-shadow 0.3s ease;
+    border-bottom: 1px solid var(--line);
+    transition: box-shadow var(--transition), border-color var(--transition);
+  }
+
+  .header.scrolled {
+    box-shadow: 0 4px 24px rgba(15,40,32,0.08);
+    border-bottom-color: transparent;
   }
 
   .header__inner {
@@ -55,47 +76,81 @@ const currentPath = Astro.url.pathname;
   }
 
   .header__logo {
-    display: flex;
-    align-items: center;
+    font-family: var(--font-brand);
+    font-size: 2.2rem;
+    color: var(--teal-deep);
+    text-decoration: none;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    transition: color var(--transition-fast);
   }
 
-  .header__logo-img {
-    height: 44px;
-    width: auto;
-    display: block;
+  .header__logo:hover {
+    color: var(--calcita);
   }
 
   .header__nav {
-    display: flex;
+    display: none;
     align-items: center;
-    gap: 32px;
+    gap: 36px;
+  }
+
+  @media (min-width: 1024px) {
+    .header__nav {
+      display: flex;
+    }
   }
 
   .header__link {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 400;
-    letter-spacing: 0.05em;
-    color: #475569;
-    transition: color 0.2s;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    transition: color var(--transition-fast);
+    text-transform: uppercase;
   }
 
   .header__link:hover {
-    color: #0F2820;
+    color: var(--text-primary);
   }
 
   .header__link--active {
-    color: #006a60;
-    border-bottom: 2px solid #5ECFBF;
-    padding-bottom: 2px;
+    color: var(--teal-deep);
+    font-weight: 500;
   }
 
   .header__cta {
-    padding: 10px 20px;
-    font-size: 0.8rem;
+    padding: 10px 22px;
+    font-size: 0.75rem;
+  }
+
+  /* Mobile actions */
+  .header__mobile-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  @media (min-width: 1024px) {
+    .header__mobile-actions {
+      display: none;
+    }
+  }
+
+  .header__wa-mobile {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--text-black);
+    color: var(--white);
+    padding: 9px 18px;
+    border-radius: var(--radius-pill);
   }
 
   .header__burger {
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 5px;
     background: none;
@@ -108,47 +163,76 @@ const currentPath = Astro.url.pathname;
     display: block;
     width: 22px;
     height: 2px;
-    background: #0F2820;
-    transition: all 0.25s;
+    background: var(--teal-deep);
+    transition: transform var(--transition-fast), opacity var(--transition-fast), background var(--transition-fast);
     transform-origin: center;
   }
 
-  @media (max-width: 768px) {
-    .header__nav {
-      display: none;
-      position: absolute;
-      top: 72px;
-      left: 0;
-      right: 0;
-      background: #fff;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 24px;
-      gap: 20px;
-      border-bottom: 1px solid #E2E8F0;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-    }
+  /* Mobile nav drawer */
+  .header__nav--mobile {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 20px;
+    gap: 20px;
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    z-index: 99;
+  }
 
-    .header__nav.open {
-      display: flex;
-    }
+  .header__nav--mobile.open {
+    display: flex;
+  }
 
-    .header__link {
-      font-size: 1rem;
-    }
-
-    .header__burger {
-      display: flex;
-    }
+  .header__nav--mobile .header__link {
+    font-size: 1rem;
   }
 </style>
 
+<nav class="header__nav--mobile" id="mobile-nav" aria-label="Navegação mobile" inert>
+  {nav.map(({ label, href }) => (
+    <a
+      href={href}
+      class={`header__link ${currentPath.startsWith(href) ? 'header__link--active' : ''}`}
+    >
+      {label}
+    </a>
+  ))}
+</nav>
+
 <script>
   const burger = document.getElementById('burger');
-  const nav = document.querySelector('.header__nav');
+  const mobileNav = document.getElementById('mobile-nav');
+  const header = document.getElementById('header');
 
+  // Scroll effect
+  window.addEventListener('scroll', () => {
+    header?.classList.toggle('scrolled', window.scrollY > 20);
+  }, { passive: true });
+
+  // Mobile nav toggle
   burger?.addEventListener('click', () => {
-    const isOpen = nav?.classList.toggle('open');
+    const isOpen = mobileNav?.classList.toggle('open');
     burger.setAttribute('aria-expanded', String(isOpen));
+    burger.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+    if (isOpen) {
+      mobileNav?.removeAttribute('inert');
+    } else {
+      mobileNav?.setAttribute('inert', '');
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!burger?.contains(e.target as Node) && !mobileNav?.contains(e.target as Node)) {
+      mobileNav?.classList.remove('open');
+      mobileNav?.setAttribute('inert', '');
+      burger?.setAttribute('aria-expanded', 'false');
+      burger?.setAttribute('aria-label', 'Abrir menu');
+    }
   });
 </script>

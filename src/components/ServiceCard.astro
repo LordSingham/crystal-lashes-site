@@ -1,4 +1,4 @@
-﻿---
+---
 interface Props {
   name: string;
   description: string;
@@ -12,6 +12,7 @@ const waText = encodeURIComponent(`Olá, gostaria de agendar ${name}!`);
 ---
 
 <article class={`service-card ${highlight ? 'service-card--highlight' : ''}`}>
+  {highlight && <span class="service-card__badge">Exclusivo</span>}
   <div class="service-card__body">
     <h3 class="service-card__name">{name}</h3>
     <p class="service-card__desc">{description}</p>
@@ -24,6 +25,7 @@ const waText = encodeURIComponent(`Olá, gostaria de agendar ${name}!`);
       class="btn btn--primary service-card__btn"
       target="_blank"
       rel="noopener"
+      aria-label={`Agendar ${name}`}
     >
       Agendar
     </a>
@@ -32,43 +34,59 @@ const waText = encodeURIComponent(`Olá, gostaria de agendar ${name}!`);
 
 <style>
   .service-card {
-    background: #fff;
-    border: 1px solid #E2E8F0;
-    border-radius: 8px;
+    background: var(--white);
+    border: var(--border-default);
+    border-radius: var(--radius-lg);
     padding: 28px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 20px;
-    transition: box-shadow 0.25s, transform 0.25s;
+    transition: box-shadow var(--transition), transform var(--transition);
+    position: relative;
   }
 
   .service-card:hover {
-    box-shadow: 0 8px 32px rgba(15, 23, 42, 0.1);
+    box-shadow: var(--shadow-soft);
     transform: translateY(-2px);
   }
 
   .service-card--highlight {
-    border-color: #5ECFBF;
-    box-shadow: 0 0 0 1px #5ECFBF, 0 0 24px rgba(94, 207, 191, 0.22);
+    border-color: var(--calcita);
+    box-shadow: 0 0 0 1px var(--calcita), var(--shadow-soft);
+  }
+
+  .service-card__badge {
+    position: absolute;
+    top: -1px;
+    right: 24px;
+    background: var(--calcita);
+    color: var(--text-black);
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 0 0 var(--radius) var(--radius);
   }
 
   .service-card__name {
-    font-size: 1.3rem;
-    color: #0F2820;
+    font-size: 1.25rem;
+    color: var(--teal-deep);
     margin-bottom: 8px;
   }
 
   .service-card__desc {
-    font-size: 0.9rem;
-    color: #475569;
-    line-height: 1.6;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.7;
   }
 
   .service-card__duration {
-    font-size: 0.78rem;
-    color: #94A3B8;
-    margin-top: 8px;
+    font-size: 0.75rem;
+    color: var(--gray-400);
+    margin-top: 10px;
     letter-spacing: 0.04em;
   }
 
@@ -78,20 +96,20 @@ const waText = encodeURIComponent(`Olá, gostaria de agendar ${name}!`);
     justify-content: space-between;
     gap: 12px;
     padding-top: 16px;
-    border-top: 1px solid #F1F5F9;
+    border-top: 1px solid var(--line);
   }
 
   .service-card__price {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: var(--font-heading);
     font-size: 1.6rem;
-    font-weight: 300;
-    color: #0F2820;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--teal-deep);
+    font-variant-numeric: tabular-nums;
   }
 
   .service-card__btn {
-    padding: 10px 18px;
-    font-size: 0.78rem;
-    white-space: nowrap;
+    padding: 9px 18px;
+    font-size: 0.72rem;
   }
 </style>
-

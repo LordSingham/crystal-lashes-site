@@ -72,7 +72,7 @@ const jsonLd = {
 
     {post.data.image && (
       <div class="post-hero-img container">
-        <img src={post.data.image} alt={post.data.title} loading="eager" />
+        <img src={post.data.image} alt={post.data.title} loading="eager" width="1200" height="630" />
       </div>
     )}
 
@@ -80,7 +80,7 @@ const jsonLd = {
       <Content />
     </div>
 
-    <footer class="post-footer section section--muted">
+    <footer class="post-footer section section--calcita">
       <div class="container text-center">
         <p class="eyebrow">Ficou com dúvidas?</p>
         <h2>Agende uma avaliação</h2>
@@ -98,7 +98,7 @@ const jsonLd = {
 
 <style>
   .post-header {
-    padding: 100px 24px 60px;
+    padding: 100px 0 60px;
   }
 
   .post-meta {
@@ -111,13 +111,13 @@ const jsonLd = {
   }
 
   .back-link {
-    color: #5ECFBF;
+    color: var(--calcita);
     font-weight: 500;
-    transition: color 0.2s;
+    transition: color var(--transition-fast);
   }
 
   .back-link:hover {
-    color: #3BADA0;
+    color: var(--teal-dark);
   }
 
   .post-desc {
@@ -145,8 +145,9 @@ const jsonLd = {
 
   .post-hero-img {
     margin: 40px auto;
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     overflow: hidden;
+    aspect-ratio: 16/9;
     max-height: 480px;
   }
 
@@ -165,19 +166,19 @@ const jsonLd = {
   .post-content :global(h2) {
     font-size: 1.8rem;
     margin: 40px 0 16px;
-    color: #0F2820;
+    color: var(--teal-deep);
   }
 
   .post-content :global(h3) {
     font-size: 1.3rem;
     margin: 32px 0 12px;
-    color: #0F2820;
+    color: var(--teal-deep);
   }
 
   .post-content :global(p) {
     font-size: 1rem;
     line-height: 1.8;
-    color: #334155;
+    color: var(--text-muted);
     margin-bottom: 20px;
   }
 
@@ -190,23 +191,23 @@ const jsonLd = {
   .post-content :global(li) {
     font-size: 1rem;
     line-height: 1.7;
-    color: #334155;
+    color: var(--text-muted);
     margin-bottom: 6px;
   }
 
   .post-content :global(strong) {
-    color: #0F2820;
+    color: var(--teal-deep);
     font-weight: 600;
   }
 
   .post-content :global(blockquote) {
-    border-left: 3px solid #5ECFBF;
+    border-left: 3px solid var(--calcita);
     padding: 16px 24px;
-    background: #F8FAFC;
-    border-radius: 0 8px 8px 0;
+    background: var(--calcita-soft);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
     margin: 24px 0;
     font-style: italic;
-    color: #475569;
+    color: var(--text-muted);
   }
 
   .post-content :global(table) {
@@ -217,34 +218,34 @@ const jsonLd = {
   }
 
   .post-content :global(th) {
-    background: #F1F5F9;
+    background: var(--calcita-light);
     padding: 10px 16px;
     text-align: left;
     font-weight: 600;
-    color: #0F2820;
-    border-bottom: 2px solid #E2E8F0;
+    color: var(--teal-deep);
+    border-bottom: 2px solid var(--line);
   }
 
   .post-content :global(td) {
     padding: 10px 16px;
-    border-bottom: 1px solid #F1F5F9;
-    color: #334155;
+    border-bottom: 1px solid var(--line);
+    color: var(--text-muted);
   }
 
   .post-content :global(a) {
-    color: #5ECFBF;
+    color: var(--calcita);
     font-weight: 500;
-    transition: color 0.2s;
+    transition: color var(--transition-fast);
   }
 
   .post-content :global(a:hover) {
-    color: #3BADA0;
+    color: var(--teal-dark);
   }
 
   /* Imagens dentro do post */
   .post-content :global(img) {
     width: 100%;
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     margin: 32px 0;
     object-fit: cover;
   }
@@ -256,7 +257,7 @@ const jsonLd = {
   .post-content :global(figcaption) {
     text-align: center;
     font-size: 0.8rem;
-    color: #94A3B8;
+    color: var(--text-muted);
     margin-top: 10px;
     font-style: italic;
   }
@@ -267,7 +268,7 @@ const jsonLd = {
     margin-right: -80px;
     width: calc(100% + 160px);
     max-width: none;
-    border-radius: 8px;
+    border-radius: var(--radius-md);
   }
 
   /* Imagem flutuando à direita (texto ao lado) */
@@ -275,7 +276,7 @@ const jsonLd = {
     float: right;
     width: 45%;
     margin: 8px 0 24px 32px;
-    border-radius: 8px;
+    border-radius: var(--radius-md);
   }
 
   @media (max-width: 640px) {
@@ -295,7 +296,7 @@ const jsonLd = {
   /* Separador visual entre seções */
   .post-content :global(hr) {
     border: none;
-    border-top: 1px solid #E2E8F0;
+    border-top: var(--border-default);
     margin: 40px 0;
   }
 </style>

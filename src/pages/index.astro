@@ -1,40 +1,39 @@
 ---
 import Base from '../layouts/Base.astro';
 import ServiceCard from '../components/ServiceCard.astro';
-import Testimonial from '../components/Testimonial.astro';
 
 const services = [
   {
     name: 'Volume Crystal',
-    description: 'Nossa técnica exclusiva. Mapeamento personalizado que harmoniza extensão, curvatura e espessura ao formato natural dos seus olhos.',
-    price: 'R$210',
-    duration: '2h30 – 3h',
+    description: 'A técnica exclusiva do studio. O Mapeamento Crystal analisa o formato individual do olho para definir a curvatura, comprimento e espessura ideais. Um olhar harmonizado que parece natural, porque foi feito para você.',
+    price: 'R$250',
+    duration: '2h – 2h30',
     highlight: true,
   },
   {
-    name: 'Volume Egípcio / Fox Eyes',
-    description: 'Efeito alongado e dramático que eleva o olhar. Mapeamento com fio mais longo nas extremidades para um resultado marcante.',
-    price: 'R$220',
-    duration: '2h30 – 3h',
+    name: 'Fox Eyes',
+    description: 'Efeito alongado. Mapeamento com fios mais longos nas extremidades para elevar e alongar o olhar. Ideal para quem quer presença e impacto.',
+    price: 'R$250',
+    duration: '2h',
   },
   {
-    name: 'Extensão Elegance',
-    description: 'Clássica e sofisticada. Define o olhar de forma natural e delicada, sem exageros — ideal para o dia a dia.',
-    price: 'R$200',
-    duration: '2h – 2h30',
+    name: 'Elegance / Brasileiro',
+    description: 'Clássica e sofisticada. Define o olhar de forma delicada e natural, sem exageros. A escolha perfeita para o dia a dia profissional.',
+    price: 'R$250',
+    duration: '2h',
   },
   {
-    name: 'Manutenção',
-    description: 'Reposição dos fios para manter o visual impecável. Recomendada a cada 21–28 dias.',
-    price: 'R$120–150',
-    duration: '1h – 1h30',
+    name: 'Egípcio',
+    description: 'Efeito mais volumoso. Modelo com fios mais volumosos, na medida certa. Para quem procura um olhar mais marcante, sem exageros.',
+    price: 'R$250',
+    duration: '2h',
   },
 ];
 
 const testimonials = [
   {
     name: 'Amanda Brinholi',
-    text: 'Atendimento único, ela sempre respeita o gosto do cliente e sempre me surpreende no resultado impecável. É muito difícil achar uma profissional de cílios que também preze pela saúde das clientes — a Ste é extremamente cuidadosa com a limpeza do studio e dos materiais.',
+    text: 'Atendimento único, ela sempre respeita o gosto do cliente e sempre me surpreende no resultado impecável. É muito difícil achar uma profissional de cílios que também preze pela saúde das clientes, a Ste é extremamente cuidadosa com a limpeza do studio e dos materiais.',
   },
   {
     name: 'Victoria Psd',
@@ -42,17 +41,25 @@ const testimonials = [
   },
   {
     name: 'Natalia Santos',
-    text: 'Materiais de ótima qualidade e honestidade no resultado. Fica um trabalho muito natural mesmo sendo com um volume maior de cílios — ela leva em consideração os fios do cliente, sendo realista e não apenas fazendo para ganhar o dinheiro.',
+    text: 'Materiais de ótima qualidade e honestidade no resultado. Fica um trabalho muito natural mesmo sendo com um volume maior de cílios, ela leva em consideração os fios do cliente, sendo realista e não apenas fazendo para ganhar o dinheiro.',
+  },
+  {
+    name: 'Patricia Oliveira',
+    text: 'Stefanie é incrível! Fiz o Volume Crystal e fiquei apaixonada. O studio é impecável, ela é super atenciosa e o resultado ficou perfeito.',
   },
 ];
 
-const reviewImages = [
-  { src: '/reviews/review-01.jpg', alt: 'Avaliação Google — Studio Crystal Lashes' },
-  { src: '/reviews/review-02.jpg', alt: 'Avaliação Google — Studio Crystal Lashes' },
-  { src: '/reviews/review-03.jpg', alt: 'Avaliação Google — Studio Crystal Lashes' },
-  { src: '/reviews/review-04.jpg', alt: 'Avaliação Google — Studio Crystal Lashes' },
-  { src: '/reviews/review-05.jpg', alt: 'Avaliação Google — Studio Crystal Lashes' },
-  { src: '/reviews/review-06.jpg', alt: 'Avaliação Google — Studio Crystal Lashes' },
+const resultadosPreview = [
+  { src: '/fotos/resultados/resultado-volume-crystal-01.jpg', alt: 'Resultado Volume Crystal', label: 'Volume Crystal' },
+  { src: '/fotos/resultados/resultado-fox-eyes-01.jpg', alt: 'Resultado Fox Eyes', label: 'Fox Eyes' },
+  { src: '/fotos/resultados/resultado-elegance-01.jpeg', alt: 'Resultado Elegance', label: 'Elegance' },
+  { src: '/fotos/resultados/resultado-volume-brasileiro-01.jpg', alt: 'Resultado Volume Brasileiro', label: 'Volume Brasileiro' },
+];
+
+const blogPreview = [
+  { title: 'Quanto tempo dura a extensão de cílios?', desc: 'Tudo o que você precisa saber para manter o resultado impecável entre manutenções.', img: '/fotos/blog/blog-quanto-tempo-dura-extensao-cilios.jpg', slug: '/blog/quanto-dura-extensao-de-cilios' },
+  { title: 'Mapeamento Crystal: o que é e por que faz diferença', desc: 'A técnica exclusiva que analisa o formato do seu olho antes de qualquer decisão.', img: '/fotos/blog/blog-mapeamento-crystal.jpg', slug: '/blog/harmonizacao-do-olhar' },
+  { title: 'Como escolher o efeito ideal para o seu olhar', desc: 'Fox Eyes, Elegance, Egípcio ou Crystal — entenda qual harmoniza melhor com você.', img: '/fotos/blog/blog-como-escolher-efeito-ideal.jpg', slug: '/blog/extensao-de-cilios-santo-andre' },
 ];
 ---
 
@@ -61,29 +68,32 @@ const reviewImages = [
   description="Especialistas em Harmonização do Olhar e Extensão de Cílios em Santo André, SP. Técnica Crystal exclusiva. Agende pelo WhatsApp."
 >
 
-  <!-- Hero -->
+  <!-- ─── Hero ─────────────────────────────────────────────── -->
   <section class="hero">
     <div class="hero__inner container">
       <div class="hero__content">
-        <p class="eyebrow">Studio Crystal Lashes · Santo André, SP</p>
-        <h1>O olhar que você merece,<br /><em>no formato que te harmoniza.</em></h1>
-        <p class="hero__sub">
-          Extensão de cílios com mapeamento exclusivo para harmonizar cada formato de olho.
-          Mais de 7 anos transformando olhares em Vila Assunção.
+        <p class="eyebrow hero-animate">Studio Crystal Lashes · Santo André, SP</p>
+        <h1 class="hero-animate hero-animate-delay-1">
+          O olhar que você merece,<br />
+          <em>no formato que te harmoniza.</em>
+        </h1>
+        <p class="hero__sub hero-animate hero-animate-delay-2">
+          Extensão de cílios com mapeamento exclusivo para harmonizar o seu olhar.
+          Mais de 7 anos realçando olhares.
         </p>
-        <div class="hero__actions">
+        <div class="hero__actions hero-animate hero-animate-delay-3">
           <a href="https://wa.me/5511916637446?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio!" class="btn btn--primary" target="_blank" rel="noopener">
             Agendar pelo WhatsApp
           </a>
-          <a href="/servicos" class="btn btn--outline">Ver serviços</a>
+          <a href="/resultados" class="btn btn--outline">Ver resultados</a>
         </div>
-        <div class="hero__trust">
+        <div class="hero__trust hero-animate hero-animate-delay-4">
           <div class="trust-item">
             <strong>7+</strong><span>anos de experiência</span>
           </div>
           <div class="trust-divider"></div>
           <div class="trust-item">
-            <strong>4.8★</strong><span>no Google (46 avaliações)</span>
+            <strong>4.8★</strong><span>no Google</span>
           </div>
           <div class="trust-divider"></div>
           <div class="trust-item">
@@ -91,103 +101,175 @@ const reviewImages = [
           </div>
         </div>
       </div>
-      <div class="hero__photo">
-        <img
-          src="/portfolio/antes-depois-01.jpg"
-          alt="Resultado antes e depois — Extensão de Cílios Volume Crystal, Studio Crystal Lashes Santo André"
-          loading="eager"
-        />
-        <span class="hero__sparkle" aria-hidden="true">✦</span>
+
+      <!-- Frame calcita: primeira impressão visual da cor-marca -->
+      <div class="hero__photo-frame hero-photo-animate">
+        <div class="hero__calcita-frame">
+          <img
+            src="/fotos/stefanie/stefanieoriginal-2.png"
+            alt="Stefanie Moura — Fundadora do Studio Crystal Lashes, Santo André"
+            loading="eager"
+            width="640"
+            height="800"
+            class="hero__photo-img"
+          />
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Diferencial -->
-  <section class="section">
+  <!-- ─── Espaço do Studio ──────────────────────────────────── -->
+  <section class="section espaco-section">
     <div class="container">
-      <div class="diff-intro text-center">
+      <div class="espaco-grid">
+        <div class="espaco-text reveal">
+          <p class="eyebrow">O ambiente</p>
+          <h2>Um studio pensado para o seu conforto</h2>
+          <p class="text-muted">
+            Higiene, temperatura controlada, luz calibrada e música suave.
+            A maioria das clientes adormece durante o procedimento.
+            Isso não é coincidência, é o Lash Nap.
+          </p>
+        </div>
+        <div class="espaco-fotos">
+          <img src="/fotos/espaco/espaco-atendimento.png" alt="Stefanie em atendimento no Studio Crystal Lashes" class="espaco-foto espaco-foto--main reveal" loading="lazy" width="800" height="600" />
+          <img src="/fotos/espaco/espaco-02.png" alt="Detalhe do studio Crystal Lashes" class="espaco-foto reveal reveal-delay-1" loading="lazy" width="400" height="300" />
+          <img src="/fotos/espaco/espaco-03.png" alt="Organização e higiene do studio" class="espaco-foto reveal reveal-delay-2" loading="lazy" width="400" height="300" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Diferenciais — CALCITA BOLD ──────────────────────── -->
+  <section class="section section--calcita-brand">
+    <div class="container">
+      <div class="diff-intro text-center reveal">
         <p class="eyebrow">Por que Crystal Lashes</p>
-        <h2>Cada olho tem uma história.<br />Sabemos contar a sua.</h2>
-        <p class="text-muted diff-sub">Não aplicamos cílios. Projetamos harmonias. O Mapeamento Crystal analisa o formato do olho, a curvatura natural e o estilo de vida para criar um resultado personalizado — que parece natural porque foi feito para você.</p>
+        <h2 style="color: var(--teal-deep); margin-top: 12px;">Cada olho tem uma história.<br /><em>Sabemos contar a sua.</em></h2>
+        <p class="diff-sub">Não aplicamos cílios. Projetamos harmonias. O Mapeamento Crystal analisa o formato do olho, a curvatura natural e o estilo de vida para criar um resultado personalizado, que parece natural porque foi feito para você.</p>
       </div>
       <div class="diff-grid">
-        <div class="diff-item">
+        <div class="diff-item reveal reveal-delay-1">
           <div class="diff-icon">✦</div>
           <h3>Mapeamento Crystal</h3>
           <p>Técnica exclusiva que analisa o formato do seu olho para definir a curvatura, espessura e comprimento ideais. Resultado: harmonia, não exagero.</p>
         </div>
-        <div class="diff-item">
+        <div class="diff-item reveal reveal-delay-2">
           <div class="diff-icon">✦</div>
           <h3>Lash Nap</h3>
           <p>Ambiente pensado para seu conforto. Música suave, temperatura agradável e luz calibrada. Muitas clientes dormem durante o procedimento.</p>
         </div>
-        <div class="diff-item">
+        <div class="diff-item reveal reveal-delay-3">
           <div class="diff-icon">✦</div>
           <h3>7 anos de precisão</h3>
-          <p>Stefanie Moura acumulou 7 anos especializando o olhar clínico para lash e 3 anos na Harmonização do Olhar — a combinação que entrega exatamente o resultado certo.</p>
+          <p>Stefanie Moura acumulou 7 anos especializando o olhar clínico para lash e 3 anos na Harmonização do Olhar, a combinação que entrega exatamente o resultado certo.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Serviços Preview -->
-  <section class="section section--muted">
+  <!-- ─── Serviços Preview ──────────────────────────────────── -->
+  <section class="section">
     <div class="container">
-      <div class="text-center" style="margin-bottom: 48px;">
+      <div class="text-center reveal" style="margin-bottom: 48px;">
         <p class="eyebrow">Serviços</p>
         <h2>Do clássico ao exclusivo</h2>
       </div>
       <div class="grid-2">
-        {services.map((s) => <ServiceCard {...s} />)}
-      </div>
-      <div class="text-center" style="margin-top: 40px;">
-        <a href="/servicos" class="btn btn--primary">Ver todos os serviços</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Depoimentos -->
-  <section class="section section--dark">
-    <div class="container">
-      <div class="text-center" style="margin-bottom: 48px;">
-        <p class="eyebrow">O que as clientes dizem</p>
-        <h2 style="color: #fff;">Resultados que falam<br /><em>por si mesmos</em></h2>
-      </div>
-      <div class="grid-3">
-        {testimonials.map((t) => <Testimonial {...t} />)}
-      </div>
-    </div>
-  </section>
-
-  <!-- Avaliações Google -->
-  <section class="section reviews-section">
-    <div class="container">
-      <div class="text-center" style="margin-bottom: 40px;">
-        <p class="eyebrow">Avaliações no Google</p>
-        <h2>4.8★ · 46 avaliações verificadas</h2>
-        <p class="text-muted" style="margin-top: 12px; font-size: 0.9rem;">Clientes reais, resultados reais.</p>
-      </div>
-      <div class="reviews-grid">
-        {reviewImages.map((r) => (
-          <div class="review-img-wrap">
-            <img src={r.src} alt={r.alt} loading="lazy" />
+        {services.map((s, i) => (
+          <div class={`reveal reveal-delay-${(i % 4) + 1}`}>
+            <ServiceCard {...s} />
           </div>
         ))}
       </div>
-      <div class="text-center" style="margin-top: 40px;">
-        <a href="https://g.page/r/StudioCrystalLashes/review" class="btn btn--primary" target="_blank" rel="noopener">
+      <div class="text-center reveal" style="margin-top: 40px;">
+        <a href="/servicos" class="btn btn--outline">Ver todos os serviços</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Resultados Preview ────────────────────────────────── -->
+  <section class="section section--calcita resultados-preview">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom: 48px;">
+        <p class="eyebrow">Resultados</p>
+        <h2>Transformações reais</h2>
+        <p class="text-muted" style="margin-top: 12px;">Cada resultado é único porque cada olho é único.</p>
+      </div>
+      <div class="resultados-grid">
+        {resultadosPreview.map((r, i) => (
+          <a href="/resultados" class={`resultado-item reveal reveal-delay-${i + 1}`}>
+            <img src={r.src} alt={r.alt} loading="eager" width="700" height="700" />
+            <span class="resultado-label">{r.label}</span>
+          </a>
+        ))}
+      </div>
+      <div class="text-center reveal" style="margin-top: 40px;">
+        <a href="/resultados" class="btn btn--primary">Ver todos os resultados</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Depoimentos ───────────────────────────────────────── -->
+  <section class="section section--dark">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom: 48px;">
+        <p class="eyebrow">Avaliações Google</p>
+        <h2 style="color: #fff;">O que as clientes dizem</h2>
+        <p style="color: rgba(255,255,255,0.4); margin-top: 10px; font-size: 0.82rem; letter-spacing: 0.06em;">4.8★ · 46 avaliações</p>
+      </div>
+      <div class="swiper testimonials-swiper">
+        <div class="swiper-wrapper">
+        {testimonials.map((t, i) => (
+          <div class={`swiper-slide reveal reveal-delay-${(i % 4) + 1}`}>
+            <blockquote class="home-testimonial">
+              <div class="home-testimonial__stars">★★★★★</div>
+              <p>"{t.text}"</p>
+              <footer>{t.name}</footer>
+            </blockquote>
+          </div>
+        ))}
+        </div>
+        <div class="testimonial-pagination"></div>
+      </div>
+      <div class="text-center reveal" style="margin-top: 40px;">
+        <a href="https://goo.gl/maps/fU1T5ZW75svgxD9U7" class="btn btn--outline-white" target="_blank" rel="noopener">
           Ver todas no Google
         </a>
       </div>
     </div>
   </section>
 
-  <!-- CTA Final -->
-  <section class="section cta-final section--dark">
-    <div class="container text-center">
+  <!-- ─── Blog Preview ─────────────────────────────────────── -->
+  <section class="section blog-preview">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom: 48px;">
+        <p class="eyebrow">Conhecimento Crystal</p>
+        <h2>Do blog</h2>
+      </div>
+      <div class="blog-preview-grid">
+        {blogPreview.map((p, i) => (
+          <a href={p.slug} class={`blog-preview-card reveal reveal-delay-${i + 1}`}>
+            <div class="blog-preview-card__img">
+              <img src={p.img} alt={p.title} loading="eager" width="640" height="360" />
+            </div>
+            <div class="blog-preview-card__body">
+              <h3>{p.title}</h3>
+              <p>{p.desc}</p>
+              <span class="blog-preview-card__link">Ler artigo</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CTA Final — CALCITA BOLD ─────────────────────────── -->
+  <section class="section cta-final section--calcita-brand">
+    <div class="container text-center reveal">
       <p class="eyebrow">Pronta para transformar seu olhar?</p>
-      <h2 style="color: #fff;">Agende seu horário<br /><em>ainda hoje</em></h2>
-      <p style="color: rgba(255,255,255,0.6); margin-top: 12px; font-size: 0.9rem;">Terça a sexta · Vila Assunção, Santo André – SP</p>
+      <h2 style="color: var(--teal-deep); margin-top: 12px;">Agende seu horário<br /><em>ainda hoje</em></h2>
+      <p style="color: rgba(15,40,32,0.55); margin-top: 12px; font-size: 0.88rem;">Terça a sexta · Vila Assunção, Santo André, SP</p>
       <a href="https://wa.me/5511916637446?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio!" class="btn btn--primary cta-btn" target="_blank" rel="noopener">
         Falar no WhatsApp
       </a>
@@ -199,53 +281,89 @@ const reviewImages = [
 <style>
   /* ── Hero ── */
   .hero {
-    background: var(--teal-deep);
+    position: relative;
+    background:
+      linear-gradient(180deg, rgba(124,224,211,0) 76%, var(--offwhite) 100%),
+      linear-gradient(110deg, rgba(124,224,211,0.94) 0%, rgba(124,224,211,0.78) 36%, rgba(233,251,248,0.88) 72%, var(--offwhite) 100%),
+      url('/fotos/espaco/espaco-02.png') center / cover;
     overflow: hidden;
+    border-bottom: 0;
+    color: var(--teal-deep);
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(250,250,248,0.34);
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 140px;
+    background: linear-gradient(180deg, rgba(250,250,248,0), var(--offwhite));
+    pointer-events: none;
   }
 
   .hero__inner {
+    position: relative;
+    z-index: 1;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 56px;
-    align-items: center;
-    padding-top: 100px;
-    padding-bottom: 80px;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    align-items: end;
+    padding-top: 72px;
+    padding-bottom: 0;
   }
 
-  .hero__content .eyebrow {
+  @media (min-width: 768px) {
+    .hero__inner {
+      grid-template-columns: 1fr 1fr;
+      gap: 44px;
+      padding-top: 100px;
+      padding-bottom: 0;
+      min-height: 760px;
+    }
+  }
+
+  .hero__content .eyebrow { margin-bottom: 20px; }
+
+  .hero__content h1 {
+    color: var(--teal-deep);
     margin-bottom: 20px;
   }
 
-  .hero__content h1 {
-    color: #fff;
-    max-width: 600px;
-    margin-bottom: 24px;
-  }
-
+  /* ✦ A linha em itálico do h1 aparece em calcita — primeira aparição da cor */
   .hero__content h1 em {
-    color: var(--teal);
+    color: var(--white);
     font-style: italic;
+    text-shadow: 0 1px 18px rgba(15,40,32,0.16);
   }
 
   .hero__sub {
-    color: rgba(255,255,255,0.65);
-    font-size: 1.05rem;
+    color: rgba(15,40,32,0.72);
+    font-size: 1rem;
     max-width: 480px;
-    margin-bottom: 40px;
-    line-height: 1.7;
+    margin-bottom: 36px;
+    line-height: 1.75;
   }
 
   .hero__actions {
     display: flex;
-    gap: 16px;
+    gap: 12px;
     flex-wrap: wrap;
-    margin-bottom: 56px;
+    margin-bottom: 48px;
   }
 
   .hero__trust {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 20px;
     flex-wrap: wrap;
   }
 
@@ -256,147 +374,370 @@ const reviewImages = [
   }
 
   .trust-item strong {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
     font-weight: 400;
-    color: #fff;
+    color: var(--teal-deep);
     line-height: 1;
   }
 
   .trust-item span {
-    font-size: 0.72rem;
-    color: rgba(255,255,255,0.45);
+    font-size: 0.68rem;
+    color: rgba(15,40,32,0.68);
     letter-spacing: 0.04em;
   }
 
   .trust-divider {
     width: 1px;
-    height: 32px;
-    background: rgba(255,255,255,0.12);
+    height: 28px;
+    background: rgba(15,40,32,0.16);
   }
 
-  .hero__photo {
+  /* ── Frame calcita: a foto senta num quadro verde ── */
+  .hero__photo-frame {
+    order: -1;
+    align-self: end;
+  }
+
+  @media (min-width: 768px) {
+    .hero__photo-frame { order: 0; }
+  }
+
+  .hero__calcita-frame {
     position: relative;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: 0 24px 80px rgba(0,0,0,0.4);
+    margin-inline: auto;
+    max-width: 560px;
+    filter: drop-shadow(0 30px 48px rgba(15,40,32,0.22));
   }
 
-  .hero__sparkle {
-    position: absolute;
-    top: -14px;
-    right: -14px;
-    font-size: 2rem;
-    color: var(--teal);
-    animation: sparkle-pulse 2.5s ease-in-out infinite;
-  }
-
-  @keyframes sparkle-pulse {
-    0%, 100% { opacity: 0.7; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.12); }
-  }
-
-  .hero__photo img {
+  .hero__photo-img {
     width: 100%;
-    height: 520px;
-    object-fit: cover;
+    height: 460px;
+    object-fit: contain;
     object-position: center top;
+    display: block;
+    filter: brightness(1.04) contrast(0.98) saturate(0.98);
   }
 
-  @media (max-width: 860px) {
-    .hero__inner {
-      grid-template-columns: 1fr;
-      padding-top: 80px;
-      padding-bottom: 60px;
-      gap: 40px;
-    }
-    .hero__photo img {
-      height: 340px;
+  @media (min-width: 768px) {
+    .hero__photo-img {
+      height: 660px;
+      transform: translateY(22px);
+      transform-origin: bottom center;
     }
   }
 
-  /* ── Diferencial ── */
-  .diff-intro {
-    max-width: 640px;
-    margin: 0 auto 56px;
+  /* ── Espaço do Studio ── */
+  .espaco-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
   }
+
+  @media (min-width: 768px) {
+    .espaco-grid {
+      grid-template-columns: 1fr 1.4fr;
+      gap: 64px;
+    }
+  }
+
+  .espaco-text h2 { margin: 12px 0 20px; }
+  .espaco-text p { font-size: 1rem; line-height: 1.8; }
+
+  .espaco-fotos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .espaco-foto {
+    border-radius: var(--radius-md);
+    object-fit: cover;
+    width: 100%;
+    height: 190px;
+  }
+
+  .espaco-foto--main {
+    grid-column: 1 / -1;
+    height: 270px;
+  }
+
+  /* ── Diferenciais em calcita-brand ── */
+  .diff-intro { max-width: 640px; margin: 0 auto 56px; }
 
   .diff-sub {
+    color: rgba(15,40,32,0.65);
     margin-top: 16px;
-    font-size: 1rem;
-    line-height: 1.7;
+    font-size: 0.95rem;
+    line-height: 1.8;
   }
 
   .diff-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
   }
 
   .diff-item {
-    padding: 32px;
-    border: 1px solid #E2E8F0;
-    border-radius: 8px;
-    transition: border-color 0.25s, box-shadow 0.25s;
+    padding: 28px;
+    background: rgba(255,255,255,0.65);
+    border: 1px solid rgba(15,40,32,0.08);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(4px);
+    transition: background var(--transition), transform var(--transition), box-shadow var(--transition), border-color var(--transition);
   }
 
   .diff-item:hover {
-    border-color: var(--teal);
-    box-shadow: 0 4px 24px rgba(94, 207, 191, 0.12);
+    background: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 32px rgba(15,40,32,0.12);
   }
 
   .diff-icon {
-    font-size: 1.6rem;
-    color: var(--teal);
-    margin-bottom: 16px;
-    transition: transform 0.25s;
+    font-size: 1.2rem;
+    color: var(--teal-deep);
+    opacity: 0.6;
+    margin-bottom: 14px;
+    transition: color var(--transition), opacity var(--transition), filter var(--transition), transform var(--transition);
   }
 
   .diff-item:hover .diff-icon {
-    transform: scale(1.15);
+    color: var(--calcita);
+    opacity: 1;
+    filter: drop-shadow(0 0 10px rgba(124,224,211,0.72));
+    transform: translateY(-1px) scale(1.08);
   }
 
   .diff-item h3 {
-    font-size: 1.2rem;
-    margin-bottom: 12px;
+    font-size: 1.05rem;
+    margin-bottom: 10px;
     color: var(--teal-deep);
   }
 
   .diff-item p {
-    font-size: 0.9rem;
-    color: var(--gray-600);
-    line-height: 1.7;
+    font-size: 0.85rem;
+    color: rgba(15,40,32,0.65);
+    line-height: 1.75;
   }
 
-  /* ── Avaliações Google ── */
-  .reviews-section {
-    background: var(--gray-50);
-  }
-
-  .reviews-grid {
+  /* ── Resultados Preview ── */
+  .resultados-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 
-  .review-img-wrap {
+  @media (min-width: 768px) {
+    .resultados-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  .resultado-item {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    display: block;
+    aspect-ratio: 1;
+  }
+
+  .resultado-item img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    transition: transform 0.45s ease;
+  }
+
+  .resultado-item:hover img { transform: scale(1.06); }
+
+  .resultado-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(15,40,32,0.75), transparent);
+    color: var(--white);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 24px 12px 10px;
+  }
+
+  /* ── Blog Preview ── */
+  .testimonials-swiper {
+    position: relative;
+    padding-bottom: 48px !important;
+  }
+
+  .testimonials-swiper .swiper-wrapper {
+    align-items: stretch;
+  }
+
+  .testimonials-swiper .swiper-slide {
+    height: auto;
+    display: flex;
+  }
+
+  .home-testimonial {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    background: rgba(255,255,255,0.075);
+    border: 1px solid rgba(255,255,255,0.13);
+    border-left: 3px solid var(--calcita);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 28px 32px;
+    box-shadow: 0 18px 38px rgba(0,0,0,0.13);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home-testimonial__stars {
+    color: var(--calcita);
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    margin-bottom: 14px;
+  }
+
+  .home-testimonial p {
+    color: rgba(255,255,255,0.86);
+    font-size: 0.95rem;
+    line-height: 1.75;
+    font-style: italic;
+  }
+
+  .home-testimonial footer {
+    color: rgba(255,255,255,0.52);
+    margin-top: auto;
+    padding-top: 18px;
+    font-size: 0.78rem;
+    letter-spacing: 0.05em;
+  }
+
+  :global(.testimonial-pagination .swiper-pagination-bullet) {
+    background: rgba(255,255,255,0.35);
+  }
+
+  :global(.testimonial-pagination .swiper-pagination-bullet-active) {
+    background: var(--calcita);
+  }
+
+  .blog-preview-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  @media (min-width: 768px) { .blog-preview-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .blog-preview-grid { grid-template-columns: repeat(3, 1fr); } }
+
+  .blog-preview-card {
+    border: var(--border-default);
     border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    background: #fff;
-    border: 1px solid #E2E8F0;
+    display: block;
+    transition: box-shadow var(--transition), transform var(--transition);
+    color: inherit;
   }
 
-  .review-img-wrap img {
+  .blog-preview-card:hover {
+    box-shadow: var(--shadow-soft);
+    transform: translateY(-3px);
+  }
+
+  .blog-preview-card__img {
+    overflow: hidden;
+    aspect-ratio: 16/9;
+  }
+
+  .blog-preview-card__img img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    transition: transform 0.45s ease;
+  }
+
+  .blog-preview-card:hover .blog-preview-card__img img {
+    transform: scale(1.05);
+  }
+
+  .blog-preview-card__body { padding: 20px 24px 24px; }
+
+  .blog-preview-card__body h3 {
+    font-size: 1rem;
+    color: var(--teal-deep);
+    margin-bottom: 8px;
+    line-height: 1.35;
+  }
+
+  .blog-preview-card__body p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin-bottom: 16px;
+  }
+
+  .blog-preview-card__link {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--teal-deep);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .blog-preview-card__link::before {
+    content: '✦ ';
+    color: var(--calcita);
+    font-size: 0.58rem;
   }
 
   /* ── CTA Final ── */
-  .cta-btn {
-    margin-top: 32px;
-    padding: 16px 40px;
-    font-size: 0.95rem;
-  }
+  .cta-btn { margin-top: 32px; }
 </style>
+
+<!-- IntersectionObserver global: ativa .is-visible nos elementos .reveal ao entrar na viewport -->
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+  );
+
+  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+  import Swiper from 'swiper';
+  import { Autoplay, Pagination } from 'swiper/modules';
+  import 'swiper/css';
+  import 'swiper/css/pagination';
+
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  new Swiper('.testimonials-swiper', {
+    modules: [Autoplay, Pagination],
+    slidesPerView: 1,
+    spaceBetween: 24,
+    loop: true,
+    pagination: {
+      el: '.testimonial-pagination',
+      clickable: true,
+    },
+    autoplay: prefersReduced ? false : {
+      delay: 2000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+    breakpoints: {
+      640: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 },
+    },
+  });
+</script>
