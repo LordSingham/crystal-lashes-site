@@ -1,11 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
-
 @font-face {
   font-family: 'BetterSignature';
   src: url('/fonts/better-signature-regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
+
+/* Lora — auto-hospedada, subset latin */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/lora-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/lora-italic-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Montserrat — auto-hospedada, subset latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300 600;
+  font-display: swap;
+  src: url('/fonts/montserrat-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 :root {
@@ -65,7 +92,9 @@
   padding: 0;
 }
 
-html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
 
 body {
   font-family: var(--font-body);
@@ -352,11 +381,17 @@ h3 { font-size: clamp(1.1rem, 2vw, 1.5rem); text-wrap: balance; }
   to   { opacity: 1; transform: scale(1); }
 }
 
-/* Scroll reveal — estado inicial */
+/* Scroll reveal — fallback sem JS: sempre visível */
 .reveal {
   opacity: 1;
   transform: none;
   transition: opacity 0.65s cubic-bezier(0.16,1,0.3,1), transform 0.65s cubic-bezier(0.16,1,0.3,1);
+}
+
+/* Com JS presente: oculta até entrar na viewport */
+.js-loaded .reveal {
+  opacity: 0;
+  transform: translateY(24px);
 }
 
 .reveal.is-visible {
@@ -387,6 +422,7 @@ h3 { font-size: clamp(1.1rem, 2vw, 1.5rem); text-wrap: balance; }
 /* ── prefers-reduced-motion ── */
 @media (prefers-reduced-motion: reduce) {
   .reveal,
+  .js-loaded .reveal,
   .hero-animate,
   .hero-photo-animate {
     animation: none !important;

@@ -1,0 +1,65 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="Página não encontrada — Studio Crystal Lashes"
+  description="Esta página não existe. Volte à página inicial ou agende sua consulta."
+>
+  <section class="page-hero section--dark not-found">
+    <div class="container">
+      <p class="eyebrow">Erro 404</p>
+      <h1>Página não encontrada</h1>
+      <p class="lead">
+        Este endereço não existe ou foi movido. Mas seus cílios podem chegar ao destino certo.
+      </p>
+      <div class="not-found__actions">
+        <a href="/" class="btn btn--primary">Voltar à página inicial</a>
+        <a
+          href="https://wa.me/5511916637446?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio!"
+          class="btn btn--outline"
+          target="_blank"
+          rel="noopener"
+        >
+          Falar pelo WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .not-found {
+    min-height: calc(100svh - 72px);
+    display: flex;
+    align-items: center;
+  }
+
+  .not-found h1 {
+    margin: 12px 0 16px;
+  }
+
+  .lead {
+    max-width: 480px;
+    line-height: 1.7;
+    color: rgba(15, 40, 32, 0.72);
+    margin-bottom: 36px;
+  }
+
+  .not-found__actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .not-found__actions .btn--outline {
+    border-color: var(--teal-deep);
+    color: var(--teal-deep);
+  }
+
+  .not-found__actions .btn--outline:hover {
+    background: rgba(15, 40, 32, 0.08);
+    border-color: var(--teal-deep);
+    color: var(--teal-deep);
+  }
+</style>

@@ -21,6 +21,27 @@ const siteUrl = 'https://crystallashes.com.br';
 const canonical = canonicalUrl ?? Astro.url.href;
 const ogImage = image.startsWith('http') ? image : `${siteUrl}${image}`;
 
+const pathLabels: Record<string, string> = {
+  '/sobre': 'Sobre',
+  '/servicos': 'Serviços',
+  '/resultados': 'Resultados',
+  '/contato': 'Contato',
+  '/blog': 'Blog',
+};
+const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
+let breadcrumbLd: object | null = null;
+if (pathname !== '/') {
+  const items: object[] = [{ '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl }];
+  const parts = pathname.split('/').filter(Boolean);
+  if (parts[0] === 'blog' && parts.length > 1) {
+    items.push({ '@type': 'ListItem', position: 2, name: 'Blog', item: `${siteUrl}/blog` });
+    items.push({ '@type': 'ListItem', position: 3, name: title, item: canonical });
+  } else {
+    items.push({ '@type': 'ListItem', position: 2, name: pathLabels[pathname] ?? title, item: canonical });
+  }
+  breadcrumbLd = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items };
+}
+
 const localBusinessJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BeautySalon',
@@ -45,7 +66,14 @@ const localBusinessJsonLd = {
   openingHoursSpecification: [
     { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Tuesday','Wednesday','Thursday','Friday'], opens: '09:00', closes: '19:00' },
   ],
-  priceRange: 'R$75 – R$220',
+  priceRange: 'R$150 – R$250',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.8',
+    reviewCount: '46',
+    bestRating: '5',
+    worstRating: '1',
+  },
   areaServed: ['Santo André', 'São Bernardo do Campo', 'Mauá', 'São Caetano do Sul', 'ABC Paulista'],
   sameAs: [
     'https://www.instagram.com/studiocrystallashes/',
@@ -65,6 +93,9 @@ const localBusinessJsonLd = {
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={ogImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:type" content="image/jpeg" />
 <meta property="og:locale" content="pt_BR" />
 <meta property="og:site_name" content="Studio Crystal Lashes" />
 
@@ -79,3 +110,6 @@ const localBusinessJsonLd = {
 
 <!-- Page-specific JSON-LD (optional) -->
 {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+
+<!-- Breadcrumb JSON-LD (auto-generated) -->
+{breadcrumbLd && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />}

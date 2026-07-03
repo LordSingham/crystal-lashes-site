@@ -5,4 +5,5 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://crystallashes.com.br',
   integrations: [sitemap()],
+  compressHTML: true,
 });

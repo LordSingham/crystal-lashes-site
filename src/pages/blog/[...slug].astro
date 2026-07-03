@@ -60,7 +60,7 @@ const jsonLd = {
             {post.data.pubDate.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })}
           </time>
         </div>
-        <h1 style="color: #fff; max-width: 720px;">{post.data.title}</h1>
+        <h1 style="max-width: 720px;">{post.data.title}</h1>
         <p class="post-desc">{post.data.description}</p>
         {post.data.tags.length > 0 && (
           <div class="post-tags">
@@ -107,17 +107,18 @@ const jsonLd = {
     gap: 20px;
     margin-bottom: 20px;
     font-size: 0.82rem;
-    color: rgba(255,255,255,0.45);
+    color: rgba(15,40,32,0.55);
   }
 
   .back-link {
-    color: var(--calcita);
+    color: var(--teal-deep);
     font-weight: 500;
     transition: color var(--transition-fast);
+    opacity: 0.72;
   }
 
   .back-link:hover {
-    color: var(--teal-dark);
+    opacity: 1;
   }
 
   .post-desc {
@@ -137,8 +138,8 @@ const jsonLd = {
 
   .post-tag {
     font-size: 0.75rem;
-    background: rgba(255,255,255,0.08);
-    color: rgba(255,255,255,0.6);
+    background: rgba(15,40,32,0.1);
+    color: rgba(15,40,32,0.65);
     padding: 4px 12px;
     border-radius: 12px;
   }

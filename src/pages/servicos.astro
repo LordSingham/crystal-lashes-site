@@ -42,18 +42,70 @@ const efeitos = [
   { nome: 'Elegance / Brasileiro', perfil: 'Olhos redondos, sobrancelhas bem definidas, pele clara ou escura.', visual: 'Delicado, natural, profissional.' },
   { nome: 'Egípcio', perfil: 'Quem quer volume, mas sem exagero. Olhar que chama atenção.', visual: 'Volumoso, intenso, sofisticado.' },
 ];
+
+const combinedJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+  {
+    '@type': 'ItemList',
+    name: 'Serviços de Extensão de Cílios — Studio Crystal Lashes',
+    itemListElement: lashServices.map((s, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: s.name,
+      description: s.description,
+    })),
+  },
+  {
+    '@type': 'FAQPage',
+    mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Quanto tempo dura a extensão de cílios?',
+      acceptedAnswer: { '@type': 'Answer', text: 'O visual fica impecável por 1 a 2 semanas e bonito por até 3 semanas com cuidados adequados. A manutenção a cada 15 a 21 dias mantém o resultado de forma contínua.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'A extensão de cílios danifica o cílio natural?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Não, quando aplicada corretamente. O Mapeamento Crystal respeita o peso e a capacidade de cada cílio natural. Nunca aplicamos fios mais pesados do que o cílio suporta.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Posso usar máscara de cílios com extensão?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Não é necessário e não é recomendado. A extensão já oferece o volume e o comprimento desejados. Máscara de cílios compromete a durabilidade da cola.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'O que é o Lash Nap?',
+      acceptedAnswer: { '@type': 'Answer', text: 'A maioria das clientes dorme durante o procedimento. O studio tem temperatura controlada, música ambiente e luz calibrada para criar um ambiente relaxante. É uma das marcas do Crystal Lashes.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Como agendar a extensão de cílios no Studio Crystal Lashes?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Pelo WhatsApp, clique em qualquer botão "Agendar" no site. O atendimento é de terça a sexta-feira na Av. João Ramalho, 170, Sala 702, Vila Assunção, Santo André.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Tenho sensibilidade a cola. Posso fazer extensão de cílios?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Depende do tipo de sensibilidade. Entre em contato antes de agendar para conversarmos sobre o histórico e eventualmente realizarmos um teste de contato.' },
+    },
+  ],
+  },
+  ],
+};
 ---
 
 <Base
   title="Serviços e Preços — Studio Crystal Lashes, Santo André"
   description="Extensão de cílios em Santo André, SP. Volume Crystal, Fox Eyes, Elegance, Egípcio e Manutenção. Preços e informações completas."
+  jsonLd={combinedJsonLd}
 >
 
   <section class="page-hero section--dark">
     <div class="container page-hero__inner">
       <div class="reveal">
         <p class="eyebrow">O que oferecemos</p>
-        <h1 style="color: #fff; margin: 12px 0 16px;">Serviços<br /><em>& Preços</em></h1>
+        <h1 style="margin: 12px 0 16px;">Serviços<br /><em>& Preços</em></h1>
         <p style="color: rgba(255,255,255,0.6); max-width: 480px; line-height: 1.7;">
           Todos os procedimentos realizados com avaliação individual do olhar. Nada genérico.
         </p>
@@ -151,7 +203,7 @@ const efeitos = [
       <div class="faq-grid">
         <details class="faq-item">
           <summary>Quanto tempo dura a extensão?</summary>
-          <p>Em média 3 a 4 semanas com cuidados adequados. A manutenção a cada 15 a 21 dias mantém o visual impecável de forma contínua.</p>
+          <p>O visual fica impecável por 1 a 2 semanas e bonito por até 3 semanas com cuidados adequados. A manutenção a cada 15 a 21 dias mantém o resultado de forma contínua.</p>
         </details>
         <details class="faq-item">
           <summary>A extensão danifica o cílio natural?</summary>
@@ -338,6 +390,10 @@ const efeitos = [
     transform: rotate(45deg);
   }
 
+  .faq-item[open] summary {
+    background: var(--calcita-soft);
+  }
+
   .faq-item p {
     padding: 0 24px 20px;
     font-size: 0.88rem;
@@ -357,19 +413,6 @@ const efeitos = [
 </style>
 
 <script>
-  // Scroll reveal
-  const revealObs = new IntersectionObserver(
-    (entries) => entries.forEach((e) => {
-      if (e.isIntersecting) {
-        e.target.classList.add('is-visible');
-        revealObs.unobserve(e.target);
-      }
-    }),
-    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
-  );
-
-  document.querySelectorAll('.reveal').forEach((el) => revealObs.observe(el));
-
   // FAQ: animação suave de altura ao abrir/fechar
   document.querySelectorAll<HTMLDetailsElement>('.faq-item').forEach((details) => {
     const summary = details.querySelector('summary')!;

@@ -54,7 +54,7 @@ const depoimentos = [
     <div class="container res-hero__inner">
       <div class="reveal">
         <p class="eyebrow">Galeria</p>
-        <h1 style="color: #fff; margin: 12px 0 16px;">Transformações<br /><em>que falam por si</em></h1>
+        <h1 style="margin: 12px 0 16px;">Transformações<br /><em>que falam por si</em></h1>
         <p style="color: rgba(255,255,255,0.6); max-width: 480px; line-height: 1.75;">
           Cada resultado é único porque cada olho é único. Veja o que o Mapeamento Crystal entrega na prática.
         </p>
@@ -326,18 +326,6 @@ const depoimentos = [
 </style>
 
 <script>
-  // Scroll reveal
-  const revealObs = new IntersectionObserver(
-    (entries) => entries.forEach((e) => {
-      if (e.isIntersecting) {
-        e.target.classList.add('is-visible');
-        revealObs.unobserve(e.target);
-      }
-    }),
-    { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
-  );
-  document.querySelectorAll('.reveal').forEach((el) => revealObs.observe(el));
-
   import PhotoSwipeLightbox from 'photoswipe/lightbox';
   import 'photoswipe/style.css';
 
@@ -357,18 +345,17 @@ const depoimentos = [
   import 'swiper/css';
   import 'swiper/css/pagination';
 
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  const swiper = new Swiper('.dep-swiper', {
+  new Swiper('.dep-swiper', {
     modules: [Autoplay, Pagination],
     slidesPerView: 1,
     spaceBetween: 24,
     loop: true,
+    speed: 600,
     pagination: {
       el: '.dep-pagination',
       clickable: true,
     },
-    autoplay: prefersReduced ? false : {
+    autoplay: {
       delay: 2000,
       disableOnInteraction: false,
       pauseOnMouseEnter: true,

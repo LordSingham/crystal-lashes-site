@@ -25,9 +25,11 @@ const { title, description, image, type = 'website', canonicalUrl, jsonLd } = As
   <meta name="generator" content={Astro.generator} />
   <meta name="theme-color" content="#0F2820" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="manifest" href="/manifest.json" />
   <link rel="preload" as="font" href="/fonts/better-signature-regular.ttf" type="font/truetype" crossorigin />
+  <link rel="preload" as="font" href="/fonts/lora-latin.woff2" type="font/woff2" crossorigin />
+  <link rel="preload" as="font" href="/fonts/montserrat-latin.woff2" type="font/woff2" crossorigin />
+  <meta name="robots" content="index, follow" />
   <SEO
     title={title}
     description={description}
@@ -47,3 +49,17 @@ const { title, description, image, type = 'website', canonicalUrl, jsonLd } = As
   <WhatsAppCTA />
 </body>
 </html>
+
+<script>
+  document.documentElement.classList.add('js-loaded');
+  const _obs = new IntersectionObserver(
+    (entries) => entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-visible');
+        _obs.unobserve(e.target);
+      }
+    }),
+    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+  );
+  document.querySelectorAll('.reveal').forEach((el) => _obs.observe(el));
+</script>

@@ -10,7 +10,7 @@ const year = new Date().getFullYear();
       </a>
       <p class="footer__tagline">Especialista em Harmonização do Olhar<br />através da Extensão de Cílios.</p>
       <div class="footer__socials">
-        <a href="https://www.instagram.com/studiocrystallashes/" target="_blank" rel="noopener" aria-label="Instagram">
+        <a href="https://www.instagram.com/studiocrystallashes/" target="_blank" rel="noopener me" aria-label="Instagram">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
           </svg>
@@ -45,7 +45,7 @@ const year = new Date().getFullYear();
         <p>Av. João Ramalho, 170, Sala 702</p>
         <p>Vila Assunção, Santo André, SP</p>
         <p>CEP 09030-320</p>
-        <p class="footer__phone"><a href="https://wa.me/5511916637446">(11) 91663-7446</a></p>
+        <p class="footer__phone"><a href="tel:+5511916637446" aria-label="Ligar para (11) 91663-7446">(11) 91663-7446</a></p>
       </address>
       <p class="footer__hours">Terça a Sexta · 9h–19h</p>
     </div>
@@ -129,9 +129,22 @@ const year = new Date().getFullYear();
     font-size: 0.9rem;
     color: rgba(255,255,255,0.65);
     transition: color var(--transition-fast);
+    position: relative;
+  }
+
+  .footer__links nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--calcita);
+    transition: width var(--transition-fast);
   }
 
   .footer__links nav a:hover { color: #fff; }
+  .footer__links nav a:hover::after { width: 100%; }
 
   .footer__contact address {
     font-style: normal;

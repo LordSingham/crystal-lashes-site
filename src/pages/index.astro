@@ -1,4 +1,5 @@
 ---
+import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 
@@ -56,11 +57,11 @@ const resultadosPreview = [
   { src: '/fotos/resultados/resultado-volume-brasileiro-01.jpg', alt: 'Resultado Volume Brasileiro', label: 'Volume Brasileiro' },
 ];
 
-const blogPreview = [
-  { title: 'Quanto tempo dura a extensão de cílios?', desc: 'Tudo o que você precisa saber para manter o resultado impecável entre manutenções.', img: '/fotos/blog/blog-quanto-tempo-dura-extensao-cilios.jpg', slug: '/blog/quanto-dura-extensao-de-cilios' },
-  { title: 'Mapeamento Crystal: o que é e por que faz diferença', desc: 'A técnica exclusiva que analisa o formato do seu olho antes de qualquer decisão.', img: '/fotos/blog/blog-mapeamento-crystal.jpg', slug: '/blog/harmonizacao-do-olhar' },
-  { title: 'Como escolher o efeito ideal para o seu olhar', desc: 'Fox Eyes, Elegance, Egípcio ou Crystal — entenda qual harmoniza melhor com você.', img: '/fotos/blog/blog-como-escolher-efeito-ideal.jpg', slug: '/blog/extensao-de-cilios-santo-andre' },
-];
+const allPosts = await getCollection('blog');
+const blogPreview = allPosts
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3)
+  .map(p => ({ title: p.data.title, desc: p.data.description, img: p.data.image, slug: `/blog/${p.id}`, pubDate: p.data.pubDate, tags: p.data.tags }));
 ---
 
 <Base
@@ -109,6 +110,7 @@ const blogPreview = [
             src="/fotos/stefanie/stefanieoriginal-2.png"
             alt="Stefanie Moura — Fundadora do Studio Crystal Lashes, Santo André"
             loading="eager"
+            fetchpriority="high"
             width="640"
             height="800"
             class="hero__photo-img"
@@ -249,16 +251,28 @@ const blogPreview = [
       </div>
       <div class="blog-preview-grid">
         {blogPreview.map((p, i) => (
-          <a href={p.slug} class={`blog-preview-card reveal reveal-delay-${i + 1}`}>
-            <div class="blog-preview-card__img">
-              <img src={p.img} alt={p.title} loading="eager" width="640" height="360" />
+          <article class={`blog-card reveal reveal-delay-${i + 1}`}>
+            {p.img && (
+              <a href={p.slug} class="blog-card__img-link">
+                <img src={p.img} alt={p.title} loading={i === 0 ? 'eager' : 'lazy'} width="640" height="360" />
+              </a>
+            )}
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <time datetime={p.pubDate.toISOString()}>
+                  {p.pubDate.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })}
+                </time>
+                {p.tags.slice(0, 2).map((tag) => (
+                  <span class="blog-tag">{tag}</span>
+                ))}
+              </div>
+              <h3 class="blog-card__title">
+                <a href={p.slug}>{p.title}</a>
+              </h3>
+              <p class="blog-card__desc">{p.desc}</p>
+              <a href={p.slug} class="blog-card__link">Ler artigo ✦</a>
             </div>
-            <div class="blog-preview-card__body">
-              <h3>{p.title}</h3>
-              <p>{p.desc}</p>
-              <span class="blog-preview-card__link">Ler artigo</span>
-            </div>
-          </a>
+          </article>
         ))}
       </div>
     </div>
@@ -413,6 +427,7 @@ const blogPreview = [
   .hero__photo-img {
     width: 100%;
     height: 460px;
+    max-height: 60svh;
     object-fit: contain;
     object-position: center top;
     display: block;
@@ -422,6 +437,7 @@ const blogPreview = [
   @media (min-width: 768px) {
     .hero__photo-img {
       height: 660px;
+      max-height: none;
       transform: translateY(22px);
       transform-origin: bottom center;
     }
@@ -632,26 +648,31 @@ const blogPreview = [
   @media (min-width: 768px) { .blog-preview-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (min-width: 1024px) { .blog-preview-grid { grid-template-columns: repeat(3, 1fr); } }
 
-  .blog-preview-card {
+  .blog-card {
     border: var(--border-default);
     border-radius: var(--radius-lg);
     overflow: hidden;
-    display: block;
-    transition: box-shadow var(--transition), transform var(--transition);
-    color: inherit;
+    background: var(--white);
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
-  .blog-preview-card:hover {
-    box-shadow: var(--shadow-soft);
+  .blog-card:hover {
     transform: translateY(-3px);
+    box-shadow: var(--shadow-soft);
+    border-color: var(--calcita);
   }
 
-  .blog-preview-card__img {
-    overflow: hidden;
+  .blog-card__img-link {
+    display: block;
     aspect-ratio: 16/9;
+    overflow: hidden;
+    background: var(--calcita-soft);
   }
 
-  .blog-preview-card__img img {
+  .blog-card__img-link img {
     width: 100%;
     height: 100%;
     aspect-ratio: 16/9;
@@ -659,77 +680,94 @@ const blogPreview = [
     transition: transform 0.45s ease;
   }
 
-  .blog-preview-card:hover .blog-preview-card__img img {
+  .blog-card:hover .blog-card__img-link img {
     transform: scale(1.05);
   }
 
-  .blog-preview-card__body { padding: 20px 24px 24px; }
-
-  .blog-preview-card__body h3 {
-    font-size: 1rem;
-    color: var(--teal-deep);
-    margin-bottom: 8px;
-    line-height: 1.35;
+  .blog-card__body {
+    padding: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
 
-  .blog-preview-card__body p {
-    font-size: 0.85rem;
+  .blog-card__meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+
+  .blog-card__meta time {
+    font-size: 0.75rem;
     color: var(--text-muted);
-    line-height: 1.65;
+  }
+
+  .blog-tag {
+    font-size: 0.7rem;
+    background: var(--calcita-light);
+    color: var(--teal-deep);
+    padding: 2px 8px;
+    border-radius: var(--radius-pill);
+  }
+
+  .blog-card__title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+
+  .blog-card__title a {
+    color: var(--teal-deep);
+    transition: color var(--transition-fast);
+  }
+
+  .blog-card__title a:hover {
+    color: var(--calcita);
+  }
+
+  .blog-card__desc {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.6;
     margin-bottom: 16px;
   }
 
-  .blog-preview-card__link {
-    font-size: 0.72rem;
+  .blog-card__link {
+    margin-top: auto;
+    font-size: 0.82rem;
     font-weight: 600;
-    color: var(--teal-deep);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--calcita);
+    transition: color var(--transition-fast);
   }
 
-  .blog-preview-card__link::before {
-    content: '✦ ';
-    color: var(--calcita);
-    font-size: 0.58rem;
+  .blog-card__link:hover {
+    color: var(--teal-dark);
   }
 
   /* ── CTA Final ── */
   .cta-btn { margin-top: 32px; }
 </style>
 
-<!-- IntersectionObserver global: ativa .is-visible nos elementos .reveal ao entrar na viewport -->
 <script>
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
-  );
-
-  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-
   import Swiper from 'swiper';
   import { Autoplay, Pagination } from 'swiper/modules';
   import 'swiper/css';
   import 'swiper/css/pagination';
-
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   new Swiper('.testimonials-swiper', {
     modules: [Autoplay, Pagination],
     slidesPerView: 1,
     spaceBetween: 24,
     loop: true,
+    speed: 600,
     pagination: {
       el: '.testimonial-pagination',
       clickable: true,
     },
-    autoplay: prefersReduced ? false : {
+    autoplay: {
       delay: 2000,
       disableOnInteraction: false,
       pauseOnMouseEnter: true,

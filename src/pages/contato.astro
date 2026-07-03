@@ -11,7 +11,7 @@ import Base from '../layouts/Base.astro';
     <div class="container page-hero__inner">
       <div class="reveal">
         <p class="eyebrow">Fale conosco</p>
-        <h1 style="color: #fff; margin: 12px 0 16px;">Agende seu<br /><em>horário</em></h1>
+        <h1 style="margin: 12px 0 16px;">Agende seu<br /><em>horário</em></h1>
         <p style="color: rgba(255,255,255,0.6); max-width: 440px; line-height: 1.75;">
           A forma mais rápida de agendar é pelo WhatsApp. Respondemos em minutos.
         </p>
@@ -97,6 +97,14 @@ import Base from '../layouts/Base.astro';
             referrerpolicy="no-referrer-when-downgrade"
             title="Localização Studio Crystal Lashes — Av. João Ramalho 170, Sala 702, Vila Assunção, Santo André"
           ></iframe>
+          <a
+            href="https://maps.google.com/maps?q=Av+Jo%C3%A3o+Ramalho+170+Vila+Assun%C3%A7%C3%A3o+Santo+Andr%C3%A9+SP"
+            class="btn btn--outline maps-btn"
+            target="_blank"
+            rel="noopener"
+          >
+            Abrir no Google Maps
+          </a>
           <p class="map-note text-muted">
             Acesso pela Av. João Ramalho. Estacionamento disponível nas proximidades.
           </p>
@@ -123,7 +131,7 @@ import Base from '../layouts/Base.astro';
     align-items: start;
   }
 
-  @media (min-width: 860px) {
+  @media (min-width: 768px) {
     .contato-grid {
       grid-template-columns: 1fr 1.4fr;
       gap: 64px;
@@ -228,6 +236,13 @@ import Base from '../layouts/Base.astro';
   .social-link--tiktok:hover { color: #111; }
 
   /* Mapa */
+  .maps-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 12px;
+  }
+
   .map-note {
     margin-top: 12px;
     font-size: 0.8rem;
@@ -235,16 +250,3 @@ import Base from '../layouts/Base.astro';
   }
 </style>
 
-<script>
-  const observer = new IntersectionObserver(
-    (entries) => entries.forEach((e) => {
-      if (e.isIntersecting) {
-        e.target.classList.add('is-visible');
-        observer.unobserve(e.target);
-      }
-    }),
-    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
-  );
-
-  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-</script>

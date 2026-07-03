@@ -1,0 +1,18 @@
+{
+  "name": "Studio Crystal Lashes",
+  "short_name": "Crystal Lashes",
+  "description": "Especialistas em Extensão de Cílios e Harmonização do Olhar em Santo André, SP.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0F2820",
+  "theme_color": "#0F2820",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -63,6 +63,18 @@ const currentPath = Astro.url.pathname;
     transition: box-shadow var(--transition), border-color var(--transition);
   }
 
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: var(--scroll-pct, 0%);
+    height: 2px;
+    background: var(--calcita);
+    transition: width 0.1s linear;
+    pointer-events: none;
+  }
+
   .header.scrolled {
     box-shadow: 0 4px 24px rgba(15,40,32,0.08);
     border-bottom-color: transparent;
@@ -105,7 +117,7 @@ const currentPath = Astro.url.pathname;
     font-size: 0.8rem;
     font-weight: 400;
     letter-spacing: 0.06em;
-    color: var(--text-muted);
+    color: #555;
     transition: color var(--transition-fast);
     text-transform: uppercase;
   }
@@ -194,7 +206,7 @@ const currentPath = Astro.url.pathname;
   }
 </style>
 
-<nav class="header__nav--mobile" id="mobile-nav" aria-label="Navegação mobile" inert>
+<nav class="header__nav--mobile" id="mobile-nav" aria-label="Navegação mobile" role="dialog" aria-modal="true" inert>
   {nav.map(({ label, href }) => (
     <a
       href={href}
@@ -210,9 +222,11 @@ const currentPath = Astro.url.pathname;
   const mobileNav = document.getElementById('mobile-nav');
   const header = document.getElementById('header');
 
-  // Scroll effect
+  // Scroll effect + progress bar
   window.addEventListener('scroll', () => {
     header?.classList.toggle('scrolled', window.scrollY > 20);
+    const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    document.documentElement.style.setProperty('--scroll-pct', `${Math.min(pct, 100)}%`);
   }, { passive: true });
 
   // Mobile nav toggle
@@ -234,5 +248,14 @@ const currentPath = Astro.url.pathname;
       burger?.setAttribute('aria-expanded', 'false');
       burger?.setAttribute('aria-label', 'Abrir menu');
     }
+  });
+
+  mobileNav?.querySelectorAll('.header__link').forEach((link) => {
+    link.addEventListener('click', () => {
+      mobileNav?.classList.remove('open');
+      mobileNav?.setAttribute('inert', '');
+      burger?.setAttribute('aria-expanded', 'false');
+      burger?.setAttribute('aria-label', 'Abrir menu');
+    });
   });
 </script>
