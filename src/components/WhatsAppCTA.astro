@@ -19,8 +19,9 @@ const waLink = "https://wa.me/5511916637446?text=Ol%C3%A1%2C%20gostaria%20de%20a
 <style>
   .wa-float {
     position: fixed;
-    bottom: 28px;
+    bottom: calc(28px + env(safe-area-inset-bottom));
     right: 28px;
+    touch-action: manipulation;
     z-index: 200;
     display: flex;
     align-items: center;

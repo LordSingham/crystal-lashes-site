@@ -201,7 +201,7 @@ const blogPreview = allPosts
       <div class="resultados-grid">
         {resultadosPreview.map((r, i) => (
           <a href="/resultados" class={`resultado-item reveal reveal-delay-${i + 1}`}>
-            <img src={r.src} alt={r.alt} loading="eager" width="700" height="700" />
+            <img src={r.src} alt={r.alt} loading="lazy" width="700" height="700" />
             <span class="resultado-label">{r.label}</span>
           </a>
         ))}
@@ -757,18 +757,20 @@ const blogPreview = allPosts
   import 'swiper/css';
   import 'swiper/css/pagination';
 
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   new Swiper('.testimonials-swiper', {
     modules: [Autoplay, Pagination],
     slidesPerView: 1,
     spaceBetween: 24,
     loop: true,
-    speed: 600,
+    speed: reduceMotion ? 0 : 600,
     pagination: {
       el: '.testimonial-pagination',
       clickable: true,
     },
-    autoplay: {
-      delay: 2000,
+    autoplay: reduceMotion ? false : {
+      delay: 4000,
       disableOnInteraction: false,
       pauseOnMouseEnter: true,
     },

@@ -46,7 +46,7 @@ const currentPath = Astro.url.pathname;
         Agendar
       </a>
       <button class="header__burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-nav">
-        <span></span><span></span><span></span>
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
       </button>
     </div>
   </div>
@@ -164,11 +164,15 @@ const currentPath = Astro.url.pathname;
   .header__burger {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 5px;
     background: none;
     border: none;
     cursor: pointer;
     padding: 4px;
+    min-width: 44px;
+    min-height: 44px;
+    touch-action: manipulation;
   }
 
   .header__burger span {
@@ -195,6 +199,7 @@ const currentPath = Astro.url.pathname;
     border-bottom: 1px solid var(--line);
     box-shadow: 0 8px 24px rgba(0,0,0,0.08);
     z-index: 99;
+    overscroll-behavior: contain;
   }
 
   .header__nav--mobile.open {
