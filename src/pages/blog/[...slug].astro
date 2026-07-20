@@ -57,7 +57,7 @@ const jsonLd = {
         <div class="post-meta">
           <a href="/blog" class="back-link">← Blog</a>
           <time datetime={post.data.pubDate.toISOString()}>
-            {post.data.pubDate.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })}
+            {post.data.pubDate.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric', timeZone: 'UTC' })}
           </time>
         </div>
         <h1 style="max-width: 720px;">{post.data.title}</h1>

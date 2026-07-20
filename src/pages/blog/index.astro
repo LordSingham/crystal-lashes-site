@@ -50,7 +50,7 @@ const posts = allPosts.sort(
               <div class="blog-card__body">
                 <div class="blog-card__meta">
                   <time datetime={post.data.pubDate.toISOString()}>
-                    {post.data.pubDate.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })}
+                    {post.data.pubDate.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric', timeZone: 'UTC' })}
                   </time>
                   {post.data.tags.slice(0, 2).map((tag) => (
                     <span class="blog-tag">{tag}</span>
