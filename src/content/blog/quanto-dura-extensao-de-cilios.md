@@ -16,9 +16,9 @@ Com cuidados adequados:
 
 - **Aparência cheia e impecável:** 1 a 2 semanas
 - **Visual ainda bonito, mas com falhas visíveis:** 2 a 3 semanas
-- **Necessidade de reposição:** entre 15 e 21 dias é o ideal
+- **Reposição:** 15 dias é o que eu recomendo, e até 21 ainda funciona
 
-A maioria das clientes do Studio Crystal Lashes agenda a manutenção a cada 3 semanas, o que mantém o olhar sempre impecável.
+Aqui no studio eu recomendo voltar a cada 15 dias. Nesse intervalo a reposição pega os fios antes de as falhas começarem a aparecer, e a sessão é mais curta. Aos 21 dias também dá, e a escolha é sua: chega mais falha para repor, e o atendimento leva mais tempo.
 
 ## O que faz os fios caírem mais rápido
 
