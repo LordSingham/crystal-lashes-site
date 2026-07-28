@@ -2,7 +2,7 @@
 title: "Extensão de Cílios em Santo André: Guia Completo para Escolher Bem"
 description: "Tudo o que você precisa saber antes de fazer extensão de cílios em Santo André, SP: técnicas, durabilidade, preços e como escolher uma lash designer de qualidade."
 pubDate: 2026-06-15
-image: "/fotos/blog/blog-como-escolher-efeito-ideal.png"
+image: "/fotos/blog/blog-como-escolher-efeito-ideal.jpg"
 tags: ["extensão de cílios", "Santo André", "lash designer", "guia"]
 ---
 

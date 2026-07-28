@@ -32,7 +32,7 @@ Nesse modelo, uma única extensão é aplicada sobre cada cílio natural apto a 
 
 O resultado é um olhar mais definido, com ganho de comprimento e curvatura, mantendo um aspecto elegante e bastante natural. Muitas clientes relatam que recebem elogios como: *"Seus cílios estão lindos!"* sem que as pessoas percebam imediatamente que se trata de uma extensão.
 
-![Resultado antes e depois da extensão fio a fio clássico](/fotos/blog/fio-a-fio-antes-depois.jpg)
+![Resultado antes e depois da extensão fio a fio clássico](/fotos/blog/fio-a-fio-antes-depois.webp)
 
 O fio a fio clássico costuma ser indicado para quem:
 
@@ -53,7 +53,7 @@ Esses leques podem variar em quantidade de fios e espessura, de acordo com as ca
 
 O resultado é um efeito com mais densidade, definição e presença, mantendo leveza e conforto.
 
-![Resultado do volume nos dois olhos — densidade e presença com leveza](/fotos/blog/volume-resultado-olhos.jpg)
+![Resultado do volume nos dois olhos — densidade e presença com leveza](/fotos/blog/volume-resultado-olhos.webp)
 
 O volume costuma ser indicado para quem:
 

@@ -20,7 +20,7 @@ E esse "desde que" faz toda a diferença. É sobre ele que quero falar aqui.
 
 ## Por que essa dúvida é tão comum?
 
-<img src="/fotos/blog/estraga-fio-natural-resultado.jpg" alt="Resultado de extensão de cílios com aspecto natural e saudável" class="img-float" />
+<img src="/fotos/blog/estraga-fio-natural-resultado.webp" alt="Resultado de extensão de cílios com aspecto natural e saudável" class="img-float" />
 
 Esse receio é totalmente compreensível.
 
@@ -72,7 +72,7 @@ Aplicações com excesso de adesivo, isolamento inadequado ou extensões incompa
 Um exemplo comum é quando dois ou mais cílios naturais ficam colados entre si. Como cada um cresce em um ritmo diferente, eles passam a exercer tração um sobre o outro, favorecendo quedas antes do tempo.
 
 <figure>
-  <img src="/fotos/blog/estraga-fio-natural-isolamento.jpg" alt="Isolamento fio a fio durante a aplicação da extensão de cílios" class="img-wide" />
+  <img src="/fotos/blog/estraga-fio-natural-isolamento.webp" alt="Isolamento fio a fio durante a aplicação da extensão de cílios" class="img-wide" />
   <figcaption>O isolamento fio a fio: cada extensão é fixada em um único cílio natural, nunca em dois.</figcaption>
 </figure>
 
@@ -120,7 +120,7 @@ Todo cuidado começa antes mesmo da aplicação. O processo tem três momentos, 
 | **Depois** | Você recebe orientações sobre higienização, cuidados diários e o intervalo ideal para as manutenções. |
 
 <figure>
-  <img src="/fotos/blog/estraga-fio-natural-mapeamento.jpg" alt="Mapeamento do olhar sendo desenhado antes da aplicação da extensão de cílios" class="img-wide" />
+  <img src="/fotos/blog/estraga-fio-natural-mapeamento.webp" alt="Mapeamento do olhar sendo desenhado antes da aplicação da extensão de cílios" class="img-wide" />
   <figcaption>O mapeamento é desenhado antes de qualquer fio ser aplicado. É ele que define o que o seu cílio vai suportar.</figcaption>
 </figure>
 
@@ -151,7 +151,7 @@ Ao longo dos anos, acompanhei muitas clientes que usam extensão de cílios de f
 Quando, por qualquer motivo, decidem fazer uma pausa, os cílios naturais permanecem saudáveis e seguem seu ciclo normal de crescimento. Isso acontece porque uma boa aplicação respeita os limites de cada fio natural.
 
 <figure>
-  <img src="/fotos/blog/estraga-fio-natural-antes-depois.jpg" alt="Antes e depois da extensão de cílios, com o fio natural preservado" />
+  <img src="/fotos/blog/estraga-fio-natural-antes-depois.webp" alt="Antes e depois da extensão de cílios, com o fio natural preservado" />
   <figcaption>Antes e depois de uma aplicação. O fio natural continua o mesmo, apenas valorizado.</figcaption>
 </figure>
 

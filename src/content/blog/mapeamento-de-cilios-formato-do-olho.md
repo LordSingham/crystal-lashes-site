@@ -26,7 +26,7 @@ O mapeamento é o planejamento da aplicação. Durante essa etapa, divido a linh
 
 É esse planejamento que determina como o olhar será valorizado no resultado final. Os materiais podem ser exatamente os mesmos. O que muda é a forma como eles são distribuídos para respeitar as características de cada rosto.
 
-![Mapeamento de cílios: as linhas azuis marcam onde cada comprimento entra, e a extensão é aplicada seguindo esse desenho](/fotos/blog/mapeamento-linhas-do-mapa.jpg)
+![Mapeamento de cílios: as linhas azuis marcam onde cada comprimento entra, e a extensão é aplicada seguindo esse desenho](/fotos/blog/mapeamento-linhas-do-mapa.webp)
 
 As linhas azuis na imagem são o mapa. Cada uma marca uma seção do olho que vai receber um comprimento diferente. Em cima, os cílios naturais antes de começar; embaixo, a extensão já aplicada seguindo exatamente esse desenho.
 
@@ -115,7 +115,7 @@ Como são características diferentes, cada uma exige um planejamento específic
 
 O mapeamento não é uma técnica separada do que eu chamo de harmonização do olhar, ele é a base dela. A harmonização olha o conjunto, a sobrancelha, o formato do rosto, a proporção entre as partes. O mapeamento é onde essa leitura vira número e desenho. Se você quiser entender a visão mais ampla, escrevi sobre ela no artigo sobre [o que é harmonização do olhar](/blog/harmonizacao-do-olhar).
 
-![Antes e depois de uma cliente do Studio Crystal Lashes: o mapeamento pensado para o rosto valoriza o olhar por inteiro](/fotos/blog/mapeamento-antes-depois.jpg)
+![Antes e depois de uma cliente do Studio Crystal Lashes: o mapeamento pensado para o rosto valoriza o olhar por inteiro](/fotos/blog/mapeamento-antes-depois.webp)
 
 Repare que o resultado não é apenas "mais cílios". O olhar todo fica mais equilibrado, e é o mapeamento pensado para aquele rosto que faz essa diferença.
 
