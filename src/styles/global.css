@@ -38,6 +38,9 @@
 :root {
   /* Brand */
   --calcita: #7CE0D3;
+  /* destaque-em-fundo-claro da IV v1.0 (crystal-700). A calcita e o destaque
+     de fundo ESCURO: sobre branco ela da 1,56:1 e reprova contraste. */
+  --crystal-700: #14675B;
   --calcita-soft: #E9FBF8;
   --calcita-light: #D7F6F1;
   --teal-deep: #0F2820;
