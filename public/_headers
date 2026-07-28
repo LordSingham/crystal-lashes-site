@@ -1,0 +1,24 @@
+/*
+  Strict-Transport-Security: max-age=31536000
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+
+# Auditoria de 28/07/2026: destes seis, so nosniff e Referrer-Policy ja vinham.
+# Os outros quatro faltavam.
+#
+# HSTS vai SEM includeSubDomains de proposito. Este e o unico header caro de
+# desfazer: o navegador guarda a instrucao pelo tempo do max-age, entao um
+# subdominio futuro que suba sem HTTPS ficaria inacessivel ate o prazo vencer.
+# Nao ha subdominio em uso hoje, e o ganho de incluir seria zero.
+#
+# ATENCAO: este arquivo so tem efeito no Cloudflare Pages. `astro preview` nao
+# aplica nada disto, entao os headers so podem ser conferidos depois do deploy.
+#
+# Content-Security-Policy ficou de fora de proposito. O site tem script inline
+# (o observador de scroll no Base.astro) e carrega terceiros: mapa do Google,
+# Metricool e o beacon da Cloudflare. Uma CSP que aceite tudo isso precisa de
+# 'unsafe-inline' em script-src, e a partir dai ela nao protege quase nada,
+# so aumenta a chance de quebrar a pagina numa mudanca futura. Entra quando os
+# scripts inline sairem, e ai vale de verdade.
