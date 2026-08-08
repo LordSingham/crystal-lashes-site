@@ -43,7 +43,7 @@ const posts = allPosts.sort(
           {posts.map((post, i) => (
             <article class={`blog-card reveal reveal-delay-${(i % 4) + 1}`}>
               {post.data.image && (
-                <a href={`/blog/${post.id}`} class="blog-card__img-link">
+                <a href={`/blog/${post.id}/`} class="blog-card__img-link">
                   <img src={post.data.image} alt={post.data.title} loading={i === 0 ? 'eager' : 'lazy'} width="640" height="360" />
                 </a>
               )}
@@ -57,10 +57,10 @@ const posts = allPosts.sort(
                   ))}
                 </div>
                 <h2 class="blog-card__title">
-                  <a href={`/blog/${post.id}`}>{post.data.title}</a>
+                  <a href={`/blog/${post.id}/`}>{post.data.title}</a>
                 </h2>
                 <p class="blog-card__desc">{post.data.description}</p>
-                <a href={`/blog/${post.id}`} class="blog-card__link">Ler artigo ✦</a>
+                <a href={`/blog/${post.id}/`} class="blog-card__link">Ler artigo ✦</a>
               </div>
             </article>
           ))}

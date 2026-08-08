@@ -45,7 +45,7 @@ Os preços variam de R$120 a R$350 dependendo da técnica e da profissional. Mé
 | **Volume Crystal ✦ (exclusivo Studio Crystal Lashes)** | **R$ 250,00** |
 | Manutenção | R$100 – R$200 |
 
-> **[Volume Crystal](/servicos)** é a técnica exclusiva do Studio Crystal Lashes. Combina o Mapeamento Crystal com a escolha precisa de curvatura, comprimento e espessura para o seu olho. Um resultado harmonizado que parece natural, porque foi feito para você.
+> **[Volume Crystal](/servicos/)** é a técnica exclusiva do Studio Crystal Lashes. Combina o Mapeamento Crystal com a escolha precisa de curvatura, comprimento e espessura para o seu olho. Um resultado harmonizado que parece natural, porque foi feito para você.
 
 Valores abaixo do mínimo do mercado costumam indicar cola de baixa qualidade, aplicação rápida sem avaliação ou fios inadequados ao cílio natural, o que pode resultar em danos.
 

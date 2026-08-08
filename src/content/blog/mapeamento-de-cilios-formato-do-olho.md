@@ -98,7 +98,7 @@ Antes de iniciar qualquer aplicação, passo alguns minutos apenas analisando o 
 | **A direção dos cílios naturais** | Fios que apontam para baixo, mais retos ou já bastante curvados. Influencia diretamente a curvatura das extensões |
 | **A saúde e a resistência dos fios** | O limite físico de tudo. Fios finos e delicados exigem escolhas diferentes de fios grossos e resistentes |
 
-Esse último ponto vem sempre em primeiro lugar: a saúde dos fios vem antes da estética. Expliquei isso com mais detalhes no artigo [Extensão de cílios estraga o fio natural?](/blog/extensao-de-cilios-estraga-o-fio-natural).
+Esse último ponto vem sempre em primeiro lugar: a saúde dos fios vem antes da estética. Expliquei isso com mais detalhes no artigo [Extensão de cílios estraga o fio natural?](/blog/extensao-de-cilios-estraga-o-fio-natural/).
 
 ### Olho caído e pálpebra caída não são a mesma coisa
 
@@ -113,7 +113,7 @@ Como são características diferentes, cada uma exige um planejamento específic
 
 ## O mapeamento é a base da harmonização do olhar
 
-O mapeamento não é uma técnica separada do que eu chamo de harmonização do olhar, ele é a base dela. A harmonização olha o conjunto, a sobrancelha, o formato do rosto, a proporção entre as partes. O mapeamento é onde essa leitura vira número e desenho. Se você quiser entender a visão mais ampla, escrevi sobre ela no artigo sobre [o que é harmonização do olhar](/blog/harmonizacao-do-olhar).
+O mapeamento não é uma técnica separada do que eu chamo de harmonização do olhar, ele é a base dela. A harmonização olha o conjunto, a sobrancelha, o formato do rosto, a proporção entre as partes. O mapeamento é onde essa leitura vira número e desenho. Se você quiser entender a visão mais ampla, escrevi sobre ela no artigo sobre [o que é harmonização do olhar](/blog/harmonizacao-do-olhar/).
 
 ![Antes e depois de uma cliente do Studio Crystal Lashes: o mapeamento pensado para o rosto valoriza o olhar por inteiro](/fotos/blog/mapeamento-antes-depois.webp)
 

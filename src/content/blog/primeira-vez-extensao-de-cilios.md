@@ -168,7 +168,7 @@ Essa é a parte que quase ninguém fala, e é a que mais protege você. Se você
 <figcaption>Um estúdio que responde essas três com tranquilidade é um estúdio que pensou nelas antes de você perguntar.</figcaption>
 </figure>
 
-Sobre a segunda pergunta, o mesmo efeito em olhos diferentes entrega resultados diferentes, e isso já é assunto de um artigo inteiro aqui do blog: [por que o mesmo modelo não serve para dois olhos diferentes](/blog/mapeamento-de-cilios-formato-do-olho).
+Sobre a segunda pergunta, o mesmo efeito em olhos diferentes entrega resultados diferentes, e isso já é assunto de um artigo inteiro aqui do blog: [por que o mesmo modelo não serve para dois olhos diferentes](/blog/mapeamento-de-cilios-formato-do-olho/).
 
 ## As primeiras 48 horas
 
@@ -197,7 +197,7 @@ Muita cliente acha que lavar estraga, e é exatamente o contrário: **a extensã
 
 Nada de cotonete com óleo, demaquilante bifásico ou esfregar os olhos ao acordar. Se um fio incomodar, não puxe. Me chame.
 
-Se a sua dúvida for se a extensão estraga o fio natural, essa eu já respondi em detalhe em [outro artigo](/blog/extensao-de-cilios-estraga-o-fio-natural). Resumo: o que estraga é o manejo errado, não a extensão em si.
+Se a sua dúvida for se a extensão estraga o fio natural, essa eu já respondi em detalhe em [outro artigo](/blog/extensao-de-cilios-estraga-o-fio-natural/). Resumo: o que estraga é o manejo errado, não a extensão em si.
 
 ## Uma última coisa
 

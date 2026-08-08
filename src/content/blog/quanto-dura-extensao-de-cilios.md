@@ -75,7 +75,7 @@ A manutenção consiste em repor os fios que caíram naturalmente junto com o ci
 
 Geralmente é realizada entre 15 e 21 dias após a aplicação e mantém o efeito sempre bonito, sem a necessidade de recomeçar do zero. Além de ser um procedimento mais rápido, costuma ter um custo menor do que uma nova aplicação.
 
-No Studio Crystal Lashes, seguimos um protocolo de até 4 manutenções consecutivas. Após esse período, recomendo a remoção completa das extensões e uma nova aplicação. Veja os [serviços e preços completos](/servicos).
+No Studio Crystal Lashes, seguimos um protocolo de até 4 manutenções consecutivas. Após esse período, recomendo a remoção completa das extensões e uma nova aplicação. Veja os [serviços e preços completos](/servicos/).
 
 Essa recomendação permite uma higienização mais profunda dos fios naturais, a remoção de resíduos que se acumulam ao longo dos meses e a criação de um novo mapeamento, respeitando o crescimento e as mudanças naturais dos cílios. O resultado é um acabamento mais uniforme, leve e elegante, além de proporcionar uma renovação completa do olhar.
 

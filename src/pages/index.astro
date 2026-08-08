@@ -61,7 +61,7 @@ const allPosts = await getCollection('blog');
 const blogPreview = allPosts
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 3)
-  .map(p => ({ title: p.data.title, desc: p.data.description, img: p.data.image, slug: `/blog/${p.id}`, pubDate: p.data.pubDate, tags: p.data.tags }));
+  .map(p => ({ title: p.data.title, desc: p.data.description, img: p.data.image, slug: `/blog/${p.id}/`, pubDate: p.data.pubDate, tags: p.data.tags }));
 ---
 
 <Base
@@ -86,7 +86,7 @@ const blogPreview = allPosts
           <a href="https://wa.me/5511916637446?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio!" class="btn btn--primary" target="_blank" rel="noopener">
             Agendar pelo WhatsApp
           </a>
-          <a href="/resultados" class="btn btn--outline">Ver resultados</a>
+          <a href="/resultados/" class="btn btn--outline">Ver resultados</a>
         </div>
         <div class="hero__trust hero-animate hero-animate-delay-4">
           <div class="trust-item">
@@ -185,7 +185,7 @@ const blogPreview = allPosts
         ))}
       </div>
       <div class="text-center reveal" style="margin-top: 40px;">
-        <a href="/servicos" class="btn btn--outline">Ver todos os serviços</a>
+        <a href="/servicos/" class="btn btn--outline">Ver todos os serviços</a>
       </div>
     </div>
   </section>
@@ -200,14 +200,14 @@ const blogPreview = allPosts
       </div>
       <div class="resultados-grid">
         {resultadosPreview.map((r, i) => (
-          <a href="/resultados" class={`resultado-item reveal reveal-delay-${i + 1}`}>
+          <a href="/resultados/" class={`resultado-item reveal reveal-delay-${i + 1}`}>
             <img src={r.src} alt={r.alt} loading="lazy" width="700" height="700" />
             <span class="resultado-label">{r.label}</span>
           </a>
         ))}
       </div>
       <div class="text-center reveal" style="margin-top: 40px;">
-        <a href="/resultados" class="btn btn--primary">Ver todos os resultados</a>
+        <a href="/resultados/" class="btn btn--primary">Ver todos os resultados</a>
       </div>
     </div>
   </section>

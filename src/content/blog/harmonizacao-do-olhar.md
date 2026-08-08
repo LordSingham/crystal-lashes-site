@@ -71,7 +71,7 @@ Desenvolvi o Mapeamento Crystal ao longo de 7 anos de prática intensa, incorpor
 
 ---
 
-Quer ver o Mapeamento Crystal na prática? Confira os [serviços disponíveis](/servicos) ou agende uma avaliação sem compromisso.
+Quer ver o Mapeamento Crystal na prática? Confira os [serviços disponíveis](/servicos/) ou agende uma avaliação sem compromisso.
 
 **Studio Crystal Lashes** · Vila Assunção, Santo André, SP · Terça a sexta
 
