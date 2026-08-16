@@ -67,6 +67,7 @@ const blogPreview = allPosts
 <Base
   title="Studio Crystal Lashes — Extensão de Cílios em Santo André, SP"
   description="Especialistas em Harmonização do Olhar e Extensão de Cílios em Santo André, SP. Técnica Crystal exclusiva. Agende pelo WhatsApp."
+  preloadImage="/fotos/espaco/espaco-02.webp"
 >
 
   <!-- ─── Hero ─────────────────────────────────────────────── -->
@@ -254,13 +255,21 @@ const blogPreview = allPosts
           <article class={`blog-card reveal reveal-delay-${i + 1}`}>
             {p.img && (
               <a href={p.slug} class="blog-card__img-link">
-                <img src={p.img} alt={p.title} loading={i === 0 ? 'eager' : 'lazy'} width="640" height="360" />
+                {/* Todas lazy: este bloco fica a uns 7000px do topo, e o eager
+                    da primeira roubava banda da hero sem nunca aparecer na
+                    primeira tela (medido em 16/08/2026: 150KB). */}
+                <img src={p.img} alt={p.title} loading="lazy" width="640" height="360" />
               </a>
             )}
             <div class="blog-card__body">
               <div class="blog-card__meta">
                 <time datetime={p.pubDate.toISOString()}>
-                  {p.pubDate.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })}
+                  {/* timeZone UTC obrigatorio: o pubDate do artigo e meia-noite
+                      em UTC, entao formatar no fuso da maquina que compila
+                      volta um dia. A Cloudflare compila em UTC e acertava por
+                      sorte; build feito daqui (UTC-3) mostrava 26 no lugar de
+                      27. As outras duas paginas do blog ja faziam certo. */}
+                  {p.pubDate.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric', timeZone: 'UTC' })}
                 </time>
                 {p.tags.slice(0, 2).map((tag) => (
                   <span class="blog-tag">{tag}</span>

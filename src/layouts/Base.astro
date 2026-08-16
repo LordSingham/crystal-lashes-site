@@ -12,9 +12,11 @@ interface Props {
   type?: 'website' | 'article';
   canonicalUrl?: string;
   jsonLd?: object;
+  /** Imagem que pinta a primeira tela desta pagina. Ver o preload no head. */
+  preloadImage?: string;
 }
 
-const { title, description, image, type = 'website', canonicalUrl, jsonLd } = Astro.props;
+const { title, description, image, type = 'website', canonicalUrl, jsonLd, preloadImage } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -26,6 +28,12 @@ const { title, description, image, type = 'website', canonicalUrl, jsonLd } = As
   <meta name="theme-color" content="#0F2820" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="manifest" href="/manifest.json" />
+  {/* Foto que pinta a primeira tela. Quando ela e fundo de CSS (o caso da hero
+      da home), o navegador so descobre que ela existe depois de baixar e ler o
+      CSS inteiro, e nao ha elemento onde marcar prioridade. Este preload
+      antecipa a descoberta e da a prioridade. Medido em 16/08/2026: era o que
+      segurava o LCP em 4,5s no celular. */}
+  {preloadImage && <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />}
   <link rel="preload" as="font" href="/fonts/better-signature-regular.ttf" type="font/truetype" crossorigin />
   <link rel="preload" as="font" href="/fonts/lora-latin.woff2" type="font/woff2" crossorigin />
   <link rel="preload" as="font" href="/fonts/montserrat-latin.woff2" type="font/woff2" crossorigin />
@@ -45,11 +53,22 @@ const { title, description, image, type = 'website', canonicalUrl, jsonLd } = As
   <!-- Meta Pixel 3429007943872141. Criado em 2021 e nunca disparou ate 28/07/2026.
        Nao e pre-requisito do anuncio de click-to-WhatsApp: serve para juntar publico
        de remarketing e publico semelhante daqui alguns meses. Ver /privacidade. -->
+  <!-- O fbevents.js tem 105KB e e o maior arquivo da pagina. Carregado junto
+       com o resto, ele disputa banda com a foto da primeira tela e segura o
+       LCP. Aqui o atalho do fbq nasce na hora e ENFILEIRA o init e o PageView;
+       o arquivo de verdade so e buscado quando a pagina termina de carregar,
+       ou no primeiro toque, o que vier antes. Quando ele chega, a fila e
+       disparada e nenhum evento se perde. Medido em 16/08/2026. -->
   <script is:inline>
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+    function carrega(){if(f.__fbjs)return;f.__fbjs=1;t=b.createElement(e);t.async=!0;
     t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    if(b.readyState==='complete'){setTimeout(carrega,0)}
+    else{f.addEventListener('load',function(){setTimeout(carrega,0)})}
+    ['pointerdown','keydown','touchstart'].forEach(function(ev){
+      f.addEventListener(ev,carrega,{once:!0,passive:!0})})}
     (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '3429007943872141');
     fbq('track', 'PageView');
