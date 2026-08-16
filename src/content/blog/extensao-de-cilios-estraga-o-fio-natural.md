@@ -122,7 +122,7 @@ Todo cuidado começa antes mesmo da aplicação. O processo tem três momentos, 
 
 <figure>
   <img src="/fotos/blog/estraga-fio-natural-mapeamento.webp" alt="Mapeamento do olhar sendo desenhado antes da aplicação da extensão de cílios" class="img-wide" />
-  <figcaption>[O mapeamento](/blog/mapeamento-de-cilios-formato-do-olho/) é desenhado antes de qualquer fio ser aplicado. É ele que define o que o seu cílio vai suportar.</figcaption>
+  <figcaption><a href="/blog/mapeamento-de-cilios-formato-do-olho/">O mapeamento</a> é desenhado antes de qualquer fio ser aplicado. É ele que define o que o seu cílio vai suportar.</figcaption>
 </figure>
 
 Cuidar dos seus cílios naturais faz parte de todo o processo, da primeira aplicação à remoção das extensões.
