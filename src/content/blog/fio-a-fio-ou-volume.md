@@ -1,6 +1,7 @@
 ---
 title: "Fio a Fio ou Volume: Qual Extensão de Cílios é Ideal para Você?"
-description: "Entenda as diferenças reais entre a extensão fio a fio e o volume, quando cada técnica é indicada e como o Mapeamento Crystal define a melhor escolha para o seu olhar."
+seoTitle: "Cílios fio a fio ou volume: qual escolher"
+description: "As diferenças reais entre a extensão fio a fio e o volume, quando cada uma é indicada, e como o Mapeamento Crystal escolhe a certa para o seu olhar."
 pubDate: 2026-07-06
 image: "/fotos/blog/fio-a-fio-ou-volume-capa.jpg"
 tags: ["extensão de cílios", "fio a fio", "volume", "mapeamento crystal", "técnica"]

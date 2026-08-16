@@ -1,6 +1,7 @@
 ---
 title: "Mapeamento de Cílios: Por que o Mesmo Modelo Não Serve para Dois Olhos Diferentes"
-description: "O mapeamento de cílios é o que define se a extensão vai valorizar o seu olhar. Entenda por que o mesmo modelo gera resultados diferentes em cada formato de olho."
+seoTitle: "Mapeamento de cílios e o formato do olho"
+description: "O mapeamento define se a extensão vai valorizar o seu olhar. Entenda por que o mesmo modelo dá resultados diferentes em cada formato de olho."
 pubDate: 2026-07-20
 image: "/fotos/blog/mapeamento-de-cilios-capa.jpg"
 tags: ["mapeamento de cílios", "extensão de cílios", "harmonização do olhar", "formato dos olhos", "curvatura"]

@@ -1,6 +1,7 @@
 ---
 title: "O que é Harmonização do Olhar e Por que Ela Transforma Mais do que a Extensão Comum"
-description: "Entenda o que diferencia a Harmonização do Olhar da extensão de cílios convencional, como o Mapeamento Crystal funciona e por que o resultado parece mais natural."
+seoTitle: "Harmonização do Olhar: o que é e para quem"
+description: "O que diferencia a Harmonização do Olhar da extensão comum, como funciona o Mapeamento Crystal, e por que o resultado parece mais natural."
 pubDate: 2026-06-29
 image: "/fotos/blog/resultado-volume-crystal-01.jpg"
 tags: ["harmonização do olhar", "mapeamento crystal", "técnica", "extensão de cílios"]

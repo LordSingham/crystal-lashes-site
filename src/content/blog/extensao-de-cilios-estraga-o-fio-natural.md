@@ -1,6 +1,7 @@
 ---
 title: "Extensão de Cílios Estraga o Fio Natural? A Resposta que Você Precisa Antes de Agendar"
-description: "Extensão de cílios não estraga o fio natural quando o procedimento é feito corretamente. Entenda o que realmente compromete a saúde dos cílios e como protegemos os seus no Studio Crystal Lashes."
+seoTitle: "Extensão de cílios estraga o fio natural?"
+description: "Extensão de cílios não estraga o fio natural quando é bem feita. Entenda o que realmente compromete a saúde dos seus cílios, e como a gente protege."
 pubDate: 2026-07-13
 image: "/fotos/blog/estraga-fio-natural-capa.jpg"
 tags: ["extensão de cílios", "saúde dos cílios", "cílios naturais", "manutenção", "cuidados"]

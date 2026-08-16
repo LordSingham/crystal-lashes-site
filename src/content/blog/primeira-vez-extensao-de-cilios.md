@@ -1,5 +1,6 @@
 ---
 title: "Primeira Vez Fazendo Extensão de Cílios: O Que Fazer Antes de Sentar na Maca"
+seoTitle: "Primeira vez fazendo extensão de cílios"
 description: "O que contar antes de marcar, como chegar no dia, quanto tempo demora e o que perguntar ao estúdio antes de escolher onde fazer pela primeira vez."
 pubDate: 2026-07-27
 image: "/fotos/blog/primeira-vez-extensao-de-cilios-capa.jpg"
