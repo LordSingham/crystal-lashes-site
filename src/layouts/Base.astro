@@ -28,15 +28,18 @@ const { title, description, image, type = 'website', canonicalUrl, jsonLd, prelo
   <meta name="theme-color" content="#0F2820" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="manifest" href="/manifest.json" />
-  {/* Foto que pinta a primeira tela. Quando ela e fundo de CSS (o caso da hero
-      da home), o navegador so descobre que ela existe depois de baixar e ler o
-      CSS inteiro, e nao ha elemento onde marcar prioridade. Este preload
-      antecipa a descoberta e da a prioridade. Medido em 16/08/2026: era o que
-      segurava o LCP em 4,5s no celular. */}
-  {preloadImage && <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />}
   <link rel="preload" as="font" href="/fonts/better-signature-regular.ttf" type="font/truetype" crossorigin />
   <link rel="preload" as="font" href="/fonts/lora-latin.woff2" type="font/woff2" crossorigin />
   <link rel="preload" as="font" href="/fonts/montserrat-latin.woff2" type="font/woff2" crossorigin />
+  {/* Foto que pinta a primeira tela. Quando ela e fundo de CSS (o caso da hero
+      da home), o navegador so descobre que ela existe depois de baixar e ler o
+      CSS inteiro, e nao ha elemento onde marcar prioridade. Este preload
+      antecipa a descoberta. Medido em 16/08/2026: era o que segurava o LCP.
+      DEPOIS das fontes de proposito: a fonte pinta o texto (FCP) e a foto pinta
+      o bloco (LCP). Posto antes, o preload roubava a vez da fonte e o FCP em
+      producao subia de 1,1s para 2,0s. Sem fetchpriority pelo mesmo motivo:
+      basta ser descoberta cedo, nao precisa passar na frente do texto. */}
+  {preloadImage && <link rel="preload" as="image" href={preloadImage} />}
   <meta name="robots" content="index, follow" />
   <meta name="google-site-verification" content="daHodLjNirnCRwPLjbXg0jFbCdtuhyKRUmuNbRaVDag" />
   <script is:inline>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"dfbff131915f0c2998954d70d57a7b61"})});</script>
