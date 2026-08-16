@@ -1,3 +1,18 @@
+# Cache. Medido em 16/08/2026: a Cloudflare estava servindo TUDO com
+# max-age=14400 (4h) + must-revalidate, inclusive os arquivos de /_astro/, que
+# ja tem o hash do conteudo no nome e por isso nunca mudam sem trocar de nome.
+# Fonte e foto ganham 30 dias em vez de 1 ano porque o nome delas nao tem hash:
+# se o arquivo for trocado, o visitante antigo continua com a copia velha ate o
+# prazo vencer, e 30 dias e o que da para esperar sem incomodar.
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/fonts/*
+  Cache-Control: public, max-age=2592000
+
+/fotos/*
+  Cache-Control: public, max-age=2592000
+
 /*
   Strict-Transport-Security: max-age=31536000
   X-Frame-Options: SAMEORIGIN

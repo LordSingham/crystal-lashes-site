@@ -25,19 +25,21 @@ const jsonLd = {
   author: {
     '@type': 'Person',
     name: 'Stefanie Moura Oliveira',
-    url: 'https://crystallashes.com.br/sobre',
+    url: 'https://crystallashes.com.br/sobre/',
   },
   publisher: {
     '@type': 'Organization',
     name: 'Studio Crystal Lashes',
     logo: {
+      // logo-teal-bg e nao logo.png: o campo pede a logo da marca, e o .png tem
+      // fundo transparente, que vira preto no preto em quem le isto.
       '@type': 'ImageObject',
-      url: 'https://crystallashes.com.br/og-image.jpg',
+      url: 'https://crystallashes.com.br/logo-teal-bg.png',
     },
   },
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': `https://crystallashes.com.br/blog/${slug}`,
+    '@id': `https://crystallashes.com.br/blog/${slug}/`,
   },
 };
 ---
@@ -47,7 +49,6 @@ const jsonLd = {
   description={post.data.description}
   image={post.data.image}
   type="article"
-  canonicalUrl={`https://crystallashes.com.br/blog/${slug}`}
   jsonLd={jsonLd}
 >
 
