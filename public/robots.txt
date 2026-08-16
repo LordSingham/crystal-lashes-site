@@ -11,7 +11,7 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: GoogleExtendedBot
+User-agent: Google-Extended
 Allow: /
 
 User-agent: meta-externalagent

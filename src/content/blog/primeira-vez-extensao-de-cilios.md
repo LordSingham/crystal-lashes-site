@@ -19,7 +19,7 @@ tags: ["primeira vez extensão de cílios", "extensão de cílios", "cuidados", 
 
 Se essa vai ser a sua primeira vez fazendo extensão de cílios, você provavelmente já pesquisou muita coisa sobre o resultado e quase nada sobre o começo. É curioso, porque a parte que mais gera insegurança não é o depois, é o antes: o que levar, o que evitar, quanto tempo demora, se dói, se vai estragar os seus fios.
 
-Escrevo aqui o que eu explico para cada cliente nova que chega ao Studio, em Santo André. Não é regra rígida nem lista de proibições. É o que faz a sua primeira aplicação começar bem, e o que me ajuda a cuidar melhor do seu olhar.
+Escrevo aqui o que eu explico para cada cliente nova que chega ao [Studio, em Santo André](/blog/extensao-de-cilios-santo-andre/). Não é regra rígida nem lista de proibições. É o que faz a sua primeira aplicação começar bem, e o que me ajuda a cuidar melhor do seu olhar.
 
 ## Antes de marcar, me conte três coisas
 
@@ -194,7 +194,7 @@ Passado o procedimento, o cuidado inicial é curto e simples.
 <figcaption>A rotina inteira cabe nesses dois blocos.</figcaption>
 </figure>
 
-Muita cliente acha que lavar estraga, e é exatamente o contrário: **a extensão bem cuidada e limpa dura mais**, e a pele da pálpebra agradece.
+Muita cliente acha que lavar estraga, e é exatamente o contrário: **a extensão bem cuidada e limpa [dura mais](/blog/quanto-dura-extensao-de-cilios/)**, e a pele da pálpebra agradece.
 
 Nada de cotonete com óleo, demaquilante bifásico ou esfregar os olhos ao acordar. Se um fio incomodar, não puxe. Me chame.
 

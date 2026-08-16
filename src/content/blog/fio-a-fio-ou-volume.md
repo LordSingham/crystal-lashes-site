@@ -7,7 +7,7 @@ image: "/fotos/blog/fio-a-fio-ou-volume-capa.jpg"
 tags: ["extensão de cílios", "fio a fio", "volume", "mapeamento crystal", "técnica"]
 ---
 
-Uma das perguntas que mais recebo de quem vai colocar extensão de cílios pela primeira vez é:
+Uma das perguntas que mais recebo de quem vai colocar [extensão de cílios pela primeira vez](/blog/primeira-vez-extensao-de-cilios/) é:
 
 *"Stefanie, qual é a diferença entre fio a fio e volume? Qual técnica combina mais comigo?"*
 
@@ -82,13 +82,13 @@ Além do resultado visual, existem algumas diferenças práticas entre os dois m
 
 A durabilidade depende muito mais do ciclo natural dos seus cílios, da rotina de cuidados e das características individuais de cada cliente do que do modelo escolhido.
 
-No volume, quando um leque se desprende, a perda pode ficar um pouco mais perceptível, já que ele concentra mais fios em um único ponto. Por isso, manter as manutenções em dia ajuda a preservar o efeito uniforme.
+No volume, quando um leque se desprende, a perda pode ficar um pouco mais perceptível, já que ele concentra mais fios em um único ponto. Por isso, manter as [manutenções em dia](/blog/quanto-dura-extensao-de-cilios/) ajuda a preservar o efeito uniforme.
 
 ## Como o Mapeamento Crystal define a escolha
 
 Antes de iniciar qualquer aplicação, realizo uma avaliação completa do seu olhar.
 
-Analiso o formato dos olhos, a direção, a quantidade e a espessura dos seus cílios naturais, além do efeito que você deseja alcançar. É a partir dessa análise que defino o modelo, o mapeamento, a curvatura, o comprimento e a espessura mais adequados para você.
+Analiso o formato dos olhos, a direção, a quantidade e a espessura dos seus cílios naturais, além do efeito que você deseja alcançar. É a partir dessa análise que defino o modelo, [o mapeamento](/blog/mapeamento-de-cilios-formato-do-olho/), a curvatura, o comprimento e a espessura mais adequados para você.
 
 Por isso, duas clientes podem escolher o mesmo modelo de extensão e, ainda assim, terem resultados completamente diferentes.
 
@@ -96,7 +96,7 @@ Algumas ficam deslumbrantes com um fio a fio clássico bem estruturado. Outras a
 
 Não existe uma fórmula pronta. Existe um planejamento personalizado para cada olhar.
 
-É por isso que, no Studio Crystal Lashes, a escolha da extensão não acontece apenas no momento do agendamento. Ela é definida durante a avaliação, para garantir um resultado harmonioso, confortável e compatível com os seus cílios naturais.
+É por isso que, no Studio Crystal Lashes, a escolha da extensão não acontece apenas no momento do agendamento. Ela é definida durante a avaliação, para garantir um [resultado harmonioso](/blog/harmonizacao-do-olhar/), confortável e compatível com os seus cílios naturais.
 
 ## Afinal, qual é a melhor opção para você?
 

@@ -23,7 +23,7 @@ Ignorar essas variáveis produz resultados que "funcionam" tecnicamente mas não
 
 ## O que é o Mapeamento Crystal
 
-O Mapeamento Crystal é a técnica que desenvolvi no Studio Crystal Lashes após 7 anos especializando o olhar clínico para cílios.
+[O Mapeamento Crystal](/blog/mapeamento-de-cilios-formato-do-olho/) é a técnica que desenvolvi no Studio Crystal Lashes após 7 anos especializando o olhar clínico para cílios.
 
 O processo começa antes de qualquer fio ser aplicado:
 
@@ -50,7 +50,7 @@ Com o Mapeamento Crystal, o resultado tem características bem distintas:
 
 **Compensa assimetrias.** A maioria das pessoas tem olhos com pequenas diferenças entre si. Um bom mapeamento equilibra essas diferenças em vez de replicá-las.
 
-**Resiste ao tempo.** Quando a técnica respeita o cílio natural e o peso adequado, a durabilidade aumenta. Menos sobrecarga significa menos queda precoce.
+**Resiste ao tempo.** Quando a técnica respeita o cílio natural e o peso adequado, a [durabilidade aumenta](/blog/quanto-dura-extensao-de-cilios/). Menos sobrecarga significa menos queda precoce.
 
 ## Harmonização do Olhar vs. extensão convencional
 
@@ -68,7 +68,7 @@ Harmonização do Olhar exige mais tempo, mais formação e mais atenção do qu
 
 Profissionais que investem nessa abordagem geralmente têm formação especializada em design facial, biomecânica ocular ou metodologias específicas de análise do olhar.
 
-Desenvolvi o Mapeamento Crystal ao longo de 7 anos de prática intensa, incorporando técnicas de análise de proporções faciais ao processo de extensão de cílios. É o que diferencia o Studio Crystal Lashes dos demais studios da região.
+Desenvolvi o Mapeamento Crystal ao longo de 7 anos de prática intensa, incorporando técnicas de análise de proporções faciais ao processo de extensão de cílios. É o que diferencia o Studio Crystal Lashes dos [demais studios da região](/blog/extensao-de-cilios-santo-andre/).
 
 ---
 

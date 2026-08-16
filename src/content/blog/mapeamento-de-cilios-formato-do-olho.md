@@ -132,4 +132,4 @@ Se você já fez extensão de cílios e teve a sensação de que o resultado fic
 
 Por isso, antes de qualquer aplicação, gosto de conversar, entender suas expectativas e explicar o planejamento que será feito. Quando a cliente compreende o motivo de cada escolha, ela participa do processo com mais segurança e confiança.
 
-Se você ainda não sabe qual modelo combina mais com o seu olhar, será um prazer fazer essa avaliação com você. Mesmo que decida não realizar o procedimento naquele momento, entender as características dos seus olhos e dos seus cílios naturais já ajuda a fazer escolhas mais conscientes no futuro.
+Se você ainda não sabe [qual modelo combina mais com o seu olhar](/blog/fio-a-fio-ou-volume/), será um prazer fazer essa avaliação com você. Mesmo que decida não realizar o procedimento naquele momento, entender as características dos seus olhos e dos seus cílios naturais já ajuda a fazer escolhas mais conscientes no futuro.

@@ -13,7 +13,7 @@ Se você está procurando extensão de cílios em Santo André e não sabe por o
 
 Extensão de cílios é o processo de fixar fios sintéticos (um a um, ou em leques) diretamente no cílio natural, com cola especial para uso ocular. O resultado é um olhar com mais volume, comprimento e definição, sem máscara de cílios.
 
-O tempo do procedimento é em torno de duas horas, dependendo da técnica, e pode ser mantido indefinidamente com manutenções regulares a cada 15 a 21 dias.
+O tempo do procedimento é em torno de duas horas, dependendo da [técnica escolhida](/blog/fio-a-fio-ou-volume/), e pode ser mantido indefinidamente com manutenções regulares a cada 15 a 21 dias.
 
 ## Quanto dura a extensão de cílios?
 
@@ -23,7 +23,7 @@ A duração depende de três fatores:
 2. **Cuidados pós-procedimento:** evitar produtos oleosos, coçar os olhos, lavar com água quente, não higienizar diariamente e dormir de bruços são fatores que comprometem a durabilidade.
 3. **Qualidade da aplicação:** a profissional precisa ter técnica precisa e cuidadosa, além de utilizar materiais de qualidade.
 
-Com manutenção a cada 15 ou 21 dias, você mantém o visual impecável de forma contínua.
+Com [manutenção a cada 15 ou 21 dias](/blog/quanto-dura-extensao-de-cilios/), você mantém o visual impecável de forma contínua.
 
 ## Como escolher uma lash designer em Santo André
 
@@ -56,7 +56,7 @@ A maioria das lash designers aplica o mesmo padrão de cílios em todas as clien
 
 Um olho amendoado pede uma curvatura diferente de um olho redondo. Uma pálpebra caída precisa de estratégia diferente de uma pálpebra normal. Sem mapeamento, o resultado pode não harmonizar com o rosto, mesmo que tecnicamente correto.
 
-O **Mapeamento Crystal** foi a metodologia que desenvolvi ao longo de 7 anos de especialização para resolver exatamente isso: analisar o formato real do olho antes de qualquer decisão sobre técnica. É o que diferencia o Studio Crystal Lashes dos demais studios da região.
+O **Mapeamento Crystal** foi a metodologia que desenvolvi ao longo de 7 anos de especialização para resolver exatamente isso: [analisar o formato real do olho](/blog/mapeamento-de-cilios-formato-do-olho/) antes de qualquer decisão sobre técnica. É o que diferencia o Studio Crystal Lashes dos demais studios da região.
 
 ---
 

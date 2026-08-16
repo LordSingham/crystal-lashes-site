@@ -7,7 +7,7 @@ image: "/fotos/blog/blog-quanto-tempo-dura-extensao-cilios.jpg"
 tags: ["extensão de cílios", "manutenção", "cuidados", "durabilidade"]
 ---
 
-Uma das perguntas que mais recebo de quem está considerando fazer extensão de cílios pela primeira vez é: **quanto tempo dura?**
+Uma das perguntas que mais recebo de quem está considerando fazer [extensão de cílios pela primeira vez](/blog/primeira-vez-extensao-de-cilios/) é: **quanto tempo dura?**
 
 A resposta honesta: depende. Mas existem fatores claros que determinam a durabilidade, e a maioria está no seu controle.
 
@@ -78,7 +78,7 @@ Geralmente é realizada entre 15 e 21 dias após a aplicação e mantém o efeit
 
 No Studio Crystal Lashes, seguimos um protocolo de até 4 manutenções consecutivas. Após esse período, recomendo a remoção completa das extensões e uma nova aplicação. Veja os [serviços e preços completos](/servicos/).
 
-Essa recomendação permite uma higienização mais profunda dos fios naturais, a remoção de resíduos que se acumulam ao longo dos meses e a criação de um novo mapeamento, respeitando o crescimento e as mudanças naturais dos cílios. O resultado é um acabamento mais uniforme, leve e elegante, além de proporcionar uma renovação completa do olhar.
+Essa recomendação permite uma higienização mais profunda dos fios naturais, a remoção de resíduos que se acumulam ao longo dos meses e a criação de [um novo mapeamento](/blog/mapeamento-de-cilios-formato-do-olho/), respeitando o crescimento e as mudanças naturais dos cílios. O resultado é um acabamento mais uniforme, leve e elegante, além de proporcionar uma renovação completa do olhar.
 
 ### Aplicação completa
 

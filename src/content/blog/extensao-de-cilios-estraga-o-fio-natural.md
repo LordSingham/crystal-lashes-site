@@ -7,7 +7,7 @@ image: "/fotos/blog/estraga-fio-natural-capa.jpg"
 tags: ["extensão de cílios", "saúde dos cílios", "cílios naturais", "manutenção", "cuidados"]
 ---
 
-Essa é, sem dúvida, uma das perguntas que mais recebo de quem está pensando em colocar extensão de cílios pela primeira vez.
+Essa é, sem dúvida, uma das perguntas que mais recebo de quem está pensando em colocar [extensão de cílios pela primeira vez](/blog/primeira-vez-extensao-de-cilios/).
 
 É comum ouvir algo como:
 
@@ -62,7 +62,7 @@ Os cílios naturais estão em constante renovação. Com o passar dos dias, eles
 
 Quando a manutenção é adiada por muito tempo, alguns fios ficam mais longos, desalinhados e com a distribuição de peso diferente da planejada inicialmente.
 
-Por isso, recomendamos a manutenção entre 15 e 21 dias. Essa não é apenas uma questão estética: ela também ajuda a manter a aplicação equilibrada e confortável para os cílios naturais.
+Por isso, recomendamos a [manutenção entre 15 e 21 dias](/blog/quanto-dura-extensao-de-cilios/). Essa não é apenas uma questão estética: ela também ajuda a manter a aplicação equilibrada e confortável para os cílios naturais.
 
 ### Técnica de aplicação inadequada
 
@@ -122,7 +122,7 @@ Todo cuidado começa antes mesmo da aplicação. O processo tem três momentos, 
 
 <figure>
   <img src="/fotos/blog/estraga-fio-natural-mapeamento.webp" alt="Mapeamento do olhar sendo desenhado antes da aplicação da extensão de cílios" class="img-wide" />
-  <figcaption>O mapeamento é desenhado antes de qualquer fio ser aplicado. É ele que define o que o seu cílio vai suportar.</figcaption>
+  <figcaption>[O mapeamento](/blog/mapeamento-de-cilios-formato-do-olho/) é desenhado antes de qualquer fio ser aplicado. É ele que define o que o seu cílio vai suportar.</figcaption>
 </figure>
 
 Cuidar dos seus cílios naturais faz parte de todo o processo, da primeira aplicação à remoção das extensões.
