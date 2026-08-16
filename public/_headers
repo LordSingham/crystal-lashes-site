@@ -4,6 +4,14 @@
 # Fonte e foto ganham 30 dias em vez de 1 ano porque o nome delas nao tem hash:
 # se o arquivo for trocado, o visitante antigo continua com a copia velha ate o
 # prazo vencer, e 30 dias e o que da para esperar sem incomodar.
+#
+# 🚨 REGRA QUE NASCEU DE ERRO, EM 16/08/2026: trocar o CONTEUDO de um arquivo de
+# /fotos/ ou /fonts/ mantendo o NOME nao chega em ninguem. A borda da Cloudflare
+# e o navegador continuam servindo a copia velha ate os 30 dias vencerem, e nao
+# adianta publicar de novo. Aconteceu com a espaco-02.webp: a origem ja tinha a
+# versao de 37KB e o site servia a de 73KB, com cf-cache-status HIT.
+# Trocou o conteudo? TROCA O NOME (espaco-02-v2.webp), e atualiza quem aponta.
+# Sem hash no nome, a versao mora no nome, ou nao existe.
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable
 
