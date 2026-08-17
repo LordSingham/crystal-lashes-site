@@ -293,6 +293,19 @@ const jsonLd = {
       width: 100%;
       margin: 16px 0;
     }
+
+    /* Tabela larga rola dentro de si, em vez de empurrar a pagina inteira.
+       Achado em 17/08/2026 no artigo de tendencias: uma tabela de 4 colunas
+       levou o scrollWidth da pagina de 375 para 445px no celular, e o defeito
+       aparece como barra de rolagem horizontal no site todo, nao so na tabela.
+       Os posts antigos nao estouravam por sorte (tabelas de 2 e 3 colunas com
+       celula curta), entao a protecao nunca tinha sido exercitada. */
+    .post-content :global(table) {
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
   }
 
   /* Separador visual entre seções */
