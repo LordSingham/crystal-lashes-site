@@ -13,7 +13,7 @@ Uma das perguntas que mais recebo de quem vai colocar [extensão de cílios pela
 
 Minha resposta é sempre a mesma: depende.
 
-A escolha da técnica ideal não é baseada apenas na preferência da cliente. Ela leva em consideração os seus cílios naturais, o formato dos seus olhos, o efeito desejado e até a rotina do dia a dia.
+A escolha da técnica ideal não é baseada apenas na preferência da cliente. Ela leva em consideração os seus cílios naturais, o formato dos seus olhos, [o efeito desejado](/blog/tendencias-de-cilios-2026/) e até a rotina do dia a dia.
 
 Não existe uma técnica melhor do que a outra. Existe a técnica que valoriza melhor o seu olhar.
 

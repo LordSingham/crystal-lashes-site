@@ -17,7 +17,7 @@ Quando uma cliente chega ao Studio, é comum ouvir pedidos como:
 
 O que poucas pessoas sabem é que o mesmo modelo pode gerar resultados completamente diferentes em olhos diferentes. É justamente por isso que o mapeamento é uma das etapas mais importantes da extensão de cílios.
 
-Antes mesmo de iniciar a aplicação, faço um planejamento do olhar, definindo onde cada comprimento, curvatura e direção serão utilizados. Duas clientes podem escolher exatamente o mesmo efeito e, ainda assim, saírem do estúdio com mapeamentos completamente diferentes.
+Antes mesmo de iniciar a aplicação, faço um planejamento do olhar, definindo onde cada comprimento, curvatura e direção serão utilizados. Duas clientes podem escolher exatamente [o mesmo efeito](/blog/tendencias-de-cilios-2026/) e, ainda assim, saírem do estúdio com mapeamentos completamente diferentes.
 
 Já recebi muita cliente que chegou dizendo "fiz em outro lugar e ficou estranho, mas não sei explicar o que foi". Quase sempre foi isso: o alongamento estava bem aplicado, fio por fio, com material bom. Só que era o mapa errado para aquele olho.
 

@@ -28,7 +28,7 @@ Ignorar essas variáveis produz resultados que "funcionam" tecnicamente mas não
 O processo começa antes de qualquer fio ser aplicado:
 
 **1. Análise do formato do olhar**
-Olho amendoado, redondo, com canto externo caído ou elevado. Cada forma tem um conjunto de soluções que a favorece e combinações que trabalham contra.
+Olho amendoado, redondo, com canto externo caído ou elevado. Cada forma tem [um conjunto de soluções que a favorece](/blog/tendencias-de-cilios-2026/) e combinações que trabalham contra.
 
 **2. Análise de espaçamento de pálpebra**
 Pálpebras caídas, onde a pele cobre parcialmente a linha dos cílios, exigem curvaturas mais acentuadas para o fio aparecer mesmo com a pálpebra relaxada. Uso a curvatura e o tamanho dos cílios para abrir esse olhar, já que pálpebras caídas deixam o olho com aspecto menor e cansado. Pálpebras normais comportam mais variações.
