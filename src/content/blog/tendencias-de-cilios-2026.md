@@ -44,7 +44,7 @@ Antes do detalhe de cada um, o resumo de para onde cada efeito leva o olhar.
 
 ## Efeito molhado: textura e definição
 
-<img src="/fotos/blog/tendencias-textura-pontas.webp" alt="Cílios com textura e pontas definidas, resultado do efeito molhado dentro do Volume Crystal" class="img-float" loading="lazy" width="900" height="1126" />
+<img src="/fotos/blog/tendencias-volume-crystal.webp" alt="Olhar com cílios definidos e pontas marcadas, resultado do efeito molhado feito dentro do Volume Crystal" class="img-float" loading="lazy" width="900" height="1125" />
 
 O chamado efeito molhado é um nome comercial bastante usado para um estilo de extensão em que os fios ficam mais definidos e as pontas mais marcadas. No Studio Crystal Lashes, esse efeito é trabalhado dentro do Volume Crystal.
 
@@ -116,6 +116,8 @@ E é justamente por isso que gosto tanto de trabalhar com eles.
 |---|---|---|---|
 | **O que é** | O contraste mais forte perto do olho | Uma escolha de cor, não um efeito de mapeamento | Um detalhe, nunca o olho inteiro |
 | **Como aparece** | Marcante e bem definido | Definido, com aparência mais suave | Discreto, conforme a luz bate nos fios |
+
+<img src="/fotos/blog/tendencias-fio-marrom.webp" alt="Cílios aplicados com fio marrom em volume brasileiro, com definição e contraste mais suave que o fio preto" class="img-float" loading="lazy" width="900" height="1126" />
 
 O preto cria um contraste intenso próximo aos olhos. Para algumas clientes, esse contraste é exatamente o que elas procuram. Para outras, pode ser a razão de a extensão parecer mais pesada do que imaginavam.
 
